@@ -20,7 +20,7 @@ const Home: React.FC = () => {
           anchorX="center"
           anchorY="middle"
         >
-          Hi I'm Ravi
+          Hi I&apos;m Ravi
         </Text>
       </Canvas>
     </div>
