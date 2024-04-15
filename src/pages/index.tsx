@@ -19,7 +19,7 @@ const Home: React.FC = () => {
       <div className="z-10">
         <Navbar />
       </div>
-      <div className='text-white text-4xl text-center font-neue-montreal my-64'>
+      <div className='text-white text-4xl text-center font-neue-montreal pt-[43vh]'>
         Hi I&apos;m Ravi
       </div>
       <div className="flex-grow"></div>
