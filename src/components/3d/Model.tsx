@@ -5,23 +5,25 @@ import { Mesh } from 'three';
 
 export default function Model() {
   const mesh = useRef<Mesh>(null);
-  const { nodes } = useGLTF("/donut.glb");
+  const { nodes } = useGLTF("/donut2.glb");
   const { viewport } = useThree();
   const [materialProps, setMaterialProps] = useState({
-    thickness: 0.2,
-    roughness: 0,
-    transmission: 1,
-    ior: 1.2,
-    chromaticAberration: 0.02,
     backside: true,
-  });
+    chromaticAberration: 0.11,
+    ior: 1.4,
+    roughness: 0.42938770874232757,
+    thickness: 2.347200000000001,
+    transmission: 1,
+  }
 
+  );
   useFrame(() => {
     if (mesh.current) {
       mesh.current.position.z = 0;
       mesh.current.rotation.x += 0.00035;
       mesh.current.rotation.y += 0.00035;
       mesh.current.rotation.z += 0.00005;
+      console.log(materialProps);
     }
   });
 
@@ -34,7 +36,7 @@ export default function Model() {
     };
 
     const handleScroll = (event: WheelEvent) => {
-      const delta = event.deltaY * 0.001;
+      const delta = event.deltaY * 0.0004;
       setMaterialProps((prevProps) => ({
         ...prevProps,
         thickness: Math.max(0, Math.min(3, prevProps.thickness + delta)),
