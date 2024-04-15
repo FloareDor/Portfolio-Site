@@ -3,7 +3,7 @@ import Link from "next/link";
 const Navbar = () => {
 	return (
 		<div>
-			<div className="flex flex-row gap-12 items-center justify-between px-5 lg:px-10 lg:pt-2">
+			<div className="flex flex-row gap-12 items-center justify-between px-5 lg:px-10 lg:pt-10">
 				<span className="text-[#41B06E] text-xl lg:text-3xl md:text-3xl sm:text-3xl font-bold">
 					<Link href={"/"}><span className="hidden lg:inline md:inline">Sai Ravi Teja Gangavarapu</span></Link>
 					<span className="lg:hidden md:hidden">Ravi</span>
