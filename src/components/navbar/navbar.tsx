@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
     <div className="bg-opacity-80 bg-black lg:bg-transparent md:bg-transparent sm:bg-transparent fixed top-0 left-0 right-0 z-20">
       <div className="flex flex-row items-center justify-between px-5 py-4 md:px-12 md:pt-10 lg:px-12 lg:pt-10">
-        <span className="text-white text-xl lg:text-2xl md:text-3xl sm:text-3xl font-bold">
+        <span className="text-white text-2xl lg:text-3xl md:text-3xl sm:text-3xl font-bold">
           <Link href={"/"}>
             <span className="hidden lg:inline md:inline">Sai Ravi Teja Gangavarapu</span>
             <span className="lg:hidden md:hidden">Ravi</span>
@@ -33,7 +33,7 @@ const Navbar = () => {
             onClick={toggleMenu}
           >
             <svg
-              className="w-6 h-6 fill-current"
+              className="w-10 h-10 fill-current"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -56,12 +56,12 @@ const Navbar = () => {
       </div>
 
       {isOpen && (
-        <div className="lg:hidden md:hidden px-5 py-4 flex flex-col items-end">
-          <Link href={"/left-brain"}><span className="block text-white text-sm font-semibold mb-2">Left Brain</span></Link>
-          <Link href={"/right-brain"}><span className="block text-white text-sm font-semibold mb-2">Right Brain</span></Link>
-          <Link href={"/about-me"}><span className="block text-white text-sm font-semibold mb-2">About Me</span></Link>
-          <Link href={"/contact"}><span className="block text-white text-sm font-semibold mb-2">Contact</span></Link>
-          <Link href={"/resume.pdf"}><span className="block text-white text-sm font-semibold ">Resume</span></Link>
+        <div className="gap-1 lg:hidden md:hidden px-5 py-4 flex flex-col items-end">
+          <Link href={"/left-brain"}><span className="block text-white text-base font-semibold mb-2">Left Brain</span></Link>
+          <Link href={"/right-brain"}><span className="block text-white text-base font-semibold mb-2">Right Brain</span></Link>
+          <Link href={"/about-me"}><span className="block text-white text-base font-semibold mb-2">About Me</span></Link>
+          <Link href={"/contact"}><span className="block text-white text-base font-semibold mb-2">Contact</span></Link>
+          <Link href={"/resume.pdf"}><span className="block text-white text-base font-semibold ">Resume</span></Link>
         </div>
       )}
     </div>
