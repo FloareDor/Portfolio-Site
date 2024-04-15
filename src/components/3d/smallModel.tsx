@@ -8,14 +8,33 @@ export default function SmallModel() {
   const { nodes } = useGLTF("/donut.glb");
   const { viewport } = useThree();
   const [isRotating, setIsRotating] = useState(true);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [materialProps, setMaterialProps] = useState({
+    thickness: 1.7,
+    roughness: 0.4,
+    transmission: 1.0,
+    ior: 1.1,
+    chromaticAberration: 0.02,
+    backside: true,
+  });
 
   useFrame(() => {
     if (mesh.current && isRotating) {
-      mesh.current.position.z = -5;
+      mesh.current.position.z = -7;
       mesh.current.rotation.x += 0.01;
       mesh.current.rotation.y += 0.01;
       mesh.current.rotation.z += 0.005;
     }
+
+    const { x, y } = mousePosition;
+    const normalizedX = (x / window.innerWidth) * 2 - 1;
+    var normalizedY = -(y / window.innerHeight) * 2 + 1;
+
+    setMaterialProps((prevProps) => ({
+      ...prevProps,
+      thickness: normalizedX,
+      chromaticAberration: normalizedY,
+    }));
   });
 
   useEffect(() => {
@@ -23,21 +42,18 @@ export default function SmallModel() {
       setIsRotating((prevIsRotating) => !prevIsRotating);
     };
 
+    const handleMouseMove = (event: MouseEvent) => {
+      setMousePosition({ x: event.clientX, y: event.clientY });
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
     window.addEventListener('click', handleClick);
 
     return () => {
       window.removeEventListener('click', handleClick);
+      window.removeEventListener('mousemove', handleMouseMove);
     };
   }, []);
-
-  const materialPropsfinal = {
-    thickness: 1.7,
-    roughness: 0.4,
-    transmission: 1.0,
-    ior: 1.1,
-    chromaticAberration: 0.02,
-    backside: true,
-  };
 
   return (
     <group scale={1 * (viewport.width / 3.5)}>
@@ -52,8 +68,8 @@ export default function SmallModel() {
         Hi I&apos;m Ravi
       </Text>
       <mesh ref={mesh} {...nodes.Torus}>
-        <MeshTransmissionMaterial {...materialPropsfinal} />
-      </mesh>
+        <MeshTransmissionMaterial {...materialProps} />
+		  </mesh>
     </group>
   );
 }
