@@ -16,7 +16,7 @@ const Home: React.FC = () => {
           color="#41B06E"
           fontSize={1}
           position={[0, 0, 0.5]}
-          align="center"
+          textAlign="center"
           anchorX="center"
           anchorY="middle"
         >
