@@ -18,12 +18,18 @@ const RightBrain: React.FC = () => {
       description: 'A brief description of Project 2.',
       image: '/images/right/fl.png',
     },
+    {
+      id: 3,
+      title: 'Project 3',
+      description: 'A brief description of Project 3.',
+      image: '/images/right/fl.png',
+    },
   ];
 
   return (
     <div className="flex flex-col gap-14 sm:gap-24 md:gap-24 lg:gap-24">
       <Navbar />
-      <div className="container mx-auto py-8 px-4">
+      <div className="container mx-auto pt-20 px-4 lg:pt-36 md:lg:pt-36 sm:lg:pt-36">
         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8">
 				  {projects.map((project) => (
 			  <Link key={project.id} href="/right-brain/1">
@@ -31,7 +37,7 @@ const RightBrain: React.FC = () => {
               key={project.id}
               className="relative bg-black shadow-md rounded-lg overflow-hidden"
             >
-              <div className="relative h-48">
+              <div className="relative h-36 lg:h-48 md:h-48 sm:h-48">
                 <Image
                   src={project.image}
                   alt={project.title}
@@ -44,7 +50,7 @@ const RightBrain: React.FC = () => {
                 <h2 className="text-xl text-white font-semibold mb-2">
                   {project.title}
                 </h2>
-                <p className="text-gray-300">{project.description}</p>
+                <p className="text-gray-300 hidden lg:block md:block sm:block">{project.description}</p>
               </div>
 			</div>
 			</Link>

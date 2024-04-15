@@ -30,7 +30,7 @@ const Project: React.FC = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
-      <div className="container mx-auto px-4 py-8 flex-grow">
+      <div className="container mx-auto flex-grow pt-20 px-4 lg:pt-36 md:lg:pt-36 sm:lg:pt-36">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
             <Image
@@ -38,7 +38,6 @@ const Project: React.FC = () => {
               alt={project.title}
               width={600}
               height={400}
-              objectFit="cover"
               className="rounded-lg shadow-md"
             />
           </div>

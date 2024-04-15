@@ -26,6 +26,13 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+@font-face {
+  font-family: 'PPNeueMontreal-Bold';
+  src: url('/fonts/PPNeueMontreal-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
