@@ -26,7 +26,7 @@ const RightBrain: React.FC = () => {
       <div className="container mx-auto py-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 				  {projects.map((project) => (
-			  <Link href="/right-brain/1">
+			  <Link key={project.id} href="/right-brain/1">
             <div
               key={project.id}
               className="relative bg-black shadow-md rounded-lg overflow-hidden"
@@ -47,7 +47,7 @@ const RightBrain: React.FC = () => {
                 <p className="text-gray-300">{project.description}</p>
               </div>
 			</div>
-						  </Link>
+			</Link>
           ))}
         </div>
       </div>
