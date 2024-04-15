@@ -20,7 +20,7 @@ const LeftBrain: React.FC = () => {
   ];
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col gap-14 sm:gap-24 md:gap-24 lg:gap-24">
       <Navbar />
       <div className="container mx-auto py-8 px-4">
         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8">

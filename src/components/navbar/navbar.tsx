@@ -10,7 +10,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <div className="flex flex-row items-center justify-between px-5 py-4 md:px-10 md:pt-10 lg:px-10 lg:pt-10">
+      <div className="flex flex-row items-center justify-between px-5 py-4 md:px-12 md:pt-10 lg:px-12 lg:pt-10">
         <span className="text-[#41B06E] text-xl lg:text-3xl md:text-3xl sm:text-3xl font-bold">
           <Link href={"/"}>
             <span className="hidden lg:inline md:inline">Sai Ravi Teja Gangavarapu</span>
