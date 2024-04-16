@@ -2,39 +2,37 @@ import React from 'react';
 import Navbar from '@/components/navbar/navbar';
 import ProjectGrid from '@/components/projectPage/ProjectGrid';
 
-interface Project {
+interface ProjectData {
   id: number;
   title: string;
   description: string;
   image: string;
 }
 
-const LeftBrain: React.FC = () => {
-  const projectsData: Project[] = [
-    {
-      id: 1,
-      title: 'Project 1',
-      description: 'A brief description of Project 1.',
-      image: '/images/right/fl.png',
-    },
-    {
-      id: 2,
-      title: 'Project 2',
-      description: 'A brief description of Project 2.',
-      image: '/images/left/graphics.png',
-    },
-    {
-      id: 3,
-      title: 'Project 3',
-      description: 'A brief description of Project 3.',
-      image: '/images/right/fl.png',
-    },
-  ];
+interface Project extends ProjectData {
+  isLeft: boolean;
+}
 
-  const projects = projectsData.map((project) => ({
-    ...project,
-    isLeft: false,
-  }));
+const RightBrain: React.FC = () => {
+  const [projects, setProjects] = React.useState<Project[]>([]);
+
+  React.useEffect(() => {
+    const fetchProjects = async () => {
+      try {
+        const response = await fetch('/projects/right/right-projects.json');
+        const data: Record<string, ProjectData> = await response.json();
+        const projectsData = Object.values(data).map((project) => ({
+          ...project,
+          isLeft: false,
+        }));
+        setProjects(projectsData);
+      } catch (error) {
+        console.error('Error fetching projects:', error);
+      }
+    };
+
+    fetchProjects();
+  }, []);
 
   return (
     <div className="flex flex-col gap-14 sm:gap-24 md:gap-24 lg:gap-24">
@@ -46,4 +44,4 @@ const LeftBrain: React.FC = () => {
   );
 };
 
-export default LeftBrain;
+export default RightBrain;

@@ -1,0 +1,46 @@
+{
+	"1": {
+	  "id": 1,
+	  "title": "Project 1",
+	  "description": "A detailed description of Project 1.",
+	  "image": "/images/right/fl.png",
+	  "technologies": ["React", "Next.js", "TypeScript"],
+	  "githubLink": "https://github.com/username/project1",
+	  "liveLink": "https://project1.com",
+	  "blog": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget aliquam ultricies, nunc nisl aliquam nisl, eget aliquam nisl nisl sit amet nisl. Nullam auctor, nisl eget aliquam ultricies, nunc nisl aliquam nisl, eget aliquam nisl nisl sit amet nisl.",
+	  "videoLink": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+	},
+	"2": {
+	  "id": 2,
+	  "title": "Project 2",
+	  "description": "A brief overview of Project 2.",
+	  "image": "/images/left/graphics.png",
+	  "technologies": ["Python", "Django", "PostgreSQL"],
+	  "githubLink": "https://github.com/username/project2",
+	  "liveLink": "https://project2.com",
+	  "blog": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",
+	  "videoLink": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+	},
+	"3": {
+	  "id": 3,
+	  "title": "Project 3",
+	  "description": "An exciting project showcasing cutting-edge technologies.",
+	  "image": "/images/right/fl.png",
+	  "technologies": ["Angular", "Node.js", "MongoDB"],
+	  "githubLink": "https://github.com/username/project3",
+	  "liveLink": "https://project3.com",
+	  "blog": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.",
+	  "videoLink": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+	},
+	"4": {
+	  "id": 4,
+	  "title": "Project 4",
+	  "description": "A game-changing project that revolutionizes the industry.",
+	  "image": "/images/left/graphics.png",
+	  "technologies": ["Vue.js", "Firebase", "CSS"],
+	  "githubLink": "https://github.com/username/project4",
+	  "liveLink": "https://project4.com",
+	  "blog": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+	  "videoLink": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+	}
+  }
