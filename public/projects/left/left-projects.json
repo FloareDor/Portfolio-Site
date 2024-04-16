@@ -1,46 +1,57 @@
 {
 	"1": {
-	  "id": 1,
-	  "title": "Project 1",
-	  "description": "A detailed description of Project 1.",
-	  "image": "/images/left/graphics.png",
-	  "technologies": ["React", "Next.js", "TypeScript"],
-	  "githubLink": "https://github.com/username/project1",
-	  "liveLink": "https://project1.com",
-	  "blog": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget aliquam ultricies, nunc nisl aliquam nisl, eget aliquam nisl nisl sit amet nisl. Nullam auctor, nisl eget aliquam ultricies, nunc nisl aliquam nisl, eget aliquam nisl nisl sit amet nisl.",
-	  "videoLink": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-	},
-	"2": {
-	  "id": 2,
-	  "title": "Project 2",
-	  "description": "A brief overview of Project 2.",
-	  "image": "/images/left/avl.png",
-	  "technologies": ["Python", "Django", "PostgreSQL"],
-	  "githubLink": "https://github.com/username/project2",
-	  "liveLink": "https://project2.com",
-	  "blog": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",
-	  "videoLink": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-	},
-	"3": {
-	  "id": 3,
-	  "title": "Project 3",
-	  "description": "An exciting project showcasing cutting-edge technologies.",
-	  "image": "/images/left/graphics.png",
-	  "technologies": ["Angular", "Node.js", "MongoDB"],
-	  "githubLink": "https://github.com/username/project3",
-	  "liveLink": "https://project3.com",
-	  "blog": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.",
-	  "videoLink": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-	},
-	"4": {
-	  "id": 4,
-	  "title": "Project 4",
-	  "description": "A game-changing project that revolutionizes the industry.",
-	  "image": "/images/left/avl.png",
-	  "technologies": ["Vue.js", "Firebase", "CSS"],
-	  "githubLink": "https://github.com/username/project4",
-	  "liveLink": "https://project4.com",
-	  "blog": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
-	  "videoLink": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-	}
+		"id": 1,
+		"title": "Co-Write: AI-Assisted Learning Platform",
+		"description": "An AI-powered platform that provides targeted assistance to students within professor-defined boundaries, promoting academic integrity and enhancing the learning experience.",
+		"image": "/images/left/co-write.png",
+		"technologies": ["Next.js", "Tailwind CSS", "FastAPI", "MongoDB", "Langchain", "RAG"],
+		"githubLink": "https://devpost.com/software/co-write-9ip45u",
+		"liveLink": "https://co-write-fe-8u5z.vercel.app/login",
+		"blog": "Co-Write is an innovative learning platform that leverages AI to provide personalized assistance to students while maintaining academic integrity. With features like custom RAG models, assignment creation with AI limitations, and targeted AI assistance, Co-Write aims to revolutionize the educational landscape.",
+		"videoLink": "https://www.youtube.com/watch?v=PgGDf78yxTg"
+	  },
+	  "2": {
+		"id": 2,
+		"title": "RateMUProfessors Site",
+		"description": "A full-stack web application that allows students to provide feedback, reviews, and ratings on courses and instructors.",
+		"image": "/images/left/ratemuprofs.png",
+		"technologies": ["React.js", "MongoDB", "FastAPI", "Node.js"],
+		"githubLink": "https://github.com/FloareDor/RateMuProfs-backend",
+		"liveLink": "https://rate-mu-profs-frontend.vercel.app/login",
+		"blog": "RateMUProfessors is a platform designed to facilitate student feedback and improve the educational experience. With features like course and instructor ratings, past exam papers, and a scalable backend architecture, RateMUProfessors aims to empower students and promote transparency in academia.",
+		"videoLink": ""
+	  },
+	  "3": {
+		"id": 3,
+		"title": "Modular Ray Tracer in C++",
+		"description": "Implemented a modular ray tracer to render a scene composed of multiple spheres and tetrahedra with different colors and sizes. Added various features such as shading, glazed surfaces, animation, and perspective geometry.",
+		"image": "/images/left/graphics.png",
+		"technologies": ["C++", "OpenGL", "GLFW", "Ray Tracing"],
+		"githubLink": "https://github.com/FloareDor/Computer-Graphics",
+		"liveLink": "",
+		"blog": "In this project, I developed a first-hit ray tracer from scratch using C++. Starting with a directional light and parallel camera geometry, I generated rays and solved ray-object intersection problems to determine pixel colors. I then added ambient, diffuse, and specular shading to enhance the realism of the rendered scene. To further improve the visual quality, I incorporated a glazed surface effect. I also created a small animation by moving the camera and objects, assembling the rendered frames into a movie. As a final touch, I provided an option to switch between parallel and perspective camera geometries. This project allowed me to gain a deep understanding of the fundamentals of ray tracing and its application in creating visually appealing scenes.",
+		"videoLink": "https://youtu.be/Mn5N6SsrhH8?si=JmcQF3ZNq2f4CWBM"
+	  },
+	  "4": {
+		"id": 4,
+		"title": "OpenGL Viewer - Model Transforms",
+		"description": "Developed an OpenGL application to read and display triangular meshes, applying linear transformations for building a Model View matrix and allowing user interaction with the object.",
+		"image": "/images/left/g2.png",
+		"technologies": ["C++", "OpenGL", "GLSL", "GLM"],
+		"githubLink": "https://github.com/FloareDor/Computer-Graphics",
+		"liveLink": "",
+		"blog": "In this project, I created an OpenGL application to read and display triangular meshes using the modern pipeline. I learned how to prepare and send information to the GPU and write simple code to program the GPU. I associated colors with each vertex and modified the vertex and fragment shaders to determine the color of each fragment based on the vertex colors. I implemented the functionality to read vertex geometry and connectivity from .obj files and generate a 'separate triangles' data structure. Additionally, I added linear transformations to build a Model View matrix, allowing users to interact with the object using a game-like interface. I experimented with applying transformations to the mesh in two different settings: transforming the geometry before sending it to the GPU and sending the transformation matrix to the GPU for rendering. I analyzed the performance of each approach on large meshes. This project provided me with hands-on experience in working with OpenGL, shaders, and model transformations.",
+		"videoLink": ""
+	  },
+	  "5": {
+		"id": 5,
+		"title": "OpenGL Viewer - Advanced Features",
+		"description": "Extended the basic 3D rendering system with advanced features such as perspective projection, z-buffer visualization, and lighting effects using Gouraud and Phong shading.",
+		"image": "/images/left/g3.png",
+		"technologies": ["C++", "OpenGL", "GLFW", "GLEW", "GLM"],
+		"githubLink": "https://github.com/FloareDor/Computer-Graphics",
+		"liveLink": "https://github.com/FloareDor/Computer-Graphics",
+		"blog": "In this project, I extended the basic 3D rendering system from the previous assignment using C++, OpenGL, and GLFW. I implemented perspective projection and demonstrated the effects of changing each parameter in the perspective matrix. I added functionality to visualize the contents of the z-buffer, allowing me to see the depth of points in the scene and verify the consistency of depth values. I implemented Gouraud and Phong shading to add lighting effects and compared the results of each shading technique. As a bonus, I also provided a mechanism for flat shading and compared it with Gouraud and Phong shading. This project allowed me to explore advanced rendering techniques and gain a deeper understanding of perspective projection, z-buffering, and shading models in computer graphics.",
+		"videoLink": ""
+	  }
   }

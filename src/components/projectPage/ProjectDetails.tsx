@@ -28,12 +28,12 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({ project }) => {
           />
         </div>
         <div>
-          <h1 className="text-4xl font-bold mb-4">{project.title}</h1>
+          <h1 className="text-4xl font-bold mb-4 text-gray-200">{project.title}</h1>
           <div className="mb-8">
-            <h2 className="text-2xl font-semibold mb-2">Technologies Used</h2>
+            <h2 className="text-2xl font-semibold mb-2 text-gray-200">Technologies Used</h2>
             <ul className="list-disc list-inside">
               {project.technologies.map((tech, index) => (
-                <li key={index} className="text-lg text-gray-600">
+                <li key={index} className="text-lg text-gray-200">
                   {tech}
                 </li>
               ))}
@@ -45,7 +45,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({ project }) => {
                 href={project.githubLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-4 py-2 bg-black text-white rounded-lg flex items-center space-x-2 hover:bg-gray-800 transition duration-300"
+                className="px-4 py-2 bg-black text-gray-200 rounded-lg flex items-center space-x-2 hover:bg-gray-800 transition duration-300"
               >
                 <FontAwesomeIcon icon={faGithub} />
                 <span>GitHub</span>
@@ -56,7 +56,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({ project }) => {
                 href={project.liveLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-4 py-2 bg-neutral-800 text-white rounded-lg flex items-center space-x-2 hover:bg-neutral-700 transition duration-300"
+                className="px-4 py-2 bg-neutral-800 text-gray-200 rounded-lg flex items-center space-x-2 hover:bg-neutral-700 transition duration-300"
               >
                 <FontAwesomeIcon icon={faLink} />
                 <span>Live Demo</span>
