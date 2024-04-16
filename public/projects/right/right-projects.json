@@ -30,7 +30,7 @@
 	  "id": 3,
 	  "title": "Audio-Reactive Landscape Visuals with StyleGAN3",
 	  "description": "Trained a custom StyleGAN3 model on NVIDIA's DGX-1 to generate audio-reactive landscape visuals for my DJ set, utilizing transfer learning and synchronizing visuals with spectral audio features using LibROSA.",
-	  "image": "/images/right/earthGAN.gif",
+	  "image": "/images/right/stylegan3.png",
 	  "technologies": ["StyleGAN3", "Transfer Learning", "Audio Analysis", "LibROSA"],
 	  "liveLink": "https://drive.google.com/file/d/1zsproXF5oHc_7pXAzTnYQt-vwy54-X6N/view?usp=sharing",
 	  "blog": "Combining my passion for music and visual arts, I tried to generate audio-reactive landscape visuals for my DJ sets. By training a custom StyleGAN3 model on NVIDIA's powerful DGX-1 system, I had done a bit of transfer learning to create interesting visuals that synchronize with the spectral features of the music. Leveraging the LibROSA library for audio analysis, I developed a system that translates the rhythm, intensity, and emotions of the music into visual landscapes, in an attempt to make the set experience cool.",
