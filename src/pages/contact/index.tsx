@@ -11,8 +11,7 @@ const contact = () => {
 					<Link href={"https://www.linkedin.com/in/sai-ravi-teja-gangavarapu/"}><span className="text-white">Linkedin</span></Link>
 					<Link href={"https://soundcloud.com/raven-714331711"}><span className="text-white">SoundCloud</span></Link>
 					<Link href={"https://www.instagram.com/floare_dor/"}><span className="text-white">Instagram</span></Link>
-					
-					
+					<Link href={"https://leetcode.com/Sai_Ravi_Teja/"}><span className="text-white">Leetcode? Seriously?</span></Link>
 				</div>
 			</div>
 		</div>
