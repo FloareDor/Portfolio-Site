@@ -1,24 +1,22 @@
-import { useGLTF, Text, MeshTransmissionMaterial } from '@react-three/drei';
-import { useFrame, useThree } from '@react-three/fiber';
+import { useGLTF, MeshTransmissionMaterial, meshBounds } from '@react-three/drei';
+import { useFrame, useThree  } from '@react-three/fiber'; // Import meshBounds
 import React, { useRef, useState, useEffect } from 'react';
 import { Mesh } from 'three';
 
 export default function Model() {
-  const mesh = useRef<Mesh>(null);
-  // const { nodes } = useGLTF("/donut2.glb");
-  const { nodes } = useGLTF("/donut-low-poly.glb");
-  const { viewport } = useThree();
-  const [materialProps, setMaterialProps] = useState({
+ const mesh = useRef<Mesh>(null);
+ const { nodes } = useGLTF("/donut-low-poly.glb");
+ const { viewport } = useThree();
+ const [materialProps, setMaterialProps] = useState({
     backside: true,
     chromaticAberration: 0.11,
     ior: 1.4,
     roughness: 0.42938770874232757,
     thickness: 2.347200000000001,
     transmission: 1,
-  }
+ });
 
-  );
-  useFrame(() => {
+ useFrame(() => {
     if (mesh.current) {
       mesh.current.position.z = 0;
       mesh.current.rotation.x += 0.00035;
@@ -26,9 +24,9 @@ export default function Model() {
       mesh.current.rotation.z += 0.00005;
       console.log(materialProps);
     }
-  });
+ });
 
-  useEffect(() => {
+ useEffect(() => {
     const handleClick = () => {
       setMaterialProps((prevProps) => ({
         ...prevProps,
@@ -51,13 +49,13 @@ export default function Model() {
       window.removeEventListener('click', handleClick);
       window.removeEventListener('wheel', handleScroll);
     };
-  }, []);
+ }, []);
 
-  return (
+ return (
     <group scale={50 * (viewport.width / 3.5)}>
-      <mesh ref={mesh} {...nodes.Torus}>
+      <mesh ref={mesh} {...nodes.Torus} raycast={meshBounds}> {/* Apply meshBounds here */}
         <MeshTransmissionMaterial {...materialProps} />
-		  </mesh>
+      </mesh>
     </group>
-  );
+ );
 }
