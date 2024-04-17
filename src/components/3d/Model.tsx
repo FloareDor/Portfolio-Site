@@ -5,7 +5,7 @@ import { Mesh } from 'three';
 
 export default function Model() {
  const mesh = useRef<Mesh>(null);
- const { nodes } = useGLTF("/donut-low-poly.glb");
+ const { nodes } = useGLTF("/donut2.glb");
  const { viewport } = useThree();
  const [materialProps, setMaterialProps] = useState({
     backside: true,
