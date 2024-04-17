@@ -5,7 +5,8 @@ import { Mesh } from 'three';
 
 export default function Model() {
   const mesh = useRef<Mesh>(null);
-  const { nodes } = useGLTF("/donut2.glb");
+  // const { nodes } = useGLTF("/donut2.glb");
+  const { nodes } = useGLTF("/donut-low-poly.glb");
   const { viewport } = useThree();
   const [materialProps, setMaterialProps] = useState({
     backside: true,
@@ -36,7 +37,7 @@ export default function Model() {
     };
 
     const handleScroll = (event: WheelEvent) => {
-      const delta = event.deltaY * 0.0004;
+      const delta = event.deltaY * 0.0007;
       setMaterialProps((prevProps) => ({
         ...prevProps,
         thickness: Math.max(0, Math.min(3, prevProps.thickness + delta)),

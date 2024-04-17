@@ -5,7 +5,7 @@ import { Mesh } from 'three';
 
 export default function SmallModel() {
   const mesh = useRef<Mesh>(null);
-  const { nodes } = useGLTF("/donut2.glb");
+  const { nodes } = useGLTF("/donut-low-poly4.glb");
   const { viewport } = useThree();
   const [isRotating, setIsRotating] = useState(true);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });

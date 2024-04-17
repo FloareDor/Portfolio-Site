@@ -9,7 +9,7 @@ import { Environment } from '@react-three/drei';
 
 export default function Scene() {
   return (
-    <Canvas style={{ backgroundColor: 'black' }}>
+    <Canvas  performance={{ min: 0.1, max:0.2 }} style={{ backgroundColor: 'black' }}>
       <directionalLight intensity={3} position={[0, 3, 2]} />
       <Environment preset="city" />
 		  <SmallModel />
