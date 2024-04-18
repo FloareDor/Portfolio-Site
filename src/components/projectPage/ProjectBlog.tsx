@@ -21,9 +21,11 @@ const ProjectBlog: React.FC<ProjectBlogProps> = ({ project }) => {
         <div className="flex flex-col gap-4">
           <h2 className="text-2xl font-semibold mb-2">More Info</h2>
           <p className="text-lg text-gray-200 whitespace-pre-line">{project.blog}</p>
-          <div className="mb-8">
-            <ReactPlayer url={project.videoLink} width="80%" height="60vh" />
-          </div>
+          {project.videoLink &&
+            <div className="mb-8">
+              <ReactPlayer url={project.videoLink} width="80%" height="60vh" />
+            </div>
+          }
         </div>
       </div>
     </div>

@@ -53,5 +53,21 @@
 		"liveLink": "https://github.com/FloareDor/Computer-Graphics",
 		"blog": "In this project, I extended the basic 3D rendering system from the previous assignment using C++, OpenGL, and GLFW. I implemented perspective projection and demonstrated the effects of changing each parameter in the perspective matrix. I added functionality to visualize the contents of the z-buffer, allowing me to see the depth of points in the scene and verify the consistency of depth values. I implemented Gouraud and Phong shading to add lighting effects and compared the results of each shading technique. As a bonus, I also provided a mechanism for flat shading and compared it with Gouraud and Phong shading. This project allowed me to explore advanced rendering techniques and gain a deeper understanding of perspective projection, z-buffering, and shading models in computer graphics.",
 		"videoLink": ""
+	  },
+	  "6": {
+		"id": 6,
+		"title": "Raft Node Consensus Protocol (Implementation)",
+		"description": "An implementation of the Raft consensus algorithm. Raft is a consensus protocol designed for managing a replicated log and achieving consensus across a cluster of nodes in a distributed system.",
+		"image": "/images/left/raft.png",
+		"technologies": [
+		  "Python",
+		  "Flask",
+		  "Multithreading",
+		  "Distributed Systems"
+		],
+		"githubLink": "https://github.com/FloareDor/Raft-Node-Runner",
+		"liveLink": "",
+		"blog": "In this project, I implemented the Raft consensus algorithm from scratch using Python and Flask. Raft is a protocol designed to manage a replicated log and achieve consensus across a cluster of nodes in a distributed system. The key features include leader election, log replication, and safety guarantees.\n\nDuring a 24-hour hackathon (Noderunner Hackathon at Catalog, where we placed first out of 50 teams), I built a cluster of nodes that could automatically communicate with each other and participate in the Raft consensus protocol. I utilized multithreading for efficient communication between nodes.\n\nWhile we initially expected to implement a full-stack application (with me handling the backend and my teammates working on the frontend and blockchain), the hackathon challenge turned out to be primarily focused on backend and distributed systems concepts.",
+		"videoLink": ""
 	  }
   }
