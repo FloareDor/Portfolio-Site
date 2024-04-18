@@ -69,5 +69,37 @@
 		"liveLink": "",
 		"blog": "In this project, I implemented the Raft consensus algorithm from scratch using Python and Flask. Raft is a protocol designed to manage a replicated log and achieve consensus across a cluster of nodes in a distributed system. The key features include leader election, log replication, and safety guarantees.\n\nDuring a 24-hour hackathon (Noderunner Hackathon at Catalog, where we placed first out of 50 teams), I built a cluster of nodes that could automatically communicate with each other and participate in the Raft consensus protocol. I utilized multithreading for efficient communication between nodes.\n\nWhile we initially expected to implement a full-stack application (with me handling the backend and my teammates working on the frontend and blockchain), the hackathon challenge turned out to be primarily focused on backend and distributed systems concepts.",
 		"videoLink": ""
+	  },
+	  "7": {
+		"id": 7,
+		"title": "Computer Networks Lab",
+		"description": "A repo containing various programming assignments and implementations related to Computer Networks concepts.",
+		"image": "/images/project/networks.png",
+		"technologies": [
+		  "C++",
+		  "C",
+		  "Socket Programming",
+		  "Networking Protocols"
+		],
+		"githubLink": "https://github.com/FloareDor/Computer-Networks-Lab",
+		"liveLink": "",
+		"blog": "In this repository, I have included several coding assignments and projects from my Computer Networks course. The projects cover a wide range of topics, including:\n\n- Error detection and correction using Hamming codes\n- Bit-stuffing for data transmission\n- Stop-and-wait ARQ protocol implementation\n- Cyclic Redundancy Check (CRC) for error detection\n- Socket programming for client-server communication\n- File transfer over a network\n\nThese projects allowed me to gain hands-on experience with various networking concepts, protocols, and techniques. From implementing error detection and correction algorithms to developing client-server applications using sockets, the course wasn't too bad, after all it was fun implementing these concepts.\n\n",
+		"videoLink": ""
+	  },
+	  "8": {
+		"id": 8,
+		"title": "Microprocessors and Interfacing Lab",
+		"description": "This repository contains various programming assignments and implementations related to Microprocessors and Interfacing concepts, completed during my undergraduate studies.",
+		"image": "/images/left/mpi.png",
+		"technologies": [
+		  "Assembly Language (x86-64)",
+		  "C Programming",
+		  "Microprocessor Architecture",
+		  "SIMD Instructions"
+		],
+		"githubLink": "https://github.com/FloareDor/MPI-LAB",
+		"liveLink": "",
+		"blog": "In this repository, I have included several coding assignments and projects from my Microprocessors and Interfacing course. The projects cover a wide range of topics, including:\n\n- Conversion of integers, floating-point, and double-precision numbers to binary representation\n- Linear search algorithm implementation in Assembly and C\n- Finding the maximum element in an array using Assembly Language Program (ALP)\n- Calculating the sum of a mathematical series using Assembly\n- Matrix multiplication using SIMD (Single Instruction Multiple Data) instructions\n\nThese projects allowed me to gain hands-on experience with low-level programming concepts, such as Assembly language, microprocessor architecture, and SIMD instructions. From implementing basic algorithms to optimizing matrix operations using SIMD, I had the opportunity to explore the intricate details of microprocessor operations and data representations.",
+		"videoLink": ""
 	  }
   }
