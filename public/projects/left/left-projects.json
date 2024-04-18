@@ -73,8 +73,8 @@
 	  "7": {
 		"id": 7,
 		"title": "Computer Networks Lab",
-		"description": "A repo containing various programming assignments and implementations related to Computer Networks concepts.",
-		"image": "/images/project/cn.png",
+		"description": "Various programming assignments and implementations related to Computer Networks concepts.",
+		"image": "/images/left/cn.png",
 		"technologies": [
 		  "C++",
 		  "C",
@@ -83,7 +83,7 @@
 		],
 		"githubLink": "https://github.com/FloareDor/Computer-Networks-Lab",
 		"liveLink": "",
-		"blog": "In this repository, I have included several coding assignments and projects from my Computer Networks course. The projects cover a wide range of topics, including:\n\n- Error detection and correction using Hamming codes\n- Bit-stuffing for data transmission\n- Stop-and-wait ARQ protocol implementation\n- Cyclic Redundancy Check (CRC) for error detection\n- Socket programming for client-server communication\n- File transfer over a network\n\nThese projects allowed me to gain hands-on experience with various networking concepts, protocols, and techniques. From implementing error detection and correction algorithms to developing client-server applications using sockets, the course wasn't too bad, after all it was fun implementing these concepts.\n\n",
+		"blog": "Assignments and projects from my Computer Networks course. The projects cover a wide range of topics, including:\n\n- Error detection and correction using Hamming codes\n- Bit-stuffing for data transmission\n- Stop-and-wait ARQ protocol implementation\n- Cyclic Redundancy Check (CRC) for error detection\n- Socket programming for client-server communication\n- File transfer over a network\n\nThese projects allowed me to gain hands-on experience with various networking concepts, protocols, and techniques. From implementing error detection and correction algorithms to developing client-server applications using sockets, the course wasn't too bad, after all it was fun implementing these concepts.\n\n",
 		"videoLink": ""
 	  },
 	  "8": {
@@ -106,7 +106,7 @@
 		"id": 9,
 		"title": "Cryptocurrency Implementation from the Ground up",
 		"description": "A blockchain implementation with a cryptocurrency wallet system, featuring transaction validation, block mining, and user wallets for sending and receiving transactions.",
-		"image": "/images/left/bitcoin.png",
+		"image": "/images/left/bitcoin.jpg",
 		"technologies": [
 		  "Python",
 		  "Blockchain",
