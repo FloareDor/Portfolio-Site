@@ -24,7 +24,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({ project }) => {
             alt={project.title}
             width={600}
             height={400}
-            className="rounded-lg shadow-md"
+            className="rounded-lg shadow-md max-h-[42vh] max-w-[48vh]"
           />
         </div>
         <div>

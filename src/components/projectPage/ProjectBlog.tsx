@@ -12,13 +12,13 @@ interface ProjectBlogProps {
 
 const ProjectBlog: React.FC<ProjectBlogProps> = ({ project }) => {
   return (
-    <div className="flex flex-col min-h-screen" suppressHydrationWarning={true}>
+    <div className="flex flex-col max-h-screen" suppressHydrationWarning={true}>
       <div className="container mx-auto px-4 py-8">
         <div className="mb-8" suppressHydrationWarning={true}>
           <h2 className="text-2xl font-semibold mb-2 text-gray-200">Project Description</h2>
           <p className="text-lg text-gray-200 whitespace-pre-line">{project.description}</p>
         </div>
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 pb-4">
           <h2 className="text-2xl font-semibold mb-2">More Info</h2>
           <p className="text-lg text-gray-200 whitespace-pre-line">{project.blog}</p>
           {project.videoLink &&
