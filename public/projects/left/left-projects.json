@@ -155,7 +155,7 @@
 		"id": 12,
 		"title": "Crypto Analytics and Leaderboard System",
 		"description": "A comprehensive system for real-time big data analytics, monitoring, and leaderboard management for garden.finance.",
-		"image": "/images/left/garden.png",
+		"image": "/images/left/lbd3.png",
 		"technologies": [
 		  "Golang",
 		  "PostgreSQL",
