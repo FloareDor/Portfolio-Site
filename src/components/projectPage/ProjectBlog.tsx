@@ -23,7 +23,7 @@ const ProjectBlog: React.FC<ProjectBlogProps> = ({ project }) => {
           <p className="text-lg text-gray-200 whitespace-pre-line">{project.blog}</p>
           {project.videoLink &&
             <div className="mb-8">
-              <ReactPlayer url={project.videoLink} width="80%" height="60vh" />
+              <ReactPlayer url={project.videoLink} width="95%" height="60vh" />
             </div>
           }
         </div>
