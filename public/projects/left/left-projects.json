@@ -101,5 +101,54 @@
 		"liveLink": "",
 		"blog": "During this time, I had done several coding assignments and projects alongside my Microprocessors and Interfacing course. The mini-projects cover a wide range of topics, including:\n\n- Conversion of integers, floating-point, and double-precision numbers to binary representation\n- Linear search algorithm implementation in Assembly and C\n- Finding the maximum element in an array using Assembly Language Program (ALP)\n- Calculating the sum of a mathematical series using Assembly\n- Matrix multiplication using SIMD (Single Instruction Multiple Data) instructions\n\nThese projects allowed me to gain hands-on experience with low-level programming concepts, such as Assembly language, microprocessor architecture, and SIMD instructions. From implementing basic algorithms to optimizing matrix operations using SIMD, I had the opportunity to explore the intricate details of microprocessor operations and data representations.",
 		"videoLink": ""
+	  },
+	  "9": {
+		"id": 9,
+		"title": "Cryptocurrency Implementation from the Ground up",
+		"description": "A blockchain implementation with a cryptocurrency wallet system, featuring transaction validation, block mining, and user wallets for sending and receiving transactions.",
+		"image": "/images/left/bitcoin.png",
+		"technologies": [
+		  "Python",
+		  "Blockchain",
+		  "Cryptography",
+		  "Networking"
+		],
+		"githubLink": "https://github.com/FloareDor/Floareum",
+		"liveLink": "",
+		"blog": "This sort of started as a meme and it helped me understand a bit of blockchain technology and cryptocurrency wallets. I developed a blockchain implementation from scratch, featuring transaction validation, block mining, and consensus mechanisms. The project also includes a user-friendly cryptocurrency wallet system, allowing users to create wallets, send and receive transactions, and track their transaction history and balances.\n\nThe backend is built using Python and the Flask web framework, with JSON :/ used for data storage and communication. The project incorporates cryptographic concepts such as ECDSA signatures and public-private key pairs for secure transactions. Networking-> uses UDP sockets and HTTP requests, employed for communication between nodes and wallets.\n\nWhile this implementation is a simplified version for educational purposes, it was fun as a freshman to work with distributed systems, cryptography, and network programming. The project has prepared me for further exploration and development in the blockchain field (Catalooooggg).",
+		"videoLink": ""
+	  },
+	  "10":{
+		"id": 10,
+		"title": "E2E-Encrypted-ChatRoom",
+		"description": "An end-to-end encrypted chat room application built using sockets, implementing the RSA algorithm (PKCS#1 version 1.5) and Caesar cipher for secure communication.",
+		"image": "/images/left/e2e.png",
+		"technologies": [
+		  "Python",
+		  "Socket Programming",
+		  "RSA Encryption",
+		  "Cipher",
+		  "Multithreading"
+		],
+		"githubLink": "https://github.com/FloareDor/E2E-Encrypted-ChatRoom",
+		"liveLink": "",
+		"blog": "This project is an end-to-end encrypted chat room application that I developed within a short timeframe of two days during a mini-hackathon at my university. The application leverages socket programming in Python to facilitate communication between clients and the server.\n\nTo ensure secure communication, the application employs the RSA algorithm (PKCS#1 version 1.5) for encryption and decryption of messages. Additionally, the Caesar cipher is used as an extra layer of encryption, with a randomly generated shift value for each client. This multi-layered encryption approach ensures that messages can only be decrypted by the intended recipient, providing strong privacy and security.\n\nOne of the key features of this project is the generation of a new RSA key pair for each client that connects to the server. The private key is known only to the respective client, preventing unauthorized access to messages. The server facilitates the exchange of public keys among clients, enabling secure communication between them.\n\nBy implementing this project, It was cool to work with encryption algorithms, network programming, and secure communication protocols within a limited timeframe. It was a challenging yet satisfying experience and I remember this being one of the first apps that I've built lol.",
+		"videoLink": ""
+	  },
+	  "11": {
+		"id": 11,
+		"title": "Intelligent Task Tracking Application",
+		"description": "A task-tracking application that enables users to add tasks, set deadlines, assign priorities, and receive reminders for pending tasks, enhanced with intelligent task suggestions powered by AI.",
+		"image": "/images/left/task-tracker.png",
+		"technologies": [
+		  "React.js",
+		  "MongoDB",
+		  "Python",
+		  "LLMs"
+		],
+		"githubLink": "https://github.com/FloareDor/Intelligent-progress-tracker",
+		"liveLink": "",
+		"blog": "This project was a challenging and rewarding experience, where I led a team to develop a task-tracking application within a short timeframe of 8 hours during the Talentmapp Hack4Hire Hackathon. The application aimed to simplify task management by providing users with a user-friendly interface to add tasks, set deadlines, assign priorities, and receive reminders for pending tasks.\n\nOne of the key features of this project was the integration of Large Language Models (LLMs), specifically leveraging GPT-3.5, to provide users with intelligent task suggestions based on their previous activity. This feature aimed to improve user productivity and assist in task planning and organization.\n\nAs a team member, I designed the application's architecture, assigned specific tasks to each team member, and took responsibility for programming the complete secure backend, including the API and NoSQL database using MongoDB. Despite the time constraints, our team successfully deployed the application within the hackathon timeline. It was a wild but fun ride and it was my first out-of-uni hackathon.\n\nWinning the first place among 400 participants was a kind of a surprise but it was awesome. I felt like I'm on the top of the world lol.",
+		"videoLink": ""
 	  }
   }
