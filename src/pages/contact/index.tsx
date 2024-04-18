@@ -3,7 +3,7 @@ import Navbar from "@/components/navbar/navbar";
 const contact = () => {
 	return (
 		<div>
-			<div className="flex flex-col">
+			<div className="flex flex-col bg-black">
 				<Navbar />
 				<div className="flex flex-col items-center gap-2 pt-28 lg:pt-60 md:pt-60 sm:pt-60">
 					<span className="text-white font-sans">gangavarapus@ufl.edu</span>

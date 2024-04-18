@@ -12,7 +12,7 @@ const Scene = dynamic(() => import('@/components/3d/Scene'), {
 
 const Home: React.FC = () => {
   return (
-    <main className="h-screen w-screen flex flex-col relative">
+    <main className="h-screen w-screen flex flex-col relative bg-black">
       <div className="absolute top-0 left-0 w-full h-full z-0 hidden lg:block md:block">
         <Scene/>
       </div>
