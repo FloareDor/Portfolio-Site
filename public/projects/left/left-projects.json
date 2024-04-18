@@ -150,5 +150,21 @@
 		"liveLink": "",
 		"blog": "This project was a challenging and rewarding experience, where I led a team to develop a task-tracking application within a short timeframe of 8 hours during the Talentmapp Hack4Hire Hackathon. The application aimed to simplify task management by providing users with a user-friendly interface to add tasks, set deadlines, assign priorities, and receive reminders for pending tasks.\n\nOne of the key features of this project was the integration of Large Language Models (LLMs), specifically leveraging GPT-3.5, to provide users with intelligent task suggestions based on their previous activity. This feature aimed to improve user productivity and assist in task planning and organization.\n\nAs a team member, I designed the application's architecture, assigned specific tasks to each team member, and took responsibility for programming the complete secure backend, including the API and NoSQL database using MongoDB. Despite the time constraints, our team successfully deployed the application within the hackathon timeline. It was a wild but fun ride and it was my first out-of-uni hackathon.\n\nWinning the first place among 400 participants was a kind of a surprise but it was awesome. I felt like I'm on the top of the world lol.",
 		"videoLink": ""
+	  },
+	  "12":{
+		"id": 12,
+		"title": "Crypto Analytics and Leaderboard System",
+		"description": "A comprehensive system for real-time big data analytics, monitoring, and leaderboard management for garden.finance.",
+		"image": "/images/left/garden.png",
+		"technologies": [
+		  "Golang",
+		  "PostgreSQL",
+		  "Gorm",
+		  "AWS"
+		],
+		"githubLink": "https://github.com/obviously/a-private-repo-corporate-dawg",
+		"liveLink": "https://garden.finance/leaderboard/",
+		"blog": "As an SDE Intern at Catalog, I had the opportunity to work on a comprehensive system for real-time big data analytics, monitoring, and leaderboard management in the cryptocurrency domain. This project involved several complex components, including fine-tuning Large Language Models (LLMs) like Llama and BERT, training a custom Named Entity Recognition (NER) model, and implementing real-time analytics using FastAPI and MongoDB.\n\nOne of the key aspects of this project was the development of efficient ways to generate training datasets for LLMs in parallel, with the goal of mapping user input to specific API endpoints by identifying relevant parameters with very low computing power. This involved fine-tuning distilbert ofc\n\nAdditionally, I implemented a decent leaderboard and deterministic reward system to track and reward users based on their transactions.\n\nTo facilitate data-driven insights and monitoring, I developed a real-time big data analytics program and deployed a dashboard specifically for garden.finance. This dashboard allowed for comprehensive monitoring and analysis of crypto token volume and other relevant metrics.\n\nThe successful implementation of this system and the whole website facilitated over $200M in trading volume within the first 30 days, its wild I dont understand the economics..",
+		"videoLink": ""
 	  }
   }
