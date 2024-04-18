@@ -74,7 +74,7 @@
 		"id": 7,
 		"title": "Computer Networks Lab",
 		"description": "A repo containing various programming assignments and implementations related to Computer Networks concepts.",
-		"image": "/images/project/networks.png",
+		"image": "/images/project/cn.png",
 		"technologies": [
 		  "C++",
 		  "C",
@@ -99,7 +99,7 @@
 		],
 		"githubLink": "https://github.com/FloareDor/MPI-LAB",
 		"liveLink": "",
-		"blog": "In this repository, I have included several coding assignments and projects from my Microprocessors and Interfacing course. The projects cover a wide range of topics, including:\n\n- Conversion of integers, floating-point, and double-precision numbers to binary representation\n- Linear search algorithm implementation in Assembly and C\n- Finding the maximum element in an array using Assembly Language Program (ALP)\n- Calculating the sum of a mathematical series using Assembly\n- Matrix multiplication using SIMD (Single Instruction Multiple Data) instructions\n\nThese projects allowed me to gain hands-on experience with low-level programming concepts, such as Assembly language, microprocessor architecture, and SIMD instructions. From implementing basic algorithms to optimizing matrix operations using SIMD, I had the opportunity to explore the intricate details of microprocessor operations and data representations.",
+		"blog": "During this time, I had done several coding assignments and projects alongside my Microprocessors and Interfacing course. The mini-projects cover a wide range of topics, including:\n\n- Conversion of integers, floating-point, and double-precision numbers to binary representation\n- Linear search algorithm implementation in Assembly and C\n- Finding the maximum element in an array using Assembly Language Program (ALP)\n- Calculating the sum of a mathematical series using Assembly\n- Matrix multiplication using SIMD (Single Instruction Multiple Data) instructions\n\nThese projects allowed me to gain hands-on experience with low-level programming concepts, such as Assembly language, microprocessor architecture, and SIMD instructions. From implementing basic algorithms to optimizing matrix operations using SIMD, I had the opportunity to explore the intricate details of microprocessor operations and data representations.",
 		"videoLink": ""
 	  }
   }
