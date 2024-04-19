@@ -16,7 +16,7 @@ const Home: React.FC = () => {
       <div className="z-10">
         <Navbar />
       </div>
-      <span className='text-4xl text-center font-neue-montreal pt-[42vh] text-transparent bg-clip-text bg-gradient-to-tr from-purple-800 via-pink-400 to-purple-900'>
+      <span className='text-4xl text-center font-neue-montreal pt-[42vh] text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-500 to-purple-900'>
         Hi I&apos;m Ravi
       </span>
       <div className="flex-grow"></div>

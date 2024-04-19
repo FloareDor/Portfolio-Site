@@ -13,8 +13,8 @@ const Navbar = () => {
       <div className="flex flex-row items-center justify-between px-5 py-4 md:px-6 md:pt-10 lg:px-12 lg:pt-10">
         <span className="text-white text-2xl lg:text-3xl md:text-3xl sm:text-3xl font-bold">
           <Link href={"/"}>
-            <span className="hidden lg:inline text-transparent bg-clip-text bg-gradient-to-br from-purple-900 via-gray-700 to-purple-900">Sai Ravi Teja Gangavarapu</span>
-            <span className="lg:hidden text-transparent bg-clip-text bg-gradient-to-br from-purple-800 via-pink-400 to-purple-900">Ravi</span>
+            <span className="hidden lg:inline text-transparent bg-clip-text bg-gradient-to-br from-white via-gray-500 to-purple-900">Sai Ravi Teja Gangavarapu</span>
+            <span className="lg:hidden text-transparent bg-clip-text bg-gradient-to-br from-white via-gray-500 to-purple-900">Ravi</span>
           </Link>
         </span>
 
