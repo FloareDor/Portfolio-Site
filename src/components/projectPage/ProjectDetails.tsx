@@ -16,15 +16,15 @@ interface ProjectDetailsProps {
 
 const ProjectDetails: React.FC<ProjectDetailsProps> = ({ project }) => {
   return (
-    <div className="container mx-auto flex-grow pt-20 px-4 lg:pt-36 md:lg:pt-36 sm:lg:pt-36">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div className="container mx-auto flex-grow pt-20 px-4 lg:pt-36 md:pt-32 sm:pt-32">
+      <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-8">
         <div>
           <Image
             src={project.image}
             alt={project.title}
             width={600}
             height={400}
-            className="rounded-lg shadow-md max-h-[42vh] max-w-[48vh]"
+            className="rounded-lg shadow-md max-h-[34vh] max-w-[40vh] lg:max-h-[25rem] lg:max-w-[30rem] md:max-h-[28vh] md:max-w-[30vh] sm:max-h-[28vh] sm:max-w-[30vh]"
           />
         </div>
         <div>

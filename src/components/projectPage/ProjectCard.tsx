@@ -17,7 +17,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ id, title, technologies, desc
 
   return (
     <Link href={href}>
-      <div className="relative bg-black shadow-md rounded-lg overflow-hidden">
+      <div className="relative bg-black shadow-md rounded-lg overflow-hidden pt-2">
 
         <div className="relative h-36 lg:h-48 md:h-48 sm:h-48">
           {isGif ? (
@@ -32,7 +32,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ id, title, technologies, desc
           <div key={index} className='m-1'>
             {/* <div className='w-auto flex flex-wrap justify-center items-center rounded-lg bg-gradient-to-r from-pink-800 to-purple-800 px-2 py-1'> */}
             <div className='w-auto flex flex-wrap justify-center items-center rounded-lg bg-gradient-to-br from-black via-gray-900 to-purple-900 px-2 py-1'>
-              <span className='text-white text-center'>{tech}</span>
+              <span className='text-white text-center text-transparent bg-clip-text bg-gradient-to-br from-white via-purple-200 to-purple-300'>{tech}</span>
             </div>
           </div>
         ))}

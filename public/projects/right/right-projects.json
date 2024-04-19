@@ -34,7 +34,7 @@
 	  "technologies": ["StyleGAN3", "Transfer Learning", "Audio Analysis", "LibROSA"],
 	  "liveLink": "https://drive.google.com/file/d/1zsproXF5oHc_7pXAzTnYQt-vwy54-X6N/view?usp=sharing",
 	  "blog": "Combining my passion for music and visual arts, I tried to generate audio-reactive landscape visuals for my DJ sets. By training a custom StyleGAN3 model on NVIDIA's powerful DGX-1 system, I had done a bit of transfer learning to create interesting visuals that synchronize with the spectral features of the music. Leveraging the LibROSA library for audio analysis, I developed a system that translates the rhythm, intensity, and emotions of the music into visual landscapes, in an attempt to make the set experience cool.",
-	  "videoLink": "https://www.instagram.com/p/Cpk381-BgGM/?img_index=4"
+	  "videoLink": ""
 	},
 	"4": {
 	  "id": 4,
@@ -63,7 +63,7 @@
 	  "title": "Emotion-Specific Sound Generation",
 	  "description": "Developed an emotion-specific sound generation tool using evolutionary algorithms, self-organizing maps, and Fuzzy C-means clustering.",
 	  "image": "/images/right/eq.png",
-	  "technologies": ["Music Information Retrieval", "Evolutionary Algorithms", "Self-Organizing Maps", "Fuzzy C-means Clustering"],
+	  "technologies": ["MIR", "Evolutionary Algorithms", "SOM", "Fuzzy"],
 	  "githubLink": "https://github.com/FloareDor/Sound-Genes",
 	  "liveLink": "",
 	  "blog": "I worked on this cool research project that used AI to generate sounds based on specific emotions. The idea was to see if machine learning could be applied to create audio with an intended vibe or feeling behind it. Using some MIR techniques, alongside a crazy talented team, I built an algorithm that analyzed different sound characteristics and clustered them into emotional categories. It basically solved for the right amplitude and phase values to produce sounds that aimed to evoke a target emotion like happiness, sadness, etc. It was just an experimental project, but the concept could potentially be useful for music composers or sound designers looking to craft emotional soundscapes and atmospheres in an novel way. Not saying I cracked the code on computationally generating feelings through audio or anything. But it was a fun chance to combine my interests in music and AI/machine learning.",
