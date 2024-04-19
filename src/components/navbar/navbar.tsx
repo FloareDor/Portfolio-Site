@@ -14,7 +14,7 @@ const Navbar = () => {
         <span className="text-white text-2xl lg:text-3xl md:text-3xl sm:text-3xl font-bold">
           <Link href={"/"}>
             <span className="hidden lg:inline text-transparent bg-clip-text bg-gradient-to-br from-purple-900 via-gray-700 to-purple-900">Sai Ravi Teja Gangavarapu</span>
-            <span className="lg:hidden text-transparent bg-clip-text bg-gradient-to-br from-purple-900 via-gray-700 to-purple-900">Ravi</span>
+            <span className="lg:hidden text-transparent bg-clip-text bg-gradient-to-br from-purple-800 via-pink-400 to-purple-900">Ravi</span>
           </Link>
         </span>
 
