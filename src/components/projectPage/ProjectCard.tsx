@@ -5,18 +5,20 @@ import Link from 'next/link';
 interface ProjectCardProps {
   	id: number;
   	title: string;
-  	description: string;
-	image: string;
-	isLeft: boolean;
+  description: string;
+  technologies: string[];
+    image: string;
+    isLeft: boolean;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ id, title, description, image, isLeft }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ id, title, technologies, description, image, isLeft }) => {
   const href = isLeft ? `/left-brain/${id}` : `/right-brain/${id}`;
   const isGif = image.endsWith('.gif');
 
   return (
     <Link href={href}>
       <div className="relative bg-black shadow-md rounded-lg overflow-hidden">
+
         <div className="relative h-36 lg:h-48 md:h-48 sm:h-48">
           {isGif ? (
             <img src={image} alt={title} className="w-full h-full object-cover" />
@@ -25,7 +27,17 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ id, title, description, image
           )}
           <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
         </div>
-        <div className="px-6 py-4">
+        <div className='w-auto bg-black rounded-md flex flex-wrap justify-start items-center pt-4'>
+        {technologies.map((tech, index) => (
+          <div key={index} className='m-1'>
+            {/* <div className='w-auto flex flex-wrap justify-center items-center rounded-lg bg-gradient-to-r from-pink-800 to-purple-800 px-2 py-1'> */}
+            <div className='w-auto flex flex-wrap justify-center items-center rounded-lg bg-gradient-to-br from-gray-900 via-gray-800 to-purple-900 px-2 py-1'>
+              <span className='text-white text-center'>{tech}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+        <div className="py-4 pl-1">
           <h2 className="text-lg sm:text-xl md:text-xl lg:text-xl text-white font-semibold mb-2">{title}</h2>
           <p className="text-gray-300 hidden lg:block md:block sm:block">{description}</p>
         </div>

@@ -21,7 +21,7 @@
 	  "title": "Guitar and Singing Covers",
 	  "description": "I post guitar and singing covers on my Instagram, mostly featuring songs by Ed Sheeran.",
 	  "image": "/images/right/edandshawn.png",
-	  "technologies": ["Guitar", "Singing", "Music Performance"],
+	  "technologies": ["Guitar", "Singing", "Music"],
 	  "liveLink": "https://www.instagram.com/floare_dor/",
 	  "blog": "I'm really into music, especially playing guitar and singing covers. On my Instagram, I post videos of me performing songs that I enjoy listening to. A lot of my covers are Ed Sheeran and Porter Robinson tunes since I connect with the emotional, melodic style.",
 	  "videoLink": ""
@@ -52,7 +52,7 @@
 	  "title": "Top-Down Horror Game with Godot",
 	  "description": "Developed a top-down horror game using the Godot game engine and won a small game jam.",
 	  "image": "/images/right/gamejam.png",
-	  "technologies": ["Godot", "Game Development", "Horror Genre"],
+	  "technologies": ["Godot", "GameDev"],
 	  "githubLink": "https://github.com/FloareDor/AloneGamejam",
 	  "liveLink": "https://floaredor.itch.io/eclipse-of-the-solitary",
 	  "blog": "Made this in a day or two after a long long break from Gamedev. Honestly, this is my first complete (fairly complete) game. Idek how I won that GameJam with this but it was fun working on path tracing.",

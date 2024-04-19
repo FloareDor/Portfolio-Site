@@ -5,6 +5,7 @@ import ProjectGrid from '@/components/projectPage/ProjectGrid';
 interface ProjectData {
   id: number;
   title: string;
+  technologies: string[];
   description: string;
   image: string;
 }

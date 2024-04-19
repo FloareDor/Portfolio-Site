@@ -3,7 +3,8 @@ import ProjectCard from './ProjectCard';
 
 interface Project {
   	id: number;
-  	title: string;
+  title: string;
+  technologies: string[];
   	description: string;
 	image: string;
 	isLeft: boolean;

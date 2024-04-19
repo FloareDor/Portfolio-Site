@@ -2,9 +2,9 @@
 	"1": {
 		"id": 1,
 		"title": "Co-Write: AI-Assisted Learning Platform",
-		"description": "An AI-powered platform that provides targeted assistance to students within professor-defined boundaries, promoting academic integrity and enhancing the learning experience.",
+		"description": "An AI-powered platform that provides targeted assistance to students within professor-defined boundaries, promoting academic integrity.",
 		"image": "/images/left/co-write.png",
-		"technologies": ["Next.js", "Tailwind CSS", "FastAPI", "MongoDB", "Langchain", "RAG"],
+		"technologies": ["Next.js", "FastAPI", "MongoDB", "Langchain", "RAG"],
 		"githubLink": "https://devpost.com/software/co-write-9ip45u",
 		"liveLink": "https://co-write-fe-8u5z.vercel.app/login",
 		"blog": "Have you ever lost a grade due to your professor marking your assignment as 'used AI' falsely? Are you tired of the high error rate AI detection software, making it an annoyance to grade your students?\n\nEnter Co-Write.\n\nBuilt in under 24 hours. CoWriter provides targeted AI assistance within professor-defined boundaries, making it a key component for all student infrastructure applications. We help students and professors set up and submit assignments while maintaining academic integrity and learning objectives, making it fun for both the profs and the students.\n\nFeatures of Co-Write\n\nFor Professors:\n\nCreate Assignments: Easily set up assignments with details like titles, descriptions, and document attachments for contextual AI assistance using RAGs and specific AI limitations.\n\nControl AI Use: Define limitations for OpenAI access to ensure students stay on track and complete assignments independently. We help preserve academic integrity and learning objectives.\n\nBuilt-in Classifier: Utilize the built-in machine learning model to determine if your student needs writing assistance or content generation help, or if it's a direct request for answer generation (which may be restricted).\n\nFor Students:\n\nTargeted Assistance: Leverage CoWriter's RAG implementation for targeted AI assistance within professor-defined document resources getting a head start on understanding assignments. Be able to use AI on your test/essay guilt-free.\n\nAdaptive OpenAI Integration: Access OpenAI's capabilities when professors provide resources, but with limitations to prevent plagiarism and encourage independent work.",
@@ -77,8 +77,7 @@
 		"image": "/images/left/cn.png",
 		"technologies": [
 		  "C++",
-		  "C",
-		  "Socket Programming",
+		  "Sockets",
 		  "Networking Protocols"
 		],
 		"githubLink": "https://github.com/FloareDor/Computer-Networks-Lab",
@@ -92,10 +91,10 @@
 		"description": "This repository contains various programming assignments and implementations related to Microprocessors and Interfacing concepts, completed during my undergraduate studies.",
 		"image": "/images/left/mpi.png",
 		"technologies": [
-		  "Assembly Language (x86-64)",
-		  "C Programming",
-		  "Microprocessor Architecture",
-		  "SIMD Instructions"
+		  "Assembly (x86-64)",
+		  "C",
+		  "Architecture",
+		  "SIMD"
 		],
 		"githubLink": "https://github.com/FloareDor/MPI-LAB",
 		"liveLink": "",
@@ -125,9 +124,8 @@
 		"image": "/images/left/e2e.png",
 		"technologies": [
 		  "Python",
-		  "Socket Programming",
-		  "RSA Encryption",
-		  "Cipher",
+		  "Sockets",
+		  "Encryption",
 		  "Multithreading"
 		],
 		"githubLink": "https://github.com/FloareDor/E2E-Encrypted-ChatRoom",
