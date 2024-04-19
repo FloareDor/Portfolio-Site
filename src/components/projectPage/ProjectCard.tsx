@@ -31,7 +31,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ id, title, technologies, desc
         {technologies.map((tech, index) => (
           <div key={index} className='m-1'>
             {/* <div className='w-auto flex flex-wrap justify-center items-center rounded-lg bg-gradient-to-r from-pink-800 to-purple-800 px-2 py-1'> */}
-            <div className='w-auto flex flex-wrap justify-center items-center rounded-lg bg-gradient-to-br from-gray-900 via-gray-800 to-purple-900 px-2 py-1'>
+            <div className='w-auto flex flex-wrap justify-center items-center rounded-lg bg-gradient-to-br from-black via-gray-900 to-purple-900 px-2 py-1'>
               <span className='text-white text-center'>{tech}</span>
             </div>
           </div>
