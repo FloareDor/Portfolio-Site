@@ -41,7 +41,7 @@
 	  "title": "Music-Based Interactive To-Do List",
 	  "description": "Developed a music-based interactive to-do list site that integrates music with task management.",
 	  "image": "/images/right/to-do-list.png",
-	  "technologies": ["Web Development", "vue.js", "flask", "JavaScript"],
+	  "technologies": ["WebDev", "vue.js", "Python", "JavaScript"],
 	  "githubLink": "https://github.com/FloareDor/to-do-list",
 	  "liveLink": "https://to-do-list-rose-theta.vercel.app/",
 	  "blog": "Just a simple productivity tool that brings sound into the UX. The idea seemed exciting to me back then and that's also the first time I've used an FE framework. Sometimes having a some audio playing can help make repetitive tasks feel less tedious. It's a small thing, but I thought combining those two elements could potentially improve the experience for some people.",
