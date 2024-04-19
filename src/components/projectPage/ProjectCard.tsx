@@ -23,7 +23,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ id, title, technologies, desc
           {isGif ? (
             <img src={image} alt={title} className="w-full h-full object-cover" />
           ) : (
-            <Image src={image} alt={title} layout="fill" objectFit="cover" />
+            <Image src={image} alt={title} layout="fill" objectFit="cover" className='rounded-lg'/>
           )}
           <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
         </div>
@@ -39,7 +39,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ id, title, technologies, desc
       </div>
         <div className="py-4 pl-1">
           <h2 className="text-lg sm:text-xl md:text-xl lg:text-xl text-white font-semibold mb-2">{title}</h2>
-          <p className="text-gray-300 hidden lg:block md:block sm:block">{description}</p>
+          {/* <p className="text-gray-300 hidden lg:block md:block sm:block">{description}</p> */}
         </div>
       </div>
     </Link>
