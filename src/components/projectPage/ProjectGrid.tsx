@@ -1,7 +1,7 @@
 import React from 'react';
 import ProjectCard from './ProjectCard';
 
-interface Project {
+export interface Project {
   	id: number;
   title: string;
   technologies: string[];

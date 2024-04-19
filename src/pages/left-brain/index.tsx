@@ -1,18 +1,6 @@
 import React from 'react';
 import Navbar from '@/components/navbar/navbar';
-import ProjectGrid from '@/components/projectPage/ProjectGrid';
-
-interface ProjectData {
-  id: number;
-  title: string;
-  technologies: string[];
-  description: string;
-  image: string;
-}
-
-interface Project extends ProjectData {
-  isLeft: boolean;
-}
+import ProjectGrid, { Project } from '@/components/projectPage/ProjectGrid';
 
 const LeftBrain: React.FC = () => {
   const [projects, setProjects] = React.useState<Project[]>([]);
@@ -21,7 +9,7 @@ const LeftBrain: React.FC = () => {
     const fetchProjects = async () => {
       try {
         const response = await fetch('/projects/left/left-projects.json');
-        const data: Record<string, ProjectData> = await response.json();
+        const data: Record<string, Project> = await response.json();
         const projectsData = Object.values(data).map((project) => ({
           ...project,
           isLeft: true,
@@ -31,7 +19,6 @@ const LeftBrain: React.FC = () => {
         console.error('Error fetching projects:', error);
       }
     };
-
     fetchProjects();
   }, []);
 
