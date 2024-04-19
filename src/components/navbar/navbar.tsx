@@ -1,7 +1,11 @@
 import Link from "next/link";
 import { useState } from "react";
+import { twMerge } from 'tailwind-merge'
 
-const Navbar = () => {
+interface navbarProps{
+  className?: string;
+}
+const Navbar = ({className} : navbarProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -9,7 +13,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="bg-opacity-95 bg-black fixed top-0 left-0 right-0 z-20">
+    <div className={twMerge("bg-opacity-95 bg-black fixed top-0 left-0 right-0 z-20", className)}>
       <div className="flex flex-row items-center justify-between px-5 py-4 md:px-6 md:pt-10 lg:px-12 lg:pt-10">
         <span className="text-white text-2xl lg:text-3xl md:text-3xl sm:text-3xl font-bold">
           <Link href={"/"}>

@@ -14,7 +14,7 @@ const Home: React.FC = () => {
         <Scene/>
       </div>
       <div className="z-10">
-        <Navbar />
+        <Navbar className='bg-transparent'/>
       </div>
       <span className='text-4xl text-center font-neue-montreal pt-[42vh] text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-500 to-purple-900'>
         Hi I&apos;m Ravi
