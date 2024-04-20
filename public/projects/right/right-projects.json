@@ -68,5 +68,19 @@
 	  "liveLink": "",
 	  "blog": "I worked on this cool research project that used AI to generate sounds based on specific emotions. The idea was to see if machine learning could be applied to create audio with an intended vibe or feeling behind it. Using some MIR techniques, alongside a crazy talented team, I built an algorithm that analyzed different sound characteristics and clustered them into emotional categories. It basically solved for the right amplitude and phase values to produce sounds that aimed to evoke a target emotion like happiness, sadness, etc. It was just an experimental project, but the concept could potentially be useful for music composers or sound designers looking to craft emotional soundscapes and atmospheres in an novel way. Not saying I cracked the code on computationally generating feelings through audio or anything. But it was a fun chance to combine my interests in music and AI/machine learning.",
 	  "videoLink": ""
-	}
+	},
+	"7":{
+		"id": 7,
+		"title": "Battleship Codeathon",
+		"description": "An implementation of the classic Battleship game where teams submit Python programs to play against each other in a competitive programming competition.",
+		"image": "/images/right/battleship.png",
+		"technologies": [
+		  "Python",
+		  "GameDev"
+		],
+		"githubLink": "https://github.com/FloareDor/BattleShip-BattleGround",
+		"liveLink": "",
+		"blog": "Organizing a competitive programming competition around the classic Battleship game was good fun. Instead of traditional human players, teams had to submit Python programs that would play the game against each other autonomously. The project was built using PyGame, a popular library for game development in Python.\n\nThe core of the competition revolved around the BattleShip class, which teams had to implement with specific member variables and functions. This class handled ship placement, attack coordination, and hit/miss tracking. Teams were required to submit a Python file containing this class, adhering to predefined method signatures.\n\nOne of the key features was the automated gameplay between teams' programs. The game engine would set up the battlefields, place ships based on the team's code, and facilitate the attack-defend loop, providing hit/miss information to the programs for further decision-making.\n\nTo spice things up, we introduced special moves like 'Nullify' and 'Missile Hawkeye,' adding strategic depth to the gameplay. The 'Nullify' move allowed teams to nullify their opponent's next chance, effectively giving them a double hit. The 'Missile Hawkeye' move enabled teams to eliminate an entire row and column with a single hit, mimicking a cross-shaped attack.\n\nAnother interesting aspect was the board representation and ship placement rules. Teams had to follow a predefined format to set up their ships, ensuring fair and consistent gameplay across all teams. The attack and hit/miss tracking mechanisms were also carefully crafted to provide meaningful information to the programs while maintaining the excitement of the game.\n\nOverall, this project combined our love for game development and programming in general. It challenged teams to think strategically, optimize their algorithms, and write robust code to outmaneuver their opponents. Seeing the programs battle it out in the Battleship arena was both entertaining, highlighting the creativity and problem-solving skills of the participants.",
+		"videoLink": ""
+	  }
   }
