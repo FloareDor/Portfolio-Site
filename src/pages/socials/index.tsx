@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Navbar from "@/components/navbar/navbar";
-const contact = () => {
+const socials = () => {
 	return (
 		<div>
 			<div className="flex flex-col bg-black">
@@ -18,4 +18,4 @@ const contact = () => {
 		
 	)
 }
-export default contact;
+export default socials;

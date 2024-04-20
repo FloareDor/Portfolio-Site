@@ -26,7 +26,7 @@ const Navbar = ({className} : navbarProps) => {
           <Link href={"/left-brain"}><span className="text-white text-sm lg:text-base md:text-base font-semibold">Left Brain</span></Link>
           <Link href={"/right-brain"}><span className="text-white text-sm lg:text-base md:text-base font-semibold">Right Brain</span></Link>
           <Link href={"/"}><span className="text-white text-sm lg:text-base md:text-base font-semibold">About Me</span></Link>
-          <Link href={"/contact"}><span className="text-white text-sm lg:text-base md:text-base font-semibold">Contact</span></Link>
+          <Link href={"/socials"}><span className="text-white text-sm lg:text-base md:text-base font-semibold">Socials</span></Link>
           <Link href={"/resume.pdf"}><span className="text-white text-sm lg:text-base md:text-base font-semibold">Resume</span></Link>
         </div>
         {/* #005702 */}
@@ -64,7 +64,7 @@ const Navbar = ({className} : navbarProps) => {
           <Link href={"/left-brain"}><span className="block text-white text-base font-semibold mb-2">Left Brain</span></Link>
           <Link href={"/right-brain"}><span className="block text-white text-base font-semibold mb-2">Right Brain</span></Link>
           <Link href={"/"}><span className="block text-white text-base font-semibold mb-2">About Me</span></Link>
-          <Link href={"/contact"}><span className="block text-white text-base font-semibold mb-2">Contact</span></Link>
+          <Link href={"/socials"}><span className="block text-white text-base font-semibold mb-2">Socials</span></Link>
           <Link href={"/resume.pdf"}><span className="block text-white text-base font-semibold ">Resume</span></Link>
         </div>
       )}
