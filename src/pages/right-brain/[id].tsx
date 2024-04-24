@@ -45,7 +45,7 @@ const Project: React.FC = () => {
 
   return (
     <div className="flex flex-col min-h-screen bg-black">
-      <Navbar />
+      <Navbar titleStyle='text-white'/>
       <ProjectDetails project={project} />
       <ProjectBlog project={project} />
     </div>
