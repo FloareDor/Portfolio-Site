@@ -169,6 +169,10 @@
 			"id": 13,
 		  	"title": "This Site",
 			"description": "A portfolio website built using Next.js, TypeScript, and Three.js.",
+			"githubLink": "https://github.com/FloareDor/Portfolio-Site",
+			"image": "/images/left/this-site.png",
+			"liveLink": "/",
+			"videoLink": "",
 			"technologies": [
 				"Next.js",
 				"TypeScript",
