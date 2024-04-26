@@ -23,7 +23,7 @@
 	  },
 	  "3": {
 		"id": 3,
-		"title": "Modular Ray Tracer in C++",
+		"title": "A Modular Ray Tracer in C++",
 		"description": "Implemented a modular ray tracer to render a scene composed of multiple spheres and tetrahedra with different colors and sizes. Added various features such as shading, glazed surfaces, animation, and perspective geometry.",
 		"image": "/images/left/graphics.png",
 		"technologies": ["C++", "OpenGL", "GLFW", "Ray Tracing"],
