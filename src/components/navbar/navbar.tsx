@@ -18,17 +18,17 @@ const Navbar = ({className, titleStyle} : navbarProps) => {
       <div className="flex flex-row items-center justify-between px-5 py-4 md:px-6 md:pt-10 lg:px-12 lg:pt-10">
         <span className="text-white text-2xl lg:text-3xl md:text-3xl sm:text-3xl font-bold">
           <Link href={"/"}>
-            <span className={twMerge("hidden lg:inline text-transparent bg-clip-text bg-gradient-to-br from-white via-gray-500 to-purple-900", titleStyle)}>Sai Ravi Teja Gangavarapu</span>
-            <span className="lg:hidden text-transparent bg-clip-text bg-gradient-to-br from-white via-gray-500 to-purple-900">Ravi</span>
+            <span className={twMerge("hidden lg:inline text-transparent bg-clip-text bg-gradient-to-br from-white via-gray-500 to-purple-900 hover:from-white hover:via-gray-500 hover:to-purple-800", titleStyle)}>Sai Ravi Teja Gangavarapu</span>
+            <span className="lg:hidden text-transparent bg-clip-text bg-gradient-to-br from-white via-gray-500 to-purple-900 hover:from-white hover:via-gray-500 hover:to-purple-700">Ravi</span>
           </Link>
         </span>
 
         <div className="hidden lg:flex md:flex flex-row gap-5 md:gap-3 lg:gap-5 sm:gap-3 items-center">
-          <Link href={"/left-brain"}><span className="text-white text-sm lg:text-base md:text-base font-semibold">Left Brain</span></Link>
-          <Link href={"/right-brain"}><span className="text-white text-sm lg:text-base md:text-base font-semibold">Right Brain</span></Link>
-          <Link href={"/"}><span className="text-white text-sm lg:text-base md:text-base font-semibold">About Me</span></Link>
-          <Link href={"/socials"}><span className="text-white text-sm lg:text-base md:text-base font-semibold">Socials</span></Link>
-          <Link href={"/resume.pdf"}><span className="text-white text-sm lg:text-base md:text-base font-semibold">Resume</span></Link>
+          <Link href={"/left-brain"}><span className="text-white text-sm lg:text-base md:text-base font-semibold hover:text-gray-300">Left Brain</span></Link>
+          <Link href={"/right-brain"}><span className="text-white text-sm lg:text-base md:text-base font-semibold hover:text-gray-300">Right Brain</span></Link>
+          <Link href={"/"}><span className="text-white text-sm lg:text-base md:text-base font-semibold hover:text-gray-300">About Me</span></Link>
+          <Link href={"/socials"}><span className="text-white text-sm lg:text-base md:text-base font-semibold hover:text-gray-300">Socials</span></Link>
+          <Link href={"/resume.pdf"}><span className="text-white text-sm lg:text-base md:text-base font-semibold hover:text-gray-300">Resume</span></Link>
         </div>
         {/* #005702 */}
 
@@ -62,11 +62,11 @@ const Navbar = ({className, titleStyle} : navbarProps) => {
 
       {isOpen && (
         <div className="gap-1 lg:hidden md:hidden px-5 py-4 flex flex-col items-end">
-          <Link href={"/left-brain"}><span className="block text-white text-base font-semibold mb-2">Left Brain</span></Link>
-          <Link href={"/right-brain"}><span className="block text-white text-base font-semibold mb-2">Right Brain</span></Link>
-          <Link href={"/"}><span className="block text-white text-base font-semibold mb-2">About Me</span></Link>
-          <Link href={"/socials"}><span className="block text-white text-base font-semibold mb-2">Socials</span></Link>
-          <Link href={"/resume.pdf"}><span className="block text-white text-base font-semibold ">Resume</span></Link>
+          <Link href={"/left-brain"}><span className="block text-white text-base font-semibold mb-2 focus:text-gray-300">Left Brain</span></Link>
+          <Link href={"/right-brain"}><span className="block text-white text-base font-semibold mb-2 hover:text-gray-300">Right Brain</span></Link>
+          <Link href={"/"}><span className="block text-white text-base font-semibold mb-2 hover:text-gray-300">About Me</span></Link>
+          <Link href={"/socials"}><span className="block text-white text-base font-semibold mb-2 hover:text-gray-300">Socials</span></Link>
+          <Link href={"/resume.pdf"}><span className="block text-white text-base font-semibold hover:text-gray-300">Resume</span></Link>
         </div>
       )}
     </div>

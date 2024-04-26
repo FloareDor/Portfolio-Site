@@ -19,5 +19,11 @@ const config: Config = {
     },
   },
   plugins: [],
+  variants: {
+    extend: {
+      scale: ['active'],
+    },
+  },
 };
+
 export default config;
