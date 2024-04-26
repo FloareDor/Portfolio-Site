@@ -179,5 +179,16 @@
 				"Three.js"
 			],
 			"blog": "Doing the WebGL part of the portfolio site was a lot of fun, especially as I prepared for my final graphics exam at UF. It was fun to apply some concepts I learned in class and bring some interactivity to the site.\n\nThanks to Tailwind CSS, I was able to set up most of the site in under 6 hours. Tailwind made it really easy to style the components and create a consistent design throughout the site."
+		},
+		"14": {
+			"id": 14,
+			"title": "HealthMyMenu (GatorFit)",
+			"description": "An application that combines personal fitness needs with a food recommendation system based on restaurant menus.",
+			"image": "/images/left/healthmymenu2.JPG",
+			"technologies": ["Next.js", "FastAPI", "MongoDB"],
+			"githubLink": "https://github.com/FloareDor/CodeForChange-Hackathon-2024-BE",
+			"liveLink": "https://github.com/Maneeshk11/code-for-change-2024-FE-",
+			"blog": "HealthMyMenu is a full-stack application that merges fitness information with a personalized food recommendation system.\n\n This was the first hackathon at UF that I participated in, and we developed the site in under 8 hours. Due to the tight time constraints, we used a Google authentication system that we had coded up for RateMUProfs. We used MongoDB and FastAPI to quickly prototype the backend, and employed basic macronutrient equations to map user fitness to classes. We utilized a simple Gainesville-based Restaurant Menu Dataset and integrated it with the GPT-3.5 Turbo's API to provide personalized food recommendations based on the user's fitness needs. Although we wanted to implement calorie tracking, time was limited as we ran into some weird Google authentication issues that ate up our time.\n\nOverall, it was good fun being there and brainstorming the idea and implementing it instantly.",
+			"videoLink": ""
 		}
   }
