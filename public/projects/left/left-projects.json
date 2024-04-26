@@ -82,7 +82,7 @@
 		],
 		"githubLink": "https://github.com/FloareDor/Computer-Networks-Lab",
 		"liveLink": "",
-		"blog": "Assignments and projects from my Computer Networks course. The projects cover a wide range of topics, including:\n\n- Error detection and correction using Hamming codes\n- Bit-stuffing for data transmission\n- Stop-and-wait ARQ protocol implementation\n- Cyclic Redundancy Check (CRC) for error detection\n- Socket programming for client-server communication\n- File transfer over a network\n\nThese projects allowed me to apply various networking concepts, protocols, and techniques. From implementing error detection and correction algorithms to developing client-server applications using sockets, the course wasn't too bad, after all it was fun implementing these.\n\n",
+		"blog": "Assignments and projects from my Computer Networks course. The projects cover a wide range of topics, including:\n\n- Error detection and correction using Hamming codes\n- Bit-stuffing for data transmission\n- Stop-and-wait ARQ protocol implementation\n- Cyclic Redundancy Check (CRC) for error detection\n- Socket programming for client-server communication\n- File transfer over a network\n\nFrom implementing error detection and correction algorithms to developing client-server applications using sockets, the course wasn't too bad, after all it was fun implementing these. I'm rn looking to apply some of this make a c++ multiplayer game from scratch, I'll update on this site if I'm anywhere near successful with it lol\n\nCheers.",
 		"videoLink": ""
 	  },
 	  "8": {
