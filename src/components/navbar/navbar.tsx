@@ -17,7 +17,7 @@ const Navbar = ({className, titleStyle} : navbarProps) => {
     <div className={twMerge("bg-opacity-95 bg-black fixed top-0 left-0 right-0 z-20", className)}>
       <div className="flex flex-row items-center justify-between px-5 py-4 md:px-6 md:pt-10 lg:px-12 lg:pt-10">
         <span className="text-white text-2xl lg:text-3xl md:text-3xl sm:text-3xl font-bold">
-          <div className="transition duration-300 ease-in-out transform-gpu hover:scale-95 hover:shadow-lg">
+          <div className="">
           <Link href={"/"}>
             <span className={twMerge("hidden lg:inline text-transparent bg-clip-text bg-gradient-to-br from-white via-gray-500 to-purple-900 hover:from-white hover:via-gray-500 hover:to-purple-800 ", titleStyle)}>Sai Ravi Teja Gangavarapu</span>
             <span className="lg:hidden text-transparent bg-clip-text bg-gradient-to-br from-white via-gray-500 to-purple-900 hover:from-white hover:via-gray-500 hover:to-purple-700">Ravi</span>
