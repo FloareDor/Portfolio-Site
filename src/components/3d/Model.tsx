@@ -1,5 +1,5 @@
 import { useGLTF, MeshTransmissionMaterial, meshBounds } from '@react-three/drei';
-import { useFrame, useThree  } from '@react-three/fiber'; // Import meshBounds
+import { useFrame, useThree  } from '@react-three/fiber'; // meshBounds
 import React, { useRef, useState, useEffect } from 'react';
 import { Mesh } from 'three';
 
@@ -53,7 +53,7 @@ export default function Model() {
 
  return (
     <group scale={50 * (viewport.width / 3.5)}>
-      <mesh ref={mesh} {...nodes.Torus} raycast={meshBounds}> {/* Apply meshBounds here */}
+      <mesh ref={mesh} {...nodes.Torus} raycast={meshBounds}> {}
         <MeshTransmissionMaterial {...materialProps} />
       </mesh>
     </group>

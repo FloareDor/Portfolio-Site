@@ -17,7 +17,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ id, title, technologies, desc
 
   return (
     <Link href={href}>
-      <div className="relative bg-black shadow-md rounded-lg overflow-hidden pt-2 transition duration-300 ease-in-out transform-gpu hover:scale-105 hover:shadow-lg ">
+      <div className="group relative bg-black shadow-md rounded-lg overflow-hidden pt-2 transition duration-700 ease-in-out transform-gpu hover:scale-105 hover:shadow-lg ">
 
         <div className="relative h-36 lg:h-48 md:h-48 sm:h-48">
           {isGif ? (
@@ -39,7 +39,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ id, title, technologies, desc
       </div>
         <div className="py-4 pl-2">
           <h2 className="text-lg sm:text-xl md:text-xl lg:text-xl text-white font-semibold mb-2">{title}</h2>
-          {/* <p className="text-gray-300 hidden lg:block md:block sm:block">{description}</p> */}
+          <p className="text-gray-300 hidden sm:block opacity-0 group-hover:opacity-100 transition duration-700 ease-in-out">{description}</p>
         </div>
       </div>
     </Link>
