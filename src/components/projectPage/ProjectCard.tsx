@@ -25,7 +25,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ id, title, technologies, desc
           ) : (
             <Image src={image} alt={title} layout="fill" objectFit="cover" className='rounded-lg'/>
           )}
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent bg-black opacity-0 sm:opacity-[0.115] transition duration-500 ease-in-out group-hover:opacity-0"></div>
         </div>
         <div className='w-auto bg-black rounded-md flex flex-wrap justify-start items-center pt-4'>
         {technologies.map((tech, index) => (
