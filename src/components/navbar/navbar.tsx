@@ -26,21 +26,11 @@ const Navbar = ({className, titleStyle} : navbarProps) => {
         </span>
 
         <div className="hidden lg:flex md:flex flex-row gap-5 md:gap-3 lg:gap-5 sm:gap-3 items-center">
-          <div className="transition duration-200 ease-in-out transform-gpu hover:scale-95 hover:shadow-lg">
-            <Link href={"/left-brain"}><span className="text-white text-sm lg:text-base md:text-base font-semibold hover:text-gray-300  ">Left Brain</span></Link>
-          </div>
-          <div className="transition duration-200 ease-in-out transform-gpu hover:scale-95 hover:shadow-lg">
-            <Link href={"/right-brain"}><span className="text-white text-sm lg:text-base md:text-base font-semibold hover:text-gray-300">Right Brain</span></Link>
-            </div>
-          <div className="transition duration-200 ease-in-out transform-gpu hover:scale-95 hover:shadow-lg">
-            <Link href={"/"}><span className="text-white text-sm lg:text-base md:text-base font-semibold hover:text-gray-300">About Me</span></Link>
-            </div>
-          <div className="transition duration-200 ease-in-out transform-gpu hover:scale-95 hover:shadow-lg">
-            <Link href={"/socials"}><span className="text-white text-sm lg:text-base md:text-base font-semibold hover:text-gray-300">Socials</span></Link>
-            </div>
-          <div className="transition duration-200 ease-in-out transform-gpu hover:scale-95 hover:shadow-lg">
-            <Link href={"/resume.pdf"}><span className="text-white text-sm lg:text-base md:text-base font-semibold hover:text-gray-300">Resume</span></Link>
-            </div>
+            <Link href={"/left-brain"}><span className="text-gray-300 text-sm lg:text-base md:text-base font-semibold hover:text-white  ">Left Brain</span></Link>
+            <Link href={"/right-brain"}><span className="text-gray-300 text-sm lg:text-base md:text-base font-semibold hover:text-white">Right Brain</span></Link>
+            <Link href={"/"}><span className="text-gray-300 text-sm lg:text-base md:text-base font-semibold hover:text-white">About Me</span></Link>
+            <Link href={"/socials"}><span className="text-gray-300 text-sm lg:text-base md:text-base font-semibold hover:text-white">Socials</span></Link>
+            <Link href={"/resume.pdf"}><span className="text-gray-300 text-sm lg:text-base md:text-base font-semibold hover:text-white">Resume</span></Link>
         </div>
         {/* #005702 */}
 
