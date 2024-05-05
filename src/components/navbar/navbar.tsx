@@ -36,34 +36,36 @@ const Navbar = ({className, titleStyle} : navbarProps) => {
 
         <div className="lg:hidden md:hidden">
           <button
-            className="text-white focus:outline-none"
+            className="text-white w-10 h-10 relative focus:outline-none bg-transparent"
             onClick={toggleMenu}
           >
-            <svg
-              className="w-8 h-8 fill-current"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              {isOpen ? (
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M18.278 16.864a1 1 0 01-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 01-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 011.414-1.414l4.829 4.828 4.828-4.828a1 1 0 111.414 1.414l-4.828 4.829 4.828 4.828z"
-                />
-              ) : (
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h16v2H4v-2z"
-                />
-              )}
-            </svg>
+            <span className="sr-only">Open main menu</span>
+            <div className="block w-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+              <span
+                aria-hidden="true"
+                className={`block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out ${
+                  isOpen ? "rotate-45" : "-translate-y-1.5"
+                }`}
+              ></span>
+              <span
+                aria-hidden="true"
+                className={`block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out ${
+                  isOpen ? "opacity-0" : ""
+                }`}
+              ></span>
+              <span
+                aria-hidden="true"
+                className={`block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out ${
+                  isOpen ? "-rotate-45" : "translate-y-1.5"
+                }`}
+              ></span>
+            </div>
           </button>
         </div>
       </div>
 
       {isOpen && (
-        <div className="gap-1 lg:hidden md:hidden px-5 py-4 flex flex-col items-end">
+        <div className="animate-in slide-in-from-right-full duration-300 gap-1 lg:hidden md:hidden px-5 py-4 flex flex-col items-end">
           <Link href={"/left-brain"}><span className="block text-white text-base font-semibold mb-2 focus:text-gray-300">Left Brain</span></Link>
           <Link href={"/right-brain"}><span className="block text-white text-base font-semibold mb-2 hover:text-gray-300">Right Brain</span></Link>
           <Link href={"/"}><span className="block text-white text-base font-semibold mb-2 hover:text-gray-300">About Me</span></Link>

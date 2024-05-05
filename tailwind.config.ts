@@ -18,7 +18,9 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require("tailwindcss-animate"),
+  ],
   variants: {
     extend: {
       scale: ['active'],
