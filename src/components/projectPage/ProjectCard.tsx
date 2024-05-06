@@ -17,7 +17,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ id, title, technologies, desc
 
   return (
     <Link href={href}>
-      <div className="group relative bg-black shadow-md rounded-lg overflow-hidden pt-2 transition duration-500 ease-in-out transform-gpu hover:scale-105 hover:shadow-lg ">
+      <div className="group relative bg-black shadow-md rounded-lg overflow-hidden pt-2 transition duration-500 ease-in-out transform-gpu hover:scale-105 hover:shadow-lg animate-drop-in ">
 
         <div className="relative h-36 lg:h-48 md:h-48 sm:h-48">
           {isGif ? (

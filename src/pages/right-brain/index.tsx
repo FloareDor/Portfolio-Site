@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from '@/components/navbar/navbar';
+import Navbar from '@/components/navbar/Navbar';
 import ProjectGrid, { Project } from '@/components/projectPage/ProjectGrid';
 
 const RightBrain: React.FC = () => {

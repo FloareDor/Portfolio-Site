@@ -38,3 +38,11 @@ body {
     text-wrap: balance;
   }
 }
+
+.animate-drop-in {
+  animation:drop-in .5s cubic-bezier(.21,1.02,.85,.96)
+}
+
+.no-scroll {
+  overflow: hidden;
+}

@@ -16,6 +16,9 @@ const config: Config = {
       fontFamily: {
         'neue-montreal': ['PPNeueMontreal-Bold', 'sans-serif'],
       },
+      colors: {
+        "nice-gray":"#6b6b6b",
+      },
     },
   },
   plugins: [

@@ -45,7 +45,13 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({ project }) => {
                 href={project.githubLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-4 py-2 bg-black text-gray-200 rounded-lg flex items-center space-x-2 hover:bg-gray-800 transition duration-300"
+                className="
+                  px-4 py-2 bg-black text-gray-200
+                  rounded-lg flex items-center space-x-2 hover:bg-[#000000]
+                  border hover:border border-purple-900
+                  shadow-br shadow-lg shadow-purple-900  hover:border-purple-700 hover:shadow-sm
+                  transition duration-300 ease-in-out  hover:scale-[0.995]
+                "
               >
                 <FontAwesomeIcon icon={faGithub} />
                 <span>GitHub</span>
@@ -56,10 +62,16 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({ project }) => {
                 href={project.liveLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-4 py-2 bg-neutral-800 text-gray-200 rounded-lg flex items-center space-x-2 hover:bg-neutral-700 transition duration-300"
+                className="
+                px-5 py-2 bg-gray-300 text-black
+                rounded-lg flex items-center space-x-2 hover:bg-gray-100
+                border hover:border border-purple-900
+                shadow-br shadow-lg shadow-purple-900  hover:border-purple-700 hover:shadow-lg
+                transition duration-500 ease-in-out transform-gpu hover:scale-[0.995]
+              "
               >
                 <FontAwesomeIcon icon={faLink} />
-                <span>Live Demo</span>
+                <span>Demo</span>
               </a>
             )}
           </div>
