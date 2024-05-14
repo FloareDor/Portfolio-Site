@@ -1,5 +1,6 @@
-import Navbar from "@/components/navbar/Navbar";
-const aboutme = () => {
+
+import Navbar from "../../components/navbar/Navbar";
+const Aboutme = () => {
 	return (
 		<div>
 			<div className="flex flex-col">
@@ -12,4 +13,4 @@ const aboutme = () => {
 		
 	)
 }
-export default aboutme;
+export default Aboutme;
