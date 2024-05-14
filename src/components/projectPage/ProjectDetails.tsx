@@ -49,8 +49,8 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({ project }) => {
                   px-4 py-2 bg-black text-gray-200
                   rounded-lg flex items-center space-x-2 hover:bg-[#000000]
                   border hover:border border-purple-900
-                  shadow-br shadow-lg shadow-purple-900  hover:border-purple-700 hover:shadow-sm
-                  transition duration-300 ease-in-out  hover:scale-[0.995]
+                  shadow-br shadow-lg shadow-purple-900  hover:border-purple-800 hover:shadow-sm
+                  transition duration-300 ease-in-out  hover:scale-[1]
                 "
               >
                 <FontAwesomeIcon icon={faGithub} />
@@ -67,7 +67,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({ project }) => {
                 rounded-lg flex items-center space-x-2 hover:bg-gray-100
                 border hover:border border-purple-900
                 shadow-br shadow-lg shadow-purple-900  hover:border-purple-700 hover:shadow-lg
-                transition duration-500 ease-in-out transform-gpu hover:scale-[0.995]
+                transition duration-500 ease-in-out transform-gpu hover:scale-[1]
               "
               >
                 <FontAwesomeIcon icon={faLink} />

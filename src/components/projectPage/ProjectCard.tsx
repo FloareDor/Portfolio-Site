@@ -21,7 +21,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ id, title, technologies, desc
 
         <div className="relative h-36 lg:h-48 md:h-48 sm:h-48">
           {isGif ? (
-            <img src={image} alt={title} className="w-full h-full object-cover" />
+            <Image src={image} alt={title} className="w-full h-full object-cover" />
           ) : (
             <Image src={image} alt={title} layout="fill" objectFit="cover" className='rounded-lg'/>
           )}

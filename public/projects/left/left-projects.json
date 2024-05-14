@@ -188,7 +188,22 @@
 			"technologies": ["Next.js", "FastAPI", "MongoDB"],
 			"githubLink": "https://github.com/FloareDor/CodeForChange-Hackathon-2024-BE",
 			"liveLink": "https://github.com/Maneeshk11/code-for-change-2024-FE-",
-			"blog": "This was the first hackathon at UF that I participated in, and we developed the site in under 8 hours. Due to the tight time constraints, we used a Google authentication system that we had coded up for RateMUProfs. For the backend, I used MongoDB and FastAPI to quickly prototype, and employed basic macronutrient equations to map user fitness to classes. Furthermore, we utilized a simple Gainesville-based Restaurant Menu Dataset and integrated it with the GPT-3.5 Turbo's API to provide personalized food recommendations based on the user's fitness needs. Although we wanted to implement calorie tracking, time was limited as we ran into some weird Google authentication issues that ate up our time.\n\nOverall, it was good fun being there and brainstorming the idea and implementing it instantly.",
+			"blog": "This was the first hackathon at UF that I participated in, and we developed the site in under 8 hours. Due to the tight time constraints, we used a Google authentication system that we had coded up for RateMUProfs. For the backend, I used MongoDB and FastAPI to quickly prototype, and employed basic macronutrient equations to map user fitness to classes. Furthermore, we utilized a simple Gainesville-based Restaurant Menu Dataset and integrated it with the GPT-3.5 Turbo's API to provide personalized food recommendations based on the user's fitness needs. Although we wanted to implement calorie tracking, time was limited as we ran into some weird Google authentication issues that ate up our time.\n\nOverall, it was good fun being there, brainstorming the idea and implementing it instantly.",
 			"videoLink": ""
-		}
-  }
+		},
+		"15":{
+			"id": 15,
+			"title": "Interview Feedback App",
+			"description": "A full-stack application designed to help interviewers track candidates and rate them after their interviews.",
+			"image": "/images/left/interview.png",
+			"technologies": [
+			  "Next.js",
+			  "FastAPI",
+			  "PostgreSQL"
+			],
+			"githubLink": "https://github.com/FloareDor/interview-feedback-be",
+			"liveLink": "https://github.com/FloareDor/interview-feedback-fe",
+			"blog": "This project is a full-stack application built with Next.js, Tailwind CSS on the frontend, and Python with PostgreSQL on the backend. It allows interviewers to sign up, sign in, and track candidates. Interviewers can also rate candidates after their interviews and provide feedback. The application includes a basic authentication system and a table to display candidate information, interview status, interview feedback, and ratings.",
+			"videoLink": ""
+		  } 
+}
