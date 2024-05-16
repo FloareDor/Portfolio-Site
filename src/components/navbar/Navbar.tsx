@@ -47,11 +47,11 @@ const Navbar = ({className, titleStyle} : navbarProps) => {
 
       {isOpen && (
         <div className="h-screen animate-in slide-in-from-right-full duration-300 gap-1 lg:hidden md:hidden px-5 py-4 flex flex-col items-end">
-          <Link href={"/left-brain"}><span className="block text-white text-base font-semibold mb-2 focus:text-gray-300">Left Brain</span></Link>
-          <Link href={"/right-brain"}><span className="block text-white text-base font-semibold mb-2 hover:text-gray-300">Right Brain</span></Link>
-          <Link href={"/"}><span className="block text-white text-base font-semibold mb-2 hover:text-gray-300">About Me</span></Link>
-          <Link href={"/socials"}><span className="block text-white text-base font-semibold mb-2 hover:text-gray-300">Socials</span></Link>
-          <Link href={"/resume.pdf"}><span className="block text-white text-base font-semibold hover:text-gray-300">Resume</span></Link>
+          <Link href={"/left-brain"}><span onClick={toggleScrollLock} className="block text-white text-base font-semibold mb-2 focus:text-gray-300">Left Brain</span></Link>
+          <Link href={"/right-brain"}><span onClick={toggleScrollLock} className="block text-white text-base font-semibold mb-2 hover:text-gray-300">Right Brain</span></Link>
+          <Link href={"/"}><span onClick={toggleScrollLock} className="block text-white text-base font-semibold mb-2 hover:text-gray-300">About Me</span></Link>
+          <Link href={"/socials"}><span onClick={toggleScrollLock} className="block text-white text-base font-semibold mb-2 hover:text-gray-300">Socials</span></Link>
+          <Link href={"/resume.pdf"}><span onClick={toggleScrollLock} className="block text-white text-base font-semibold hover:text-gray-300">Resume</span></Link>
         </div>
       )}
     </div>
