@@ -217,7 +217,7 @@
 			],
 			"githubLink": "https://github.com/FloareDor/AVL-Tree-Based-Delivery-System",
 			"liveLink": "",
-			"blog": "This project implements an order management system for GatorGlide Delivery Co. using AVL balanced binary search trees. It was developed as part of the Advanced Data Structures course taught by Prof. Sartaj Sahni. The system efficiently handles operations such as creating orders, canceling orders, updating delivery times, and retrieving order information. It utilizes two AVL trees: an Order Priority Tree for storing orders based on priority and an ETA Tree for managing estimated time of arrival. The project demonstrates the application of AVL trees performance of a real-life delivery order management system.",
+			"blog": "This was developed as part of the Advanced Data Structures course taught by Prof. Sartaj Sahni. The system efficiently handles operations such as creating orders, canceling orders, updating delivery times, and retrieving order information. It utilizes two AVL trees: an Order Priority Tree for storing orders based on priority and an ETA Tree for managing estimated time of arrival. The project demonstrates the application of AVL trees performance of a real-life delivery order management system.",
 			"videoLink": ""
 			}
 		
