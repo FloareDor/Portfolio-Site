@@ -40,18 +40,12 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({ project }) => {
             </ul>
           </div>
           <div className="flex space-x-4">
-            {project.githubLink && (
+          {project.githubLink && (
               <a
                 href={project.githubLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="
-                  px-4 py-2 bg-black text-gray-200
-                  rounded-lg flex items-center space-x-2 hover:bg-[#000000]
-                  border hover:border border-purple-900
-                  shadow-br shadow-md shadow-purple-900  hover:border-purple-800 hover:shadow-sm
-                  transition duration-300 ease-in-out  hover:scale-[1]
-                "
+                className="px-4 py-2 bg-black text-gray-200 rounded-lg flex items-center space-x-2 hover:bg-gray-800 transition duration-300"
               >
                 <FontAwesomeIcon icon={faGithub} />
                 <span>GitHub</span>
@@ -66,8 +60,8 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({ project }) => {
                 px-5 py-2 bg-gray-300 text-black
                 rounded-lg flex items-center space-x-2 hover:bg-gray-100
                 border hover:border border-purple-900
-                shadow-br shadow-lg shadow-purple-900  hover:border-purple-700 hover:shadow-lg
-                transition duration-500 ease-in-out transform-gpu hover:scale-[1]
+                shadow-br shadow-sm shadow-purple-900  hover:border-purple-700 hover:shadow-sm
+                transition duration-500 ease-in-out 
               "
               >
                 <FontAwesomeIcon icon={faLink} />
