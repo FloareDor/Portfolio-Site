@@ -66,6 +66,17 @@ export default function SmallModel() {
         anchorY="middle"
       >
         Hi I&apos;m Ravi
+        
+      </Text>
+      <Text
+              fontSize={0.7}
+              font="/fonts/PPNeueMontreal-Bold.otf"
+              position={[0, -3, -20]}
+              color="silver"
+              anchorX="center"
+            anchorY="middle"
+      >
+      Audio X AI  |  FullStack  |  Music Production
       </Text>
       <mesh ref={mesh} {...nodes.Torus}>
         <MeshTransmissionMaterial {...materialProps} />
