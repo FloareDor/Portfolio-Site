@@ -76,7 +76,7 @@ export default function SmallModel() {
               anchorX="center"
             anchorY="middle"
       >
-      Audio X AI  |  FullStack  |  Music Production
+      Audio X AI  |  Full Stack  |  Music Production
       </Text>
       <mesh ref={mesh} {...nodes.Torus}>
         <MeshTransmissionMaterial {...materialProps} />
