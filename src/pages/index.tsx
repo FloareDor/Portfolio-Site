@@ -16,9 +16,15 @@ const Home: React.FC = () => {
       <div className="z-10">
         <Navbar className='bg-transparent' titleStyle='text-white'/>
       </div>
-      <span className='text-4xl text-center font-neue-montreal pt-[42vh] text-transparent bg-clip-text bg-gradient-to-l from-white via-gray-500 to-purple-900'>
-        Hi I&apos;m Ravi
-      </span>
+      <div className='flex flex-col gap-[1vh]'>
+        <span className='text-4xl text-center font-neue-montreal pt-[42vh] text-transparent bg-clip-text bg-gradient-to-l from-white via-gray-500 to-purple-900'>
+          Hi I&apos;m Ravi
+        </span>
+        <span className='text-md text-center font-neue-montreal text-transparent bg-clip-text bg-gradient-to-r from-gray-200 via-gray-400 to-gray-500'>
+          Audio X AI  |  Full Stack  |  Music Production
+        </span>
+      </div>
+      
       <div className="flex-grow"></div>
     </main>
   );
