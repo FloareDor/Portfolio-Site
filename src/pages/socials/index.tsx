@@ -14,6 +14,9 @@ const socials = () => {
                     <Link href={"https://www.linkedin.com/in/sai-ravi-teja-gangavarapu/"} target="_blank">
                         <span className="text-white font-sans hover:text-gray-300">Linkedin</span>
                     </Link>
+                    <Link href={"https://devpost.com/FloareDor"} target="_blank">
+                        <span className="text-white font-sans hover:text-gray-300">Devpost</span>
+                    </Link>
                     <Link href={"https://soundcloud.com/raven-714331711"} target="_blank">
                         <span className="text-white font-sans hover:text-gray-300">SoundCloud</span>
                     </Link>

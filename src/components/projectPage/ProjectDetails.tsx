@@ -57,8 +57,8 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({ project }) => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="
-                px-5 py-2 bg-gray-300 text-black
-                rounded-lg flex items-center space-x-2 hover:bg-gray-100
+                px-5 py-2 bg-gray-200 text-black
+                rounded-lg flex items-center space-x-2 hover:bg-gray-300
                 border hover:border border-purple-900
                 shadow-br shadow-sm shadow-purple-900  hover:border-purple-700 hover:shadow-sm
                 transition duration-500 ease-in-out 
