@@ -10,17 +10,25 @@
 		"blog": "Have you ever lost a grade due to your professor marking your assignment as 'used AI' falsely? Are you tired of the high error rate AI detection software, making it an annoyance to grade your students?\n\nEnter Co-Write.\n\nBuilt in under 24 hours. CoWriter provides targeted AI assistance within professor-defined boundaries, making it a key component for all student infrastructure applications. We help students and professors set up and submit assignments while maintaining academic integrity and learning objectives, making it fun for both the profs and the students.\n\nFeatures of Co-Write\n\nFor Professors:\n\nCreate Assignments: Easily set up assignments with details like titles, descriptions, and document attachments for contextual AI assistance using RAGs and specific AI limitations.\n\nControl AI Use: Define limitations for OpenAI access to ensure students stay on track and complete assignments independently. We help preserve academic integrity and learning objectives.\n\nBuilt-in Classifier: Utilize the built-in machine learning model to determine if your student needs writing assistance or content generation help, or if it's a direct request for answer generation (which may be restricted).\n\nFor Students:\n\nTargeted Assistance: Leverage CoWriter's RAG implementation for targeted AI assistance within professor-defined document resources getting a head start on understanding assignments. Be able to use AI on your test/essay guilt-free.\n\nAdaptive OpenAI Integration: Access OpenAI's capabilities when professors provide resources, but with limitations to prevent plagiarism and encourage independent work.",
 		"videoLink": "https://www.youtube.com/watch?v=PgGDf78yxTg"
 	  },
-	  "2": {
+	  "2":{
 		"id": 2,
-		"title": "RateMUProfessors Site",
-		"description": "A full-stack web application that allows students to provide feedback, reviews, and ratings on courses and instructors.",
-		"image": "/images/left/ratemuprofs.png",
-		"technologies": ["React.js", "MongoDB", "FastAPI", "Node.js"],
-		"githubLink": "https://github.com/FloareDor/RateMuProfs-backend",
-		"liveLink": "https://rate-mu-profs-frontend.vercel.app/login",
-		"blog": "RateMUProfessors is a platform designed to facilitate student feedback and improve the educational experience. With features like course and instructor ratings, past exam papers, and a scalable backend architecture, RateMUProfessors aims to empower students and promote transparency in academia.",
-		"videoLink": ""
-	  },
+		"title": "Flash Focus: AI-Assisted Study Tool",
+		"description": "A Chrome extension that helps students stay focused during exams by turning distractions into bite-sized learning opportunities via AI-generated flashcards based on users' notes.",
+		"image": "/images/left/flash-focus.png",
+		"technologies": [
+			"React",
+			"TypeScript",
+			"Python",
+			"FastAPI",
+			"MongoDB",
+			"Gemini API"
+		],
+		"githubLink": "https://github.com/FloareDor/flash-focus-fe",
+		"liveLink": "https://devpost.com/software/flash-focus-1feb2y",
+		"blog": "We (Vivek Dhir and I) won @WaffleHacks 2024 among 320+ participants, securing Gold in the wellness track plus wins for best UI/UX and best use of AI. Flash Focus, our project, is a Chrome extension that helps students stay focused during exams by turning distractions into opportunities for bite-sized learning via flashcards.\n\nInspired by Clearspace, I thought, 'What if we added flashcards into the mix?' Our pitch: Upload notes, get flashcards, avoid distractions, and ace your exams.\n\nKey features:\n* Retrieval augmented generation to create flashcards from students' notes\n* Gemini AI to check YouTube video relevance to the user's exam\n* Website for custom flashcard creation\n* Cute animation for mindful breathing before engaging with content\n\nWe faced challenges in remote collaboration, learning Chrome extension development, AI integration, and time management. Despite these, we created a fully functional product that addresses a real problem, effectively integrating AI to make our extension smart and adaptable.\n\nFlash Focus is just the beginning – we're cooking more important things in the AI space.",
+		"videoLink": "https://youtu.be/74y-sF3H7g0"
+		},
+
 	  "3": {
 		"id": 3,
 		"title": "A Modular Ray Tracer in C++",
@@ -220,23 +228,16 @@
 			"blog": "This was developed as part of the Advanced Data Structures course taught by Prof. Sartaj Sahni. The system efficiently handles operations such as creating orders, canceling orders, updating delivery times, and retrieving order information. It utilizes two AVL trees: an Order Priority Tree for storing orders based on priority and an ETA Tree for managing estimated time of arrival. The project demonstrates the application of AVL trees performance of a real-life delivery order management system.",
 			"videoLink": ""
 			},
-		"17":{
+		"17": {
 			"id": 17,
-			"title": "Flash Focus: AI-Assisted Study Tool",
-			"description": "A Chrome extension that helps students stay focused during exams by turning distractions into bite-sized learning opportunities via AI-generated flashcards based on users' notes.",
-			"image": "/images/left/flash-focus.png",
-			"technologies": [
-				"React",
-				"TypeScript",
-				"Python",
-				"FastAPI",
-				"MongoDB",
-				"Gemini API"
-			],
-			"githubLink": "https://github.com/FloareDor/flash-focus-fe",
-			"liveLink": "https://devpost.com/software/flash-focus-1feb2y",
-			"blog": "We (Vivek Dhir and I) won @WaffleHacks 2024 among 320+ participants, securing Gold in the wellness track plus wins for best UI/UX and best use of AI. Flash Focus, our project, is a Chrome extension that helps students stay focused during exams by turning distractions into opportunities for bite-sized learning via flashcards.\n\nInspired by Clearspace, I thought, 'What if we added flashcards into the mix?' Our pitch: Upload notes, get flashcards, avoid distractions, and ace your exams.\n\nKey features:\n* Retrieval augmented generation to create flashcards from students' notes\n* Gemini AI to check YouTube video relevance to the user's exam\n* Website for custom flashcard creation\n* Cute animation for mindful breathing before engaging with content\n\nWe faced challenges in remote collaboration, learning Chrome extension development, AI integration, and time management. Despite these, we created a fully functional product that addresses a real problem, effectively integrating AI to make our extension smart and adaptable.\n\nFlash Focus is just the beginning – we're cooking more important things in the AI space.",
-			"videoLink": "https://youtu.be/74y-sF3H7g0"
+			"title": "RateMUProfessors Site",
+			"description": "A full-stack web application that allows students to provide feedback, reviews, and ratings on courses and instructors.",
+			"image": "/images/left/ratemuprofs.png",
+			"technologies": ["React.js", "MongoDB", "FastAPI", "Node.js"],
+			"githubLink": "https://github.com/FloareDor/RateMuProfs-backend",
+			"liveLink": "https://rate-mu-profs-frontend.vercel.app/login",
+			"blog": "RateMUProfessors is a platform designed to facilitate student feedback and improve the educational experience. With features like course and instructor ratings, past exam papers, and a scalable backend architecture, RateMUProfessors aims to empower students and promote transparency in academia.",
+			"videoLink": ""
 			}
 		
 }
