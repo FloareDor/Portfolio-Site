@@ -219,6 +219,24 @@
 			"liveLink": "",
 			"blog": "This was developed as part of the Advanced Data Structures course taught by Prof. Sartaj Sahni. The system efficiently handles operations such as creating orders, canceling orders, updating delivery times, and retrieving order information. It utilizes two AVL trees: an Order Priority Tree for storing orders based on priority and an ETA Tree for managing estimated time of arrival. The project demonstrates the application of AVL trees performance of a real-life delivery order management system.",
 			"videoLink": ""
+			},
+		"17":{
+			"id": 17,
+			"title": "Flash Focus: AI-Assisted Study Tool",
+			"description": "A Chrome extension that helps students stay focused during exams by turning distractions into bite-sized learning opportunities via AI-generated flashcards based on users' notes.",
+			"image": "/images/left/flash-focus.png",
+			"technologies": [
+				"React",
+				"TypeScript",
+				"Python",
+				"FastAPI",
+				"MongoDB",
+				"Gemini API"
+			],
+			"githubLink": "https://github.com/FloareDor/flash-focus-fe",
+			"liveLink": "https://devpost.com/software/flash-focus-1feb2y",
+			"blog": "We (Vivek Dhir and I) won @WaffleHacks 2024 among 320+ participants, securing Gold in the wellness track plus wins for best UI/UX and best use of AI. Flash Focus, our project, is a Chrome extension that helps students stay focused during exams by turning distractions into opportunities for bite-sized learning via flashcards.\n\nInspired by Clearspace, I thought, 'What if we added flashcards into the mix?' Our pitch: Upload notes, get flashcards, avoid distractions, and ace your exams.\n\nKey features:\n* Retrieval augmented generation to create flashcards from students' notes\n* Gemini AI to check YouTube video relevance to the user's exam\n* Website for custom flashcard creation\n* Cute animation for mindful breathing before engaging with content\n\nWe faced challenges in remote collaboration, learning Chrome extension development, AI integration, and time management. Despite these, we created a fully functional product that addresses a real problem, effectively integrating AI to make our extension smart and adaptable.\n\nFlash Focus is just the beginning – we're cooking more important things in the AI space.",
+			"videoLink": "https://youtu.be/74y-sF3H7g0"
 			}
 		
 }
