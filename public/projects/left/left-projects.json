@@ -238,6 +238,22 @@
 			"liveLink": "https://rate-mu-profs-frontend.vercel.app/login",
 			"blog": "RateMUProfessors is a platform designed to facilitate student feedback and improve the educational experience. With features like course and instructor ratings, past exam papers, and a scalable backend architecture, RateMUProfessors aims to empower students and promote transparency in academia.",
 			"videoLink": ""
-			}
+			},
+			"18":{
+				"id": 18,
+				"title": "RainPod: Interactive Agentic Podcasts",
+				"description": "A platform that generates interactive podcasts using AI agents in the rain, allowing users to learn and explore topics hands-free during commutes or travel.",
+				"image": "/images/left/rainpod1.png",
+				"technologies": [
+				"Next.js",
+				"Crew AI",
+				"FastAPI",
+				"WebSockets"
+				],
+				"githubLink": "https://github.com/FloareDor/interactive-podcast-generator",
+				"liveLink": "https://devpost.com/software/nebulapod",
+				"blog": "RainPod is a project developed during CalCodeFest in 2-3 days. It addresses the challenge of learning something niche during commutes or travel by generating interactive AI-powered podcasts.\n\nKey features include:\n- Engaging Host AI mimicking charismatic podcast hosts\n- Domain Expert AI providing in-depth digestible explanations\n- Interactive Agentic Framework allowing real-time user interaction\n\nI built RainPod using CrewAI, Gemini API, and WebSockets for the backend, with Next.js for the frontend. Challenges included integrating audio seamlessly, adapting to AI agent complexities, and overcoming remote collaboration hurdles.\n\nFuture plans include enhancing emotional nuances in text-to-speech, improving UI, and scaling AI capabilities to cover diverse topics and languages.\n\nThis project showcases the practical applications of AI in educational content creation and demonstrates our team's ability to develop innovative solutions under time constraints.",
+				"videoLink": "https://youtu.be/ZV2jTCv3W1Q?si=hrnASGS5uWLp9Z5I"
+				}
 		
 }
