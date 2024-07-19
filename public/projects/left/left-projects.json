@@ -242,7 +242,7 @@
 			"18":{
 				"id": 18,
 				"title": "RainPod: Interactive Agentic Podcasts",
-				"description": "A platform that generates interactive podcasts using AI agents in the rain, allowing users to learn and explore topics hands-free during commutes or travel.",
+				"description": "A rainy site that lets you interact with agentic podcast hosts in real time.",
 				"image": "/images/left/rainpod1.png",
 				"technologies": [
 				"Next.js",
