@@ -37,7 +37,7 @@
 		"technologies": ["C++", "OpenGL", "GLFW", "Ray Tracing"],
 		"githubLink": "https://github.com/FloareDor/Computer-Graphics",
 		"liveLink": "",
-		"blog": "In this project, I developed a first-hit ray tracer from scratch using C++. Starting with a directional light and parallel camera geometry, I generated rays and solved ray-object intersection problems to determine pixel colors. I then added ambient, diffuse, and specular shading to enhance the realism of the rendered scene. To further improve the visual quality, I incorporated a glazed surface effect. I also created a small animation by moving the camera and objects, assembling the rendered frames into a movie. As a final touch, I provided an option to switch between parallel and perspective camera geometries. This project allowed me to gain a deep understanding of the fundamentals of ray tracing and its application in creating visually appealing scenes.",
+		"blog": "I built a ray tracer in C++ for a project. Started with a basic setup - directional light and a simple camera. The main task was calculating where light rays intersected with objects to determine pixel colors. Then I improved it by adding better lighting effects for more realism - things like shadows and reflections. I also added a glossy surface effect that worked out well. I made a short animation by moving the camera and objects, then combining the frames into a video. I also added an option to switch between two camera modes. It was interesting to see how ray tracing works in practice. I learned a lot about the underlying principles while working on this project ~ model transformations.",
 		"videoLink": "https://youtu.be/Mn5N6SsrhH8?si=JmcQF3ZNq2f4CWBM"
 	  },
 	  "4": {
