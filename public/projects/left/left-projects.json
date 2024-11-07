@@ -270,6 +270,23 @@
 					"liveLink": "https://resumesmith.vercel.app",
 					"blog": "Whipped up this simple tool one weekend because formatting resumes is a pain. It's pretty simple - you feed it your existing resume, and it spits out a slick version in whatever layout you want.\n\nWhat it does:\n- Switches up your resume format without the headache\n- Makes it cleaner\n- Has this neat 'summarise-to-fit' thing for force condensing the resume into one or two page\n\nBuilt it with Next.js and Python, and tossed it up on Vercel. Nothing fancy, just works.\n\n Might add client side LaTeX compiling soon for users to edit the result.\n\nAlso, I'm super happy I got 150 users or so :)\nhttps://drive.google.com/file/d/1F5Npa0mqs-2N9HmJ7IQjwiVyKL0tT11W/view?usp=sharing",
 					"videoLink": ""
-				}
+				},
+				"20":{
+					"id": 20,
+					"title": "SampleBox: desktop app for sample flipping",
+					"description": "A desktop app that generates a box of inspiration from any song, inspired by Daft Punk's sampling techniques. Features stem separation, drum extraction, and creative sample flips using music theory.",
+					"image": "/images/left/samplebox.png",
+					"technologies": [
+					"Electron.js",
+					"FastAPI",
+					"Python",
+					"librosa",
+					"WebSockets"
+					],
+					"githubLink": "https://github.com/FloareDor/samplebox",
+					"liveLink": "https://x.com/DorFloare/status/1817256198128931107",
+					"blog": "SampleBox started as a passion project during the buildspace period, inspired by Daft Punk's legendary sampling techniques that I saw on Tracklib. As an electronic music producer myself, I wanted to automate the creative sampling process. What began as a simple loop generator evolved into a sample flipping software as I incorporated music theory and some production needs.\n\nThe app uses some audio processing techniques including:\n- Harmonic-percussive source separation\n- drum hit extraction with classification (kick, snare, hi-hat)\n- Wonky sample manipulation (pitch shifting, time stretching, reversing)\n- chopping + rearranging + Key detection and chord progression analysis + for musical coherence\n\nOne of the biggest challenges was implementing drag-and-drop functionality that would work with DAWs like FL Studio. I initially tried building it with Tauri but had to switch to Electron to achieve that desired file system interaction.\n\nThe backend uses scipy and librosa for audio processing and FastAPI with WebSockets for real-time progress updates. I focused on making the UI round and dreamy but intuitive with Tailwind CSS, as I wanted it to feel natural for music producers to use.\n\nI have been happu that 25 people signed up for the waitlist, validating at least some of idea haha (but hey anyway, I keep using it for fun). The early access version is now live and free. Future plans include implementing client-side processing for faster performance, making the music theory algorithms better and looking into diffusion and CLAP based models.\n\nThis project combines my love for music production, programming, and creating tools that help other artists. It also made me happy cuz it was almost the first time I reached out for people to use something I made (buildspace and Farza pushed me to do it honestly and I'll forever be grateful for buildspace for it helped me open up my little work to the world and made me discover a sense of meaning in building things :).",
+					"videoLink": "https://x.com/DorFloare/status/1817256198128931107"
+					}
 		
 }
