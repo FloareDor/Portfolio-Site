@@ -287,6 +287,24 @@
 					"liveLink": "https://x.com/DorFloare/status/1817256198128931107",
 					"blog": "SampleBox started as a passion project during the buildspace period, inspired by Daft Punk's legendary sampling techniques that I saw on Tracklib. As an electronic music producer myself, I wanted to automate the creative sampling process. What began as a simple loop generator evolved into a sample flipping software as I incorporated music theory and some production needs.\n\nThe app uses some audio processing techniques including:\n- Harmonic-percussive source separation\n- drum hit extraction with classification (kick, snare, hi-hat)\n- Wonky sample manipulation (pitch shifting, time stretching, reversing)\n- chopping + rearranging + Key detection and chord progression analysis + for musical coherence\n\nOne of the biggest challenges was implementing drag-and-drop functionality that would work with DAWs like FL Studio. I initially tried building it with Tauri but had to switch to Electron to achieve that desired file system interaction.\n\nThe backend uses scipy and librosa for audio processing and FastAPI with WebSockets for real-time progress updates. I focused on making the UI round and dreamy but intuitive with Tailwind CSS, as I wanted it to feel natural for music producers to use.\n\nI have been happu that 25 people signed up for the waitlist, validating at least some of idea haha (but hey anyway, I keep using it for fun). The early access version is now live and free. Future plans include implementing client-side processing for faster performance, making the music theory algorithms better and looking into diffusion and CLAP based models.\n\nThis project combines my love for music production, programming, and creating tools that help other artists. It also made me happy cuz it was almost the first time I reached out for people to use something I made (buildspace and Farza pushed me to do it honestly and I'll forever be grateful for buildspace for it helped me open up my little work to the world and made me discover a sense of meaning in building things :).",
 					"videoLink": "https://x.com/DorFloare/status/1817256198128931107"
-					}
+					},
+					"21":{
+						"id": 21,
+						"title": "CUDA Ray Tracer with Audio-Reactive Boids",
+						"description": "A real-time ray tracer built with CUDA Python that combines GPU-accelerated rendering with a Boids flocking simulation, featuring audio reactivity and real-time music visualization.",
+						"image": "/images/left/solar.png",
+						"technologies": [
+						  "CUDA",
+						  "Python",
+						  "Ray Tracing",
+						  "Audio",
+						  "NumPy",
+						  "PyGame"
+						],
+						"githubLink": "https://github.com/FloareDor/cuda-raytracer",
+						"liveLink": "https://github.com/FloareDor/cuda-raytracer",
+						"blog": "Wrapped up NVIDIA's CUDA Python course and built a ray tracer (in Python 💀). Started with the basics - shadows, reflections, and lighting effects. Got massive speedups by moving ray-sphere intersection and shading calculations to the GPU - turns out Python isn't that slow if you don't actually use Python.\n\nAfter getting the core rendering working and plotting some performance comparisons between CUDA vs numba.jit vs bare Python, I added basic FPS controls and made a quick aim trainer with it. Then came the fun part - implementing a Boids flocking simulation with 256 bird agents (as spheres).\n\nWired this up to audio input with FFT and onset detection so the flock reacts to music frequencies and beats in real-time. Each bird's movement (separation, cohesion, alignment) changes based on different frequency bands. Kept the FPS controls so you can fly around and spectate.\n\nCode's a mess right now but it works ¯\\_(ツ)_/¯\n\nCurrently, I'm grinding Math Academy to (re)learn math for ML. Trying to get comfortable with the complexity in deep learning and audio processing research. Multimodal vector search and sound design have been very interesting to play around with lately.",
+						"videoLink": "https://youtu.be/af9BXI05vT8"
+					  }
 		
 }
