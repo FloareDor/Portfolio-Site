@@ -302,7 +302,7 @@
 						  "PyGame"
 						],
 						"githubLink": "https://github.com/FloareDor/cuda-raytracer",
-						"liveLink": "https://github.com/FloareDor/cuda-raytracer",
+						"liveLink": "https://x.com/DorFloare/status/1858644451717210228",
 						"blog": "Wrapped up NVIDIA's CUDA Python course and built a ray tracer (in Python 💀). Started with the basics - shadows, reflections, and lighting effects. Got massive speedups by moving ray-sphere intersection and shading calculations to the GPU - turns out Python isn't that slow if you don't actually use Python.\n\nAfter getting the core rendering working and plotting some performance comparisons between CUDA vs numba.jit vs bare Python, I added basic FPS controls and made a quick aim trainer with it. Then came the fun part - implementing a Boids flocking simulation with 256 bird agents (as spheres).\n\nWired this up to audio input with FFT and onset detection so the flock reacts to music frequencies and beats in real-time. Each bird's movement (separation, cohesion, alignment) changes based on different frequency bands. Kept the FPS controls so you can fly around and spectate.\n\nCode's a mess right now but it works ¯\\_(ツ)_/¯\n\nCurrently, I'm grinding Math Academy to (re)learn math for ML. Trying to get comfortable with the complexity in deep learning and audio processing research. Multimodal vector search and sound design have been very interesting to play around with lately.",
 						"videoLink": "https://youtu.be/af9BXI05vT8"
 					  }
