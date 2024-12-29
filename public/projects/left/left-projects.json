@@ -314,7 +314,7 @@
 						"technologies": [
 						  "Python",
 						  "PyTorch",
-						  "LAION-CLAP",
+						  "CLAP",
 						  "TorchSynth",
 						  "Differential Evolution"
 						],
