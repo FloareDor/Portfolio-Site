@@ -305,6 +305,23 @@
 						"liveLink": "https://x.com/DorFloare/status/1858644451717210228",
 						"blog": "Wrapped up NVIDIA's CUDA Python course and built a ray tracer (in Python 💀). Started with the basics - shadows, reflections, and lighting effects. Got massive speedups by moving ray-sphere intersection and shading calculations to the GPU - turns out Python isn't that slow if you don't actually use Python.\n\nAfter getting the core rendering working and plotting some performance comparisons between CUDA vs numba.jit vs bare Python, I added basic FPS controls and made a quick aim trainer with it. Then came the fun part - implementing a Boids flocking simulation with 256 bird agents (as spheres).\n\nWired this up to audio input with FFT and onset detection so the flock reacts to music frequencies and beats in real-time. Each bird's movement (separation, cohesion, alignment) changes based on different frequency bands. Kept the FPS controls so you can fly around and spectate.\n\nCode's a mess right now but it works ¯\\_(ツ)_/¯\n\nCurrently, I'm grinding Math Academy to (re)learn math for ML. Trying to get comfortable with the complexity in deep learning and audio processing research. Multimodal vector search and sound design have been very interesting to play around with lately.",
 						"videoLink": "https://youtu.be/af9BXI05vT8"
+					  },
+					  "22": {
+						"id": 22,
+						"title": "Text-Guided Sound Synthesis",
+						"description": "An implementation exploring text-to-audio synthesis using modular synthesis and parameter optimization, enabling automatic synthesizer programming based on target sounds or text descriptions.",
+						"image": "/images/left/synth.png",
+						"technologies": [
+						  "Python",
+						  "PyTorch",
+						  "LAION-CLAP",
+						  "TorchSynth",
+						  "Differential Evolution"
+						],
+						"githubLink": "https://github.com/floaredor/clapsynth",
+						"liveLink": "",
+						"videoLink": "",
+						"blog": "Implemented an approach to text-guided sound synthesis that combines traditional modular synthesis with a neural audio-language model. The system uses a virtual modular synthesizer (TorchSynth) with 78 parameters including oscillators, LFOs, ADSR envelopes, and a modulation matrix.\n\nThe core contains two main components:\n\n1. Parameter Optimization:\n- Implemented differential evolution to optimize synthesizer parameters based on text descriptions\n- Utilized LAION-CLAP embeddings for semantic matching between synthesized audio and text prompts\n- Developed a parallel processing pipeline for efficient parameter search\n- I didn't do a comprehensive testing but it worked for a few short text phrases I tested\n\n2. Synthesis Engine:\n- Implemented inverse synthesis optimization to recreate target sounds by finding optimal synthesizer parameters\n- Integrated STFT-based audio comparison metrics for parameter optimization\n- Supports basic parameter interpolation for smooth transitions between different sounds\n\nThe project serves as a proof-of-concept for combining traditional synthesis techniques with contrastive pre-trained models and basic optimization techniques for sound matching and generation. While still in early stages, it demonstrates the potential for using optimization techniques to automatically program synthesizer parameters based on target sounds or descriptions."
 					  }
 		
 }
