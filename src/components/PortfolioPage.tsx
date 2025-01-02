@@ -2,12 +2,18 @@
 import React from 'react';
 import { ExternalLink, ChevronRight, Music, Code, Brain, Award, Microscope } from 'lucide-react';
 import InstagramEmbed from './InstagramEmbed';
+import Navbar from '@/components/navbar/Navbar';
 
 export default function PortfolioPage() {
   return (
+    <div className=''>
+    <div className="z-10">
+    <Navbar className='bg-transparent' titleStyle='text-white'/>
+  </div>
     <div className="min-h-screen bg-black text-gray-100">
+
       {/* Hero Section */}
-      <header className="bg-gradient-to-r from-blue-900 to-purple-900 py-20">
+      <header className="bg-gradient-to-r from-blue-900 to-purple-900 py-40">
         <div className="max-w-6xl mx-auto px-4">
           <h1 className="text-4xl font-bold mb-4">Sai Ravi Teja Gangavarapu</h1>
           <p className="text-xl mb-6">Music Technology Researcher & Software Engineer</p>
@@ -16,22 +22,119 @@ export default function PortfolioPage() {
       </header>
 
       <main className="max-w-6xl mx-auto px-4 py-12">
-        {/* Research Publications */}
+        {/* Education */}
         <section className="mb-16">
           <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
-            <Microscope className="w-6 h-6" />
-            Research Publications
+            <Brain className="w-6 h-6" />
+            Education
           </h2>
           <div className="bg-gray-900 rounded-lg shadow-xl p-6">
             <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-2">IEEE WCCI 2024 (CEC)</h3>
-              <p className="text-gray-400 mb-4">
-                "Emotion Aligned Music Composition from Sound Fundamentals Using Differential Evolution"
-              </p>
+              <h3 className="text-xl font-semibold mb-2">University of Florida <span className="text-gray-400">(Jan 2024 – May 2024)</span></h3>
+              <p className="text-gray-300">Senior Certificate + Master's coursework in Computer Science, CISE Department</p>
+              <p className="text-gray-400 mb-2">GPA: 4.0/4.0</p>
+              <p className="text-gray-400">Courses: Analysis of Algorithms, Advanced Data Structures, Computer Graphics, UX Design</p>
+            </div>
+            <div className="mb-6">
+              <h3 className="text-xl font-semibold mb-2">Mahindra École Centrale <span className="text-gray-400">(2020 - 2024)</span></h3>
+              <p className="text-gray-300">B.Tech, Computer Science and Engineering</p>
+              <p className="text-gray-400">Hyderabad, India</p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold mb-2">Kennedy High The Global School <span className="text-gray-400">(2018 - 2020)</span></h3>
+              <p className="text-gray-300">A-levels - Mathematics, Physics and Chemistry</p>
+              <p className="text-gray-400">AAB Grades</p>
+            </div>
+          </div>
+        </section>
+
+        {/* Research Experience */}
+        <section className="mb-16">
+          <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+            <Microscope className="w-6 h-6" />
+            Research Experience
+          </h2>
+          <div className="bg-gray-900 rounded-lg shadow-xl p-6">
+            <div className="mb-6">
+              <h3 className="text-xl font-semibold mb-2">Michigan State University Research <span className="text-gray-400">(Sept 2024 – Present)</span></h3>
+              <p className="text-gray-400 mb-4">Working on emotional music transitions and therapeutic music generation</p>
+              <ul className="list-disc pl-6 text-gray-300">
+                <li className="mb-2">Developing therapeutic music generation systems using the iso principle for mood transition</li>
+                <li className="mb-2">Investigating multi-objective optimization for raga-based music generation</li>
+                <li>Collaboration with Dr. Kalyanmoy Dev and Prof. Arya Kumar</li>
+              </ul>
+            </div>
+            <div className="mb-6">
+              <h3 className="text-xl font-semibold mb-2">Mahindra École Centrale Research <span className="text-gray-400">(Oct 2022 – Sept 2024)</span></h3>
+              <p className="text-gray-400 mb-4">IEEE WCCI 2024 (CEC) Publication</p>
               <ul className="list-disc pl-6 text-gray-300">
                 <li className="mb-2">Developed novel differential evolution system for emotion-aligned sound synthesis</li>
                 <li className="mb-2">Combined music information retrieval with evolutionary computation</li>
-                <li>Achieved 90% classification accuracy using self-organizing maps and fuzzy clustering</li>
+                <li className="mb-2">Achieved 90% classification accuracy using self-organizing maps and fuzzy clustering</li>
+                <li>Designed pipelines for extracting 100+ time and frequency-based features</li>
+              </ul>
+            </div>
+            <div className="mb-6">
+              <h3 className="text-xl font-semibold mb-2">Fan Lab Research - Genomic ML <span className="text-gray-400">(Feb 2024 – Present)</span></h3>
+              <p className="text-gray-400 mb-4">Research on genomic foundational models and RNA-protein interactions</p>
+              <ul className="list-disc pl-6 text-gray-300">
+                <li className="mb-2">Conducted research under Dr. Xiao Fan on genomic foundational models using nucleotide variance techniques</li>
+                <li>Developing neural network system for RNA-Protein interaction prediction to aid in cancer diagnosis</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* Work Experience */}
+        <section className="mb-16">
+          <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+            <Code className="w-6 h-6" />
+            Work Experience
+          </h2>
+          <div className="space-y-6">
+            <div className="bg-gray-900 rounded-lg shadow-xl p-6">
+              <h3 className="text-xl font-semibold mb-2">
+                <a href="https://www.instagram.com/tapsta.app/" className="text-xl font-semibold hover:text-blue-400 flex items-center gap-2">
+                  Tapsta
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+              </h3>
+              <p className="text-gray-400 mb-4">Lead Software/Founding Engineer</p>
+              <ul className="list-disc pl-6 text-gray-300">
+                <li className="mb-2">Leading development team of 4 building social media app connecting students with local merchants (1000+ users)</li>
+                <li className="mb-2">Designed scalable architecture with 20+ schemas, shipped 50,000+ lines of code across front/backend</li>
+                <li className="mb-2">Implemented CI/CD pipelines and optimized database queries</li>
+                <li>Mentored 3 SDE interns, accelerating project velocity and code quality</li>
+              </ul>
+            </div>
+
+            <div className="bg-gray-900 rounded-lg shadow-xl p-6">
+              <h3 className="text-xl font-semibold mb-2">
+                <a href="https://oneaiclick.com" className="text-xl font-semibold hover:text-blue-400 flex items-center gap-2">
+                  OneAIclick.com
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+              </h3>
+              <p className="text-gray-400 mb-4">Co-Founder/Founding Engineer</p>
+              <ul className="list-disc pl-6 text-gray-300">
+                <li className="mb-2">Building private LLM pipeline abstraction tooling for easy fine-tuning and deployment</li>
+                <li className="mb-2">Developed no-code GUI for fine-tuning open-source HuggingFace LLMs</li>
+                <li>Speeding up validation of fine-tuning on custom datasets by 2X over traditional methods</li>
+              </ul>
+            </div>
+
+            <div className="bg-gray-900 rounded-lg shadow-xl p-6">
+              <h3 className="text-xl font-semibold mb-2">
+                <a href="https://garden.finance" className="text-xl font-semibold hover:text-blue-400 flex items-center gap-2">
+                  Catalog.fi
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+              </h3>
+              <p className="text-gray-400 mb-4">Software Development Engineer Intern</p>
+              <ul className="list-disc pl-6 text-gray-300">
+                <li className="mb-2">Fine-tuned language models and developed custom API mapping system to teach language models to use APIs.</li>
+                <li className="mb-2">Implemented real-time data analytics system for crypto token volume monitoring</li>
+                <li>Contributed to facilitating $150M+ in trading volume over 30 days</li>
               </ul>
             </div>
           </div>
@@ -41,26 +144,172 @@ export default function PortfolioPage() {
         <section className="mb-16">
           <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
             <Music className="w-6 h-6" />
-            Music Technology Projects
+            Music Technology Projects <span className="text-gray-400">(2021 – Present)</span>
           </h2>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="space-y-6">
             <div className="bg-gray-900 rounded-lg shadow-xl p-6">
-              <h3 className="text-xl font-semibold mb-2">Samplebox</h3>
-              <p className="text-gray-400 mb-4">Desktop application to generate sample packs from any song for inspiration (30+ active users)</p>
+              <h3 className="text-xl font-semibold mb-2">Music Theory & Audio Programming Studies</h3>
               <ul className="list-disc pl-6 text-gray-300">
-                <li className="mb-2">Stem separation and drum kit extraction</li>
-                <li className="mb-2">algorithmic variations of harmonic samples that sound good</li>
+                <li className="mb-2">Currently studying Fundamentals of Music Theory (University of Edinburgh) on Coursera</li>
+                <li className="mb-2">Developing audio plugins using C++ & JUCE framework</li>
+                <li>Implementing real-time audio processing and synthesis techniques</li>
+              </ul>
+            </div>
+            
+            <div className="bg-gray-900 rounded-lg shadow-xl p-6">
+              <h3 className="text-xl font-semibold mb-2">
+                <a href="https://floaredor.vercel.app/left-brain" className="text-xl font-semibold hover:text-blue-400 flex items-center gap-2">
+                  Samplebox
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+              </h3>
+              <p className="text-gray-400 mb-4">Desktop application for music production workflow (30+ active users)</p>
+              <ul className="list-disc pl-6 text-gray-300">
+                <li className="mb-2">Implemented stem separation and drum kit extraction</li>
+                <li className="mb-2">Created algorithmic variations of harmonic samples using music theory principles</li>
                 <li>Built with Electron.js, FastAPI, and Librosa</li>
               </ul>
             </div>
+
             <div className="bg-gray-900 rounded-lg shadow-xl p-6">
-              <h3 className="text-xl font-semibold mb-2">Text-to-Synthesizer System</h3>
-              <p className="text-gray-400 mb-4">Parameter mapping using LAION-CLAP embeddings</p>
+              <h3 className="text-xl font-semibold mb-2">
+                <a href="https://floaredor.vercel.app/left-brain" className="text-xl font-semibold hover:text-blue-400 flex items-center gap-2">
+                  Text-to-Synthesizer System
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+              </h3>
+              <p className="text-gray-400 mb-4">Natural language control of synthesizer parameters</p>
               <ul className="list-disc pl-6 text-gray-300">
+                <li className="mb-2">Parameter mapping using LAION-CLAP embeddings</li>
                 <li className="mb-2">PyTorch implementation with differential evolution</li>
-                <li className="mb-2">Natural language control of synthesizer parameters</li>
                 <li>STFT-based timbre matching capabilities</li>
               </ul>
+            </div>
+
+            <div className="bg-gray-900 rounded-lg shadow-xl p-6">
+              <h3 className="text-xl font-semibold mb-2">
+                <a href="https://floaredor.vercel.app/left-brain/21" className="text-xl font-semibold hover:text-blue-400 flex items-center gap-2">
+                  Audio-Visual Integration Projects
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+              </h3>
+              <ul className="list-disc pl-6 text-gray-300">
+                <li className="mb-2">CUDA-accelerated ray tracer with FFT-based audio reactivity</li>
+                <li className="mb-2">Audio-reactive GAN art installations</li>
+                <li>Boids simulation with audio parameter mapping</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* Other Technical Projects */}
+        <section className="mb-16">
+          <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+            <Code className="w-6 h-6" />
+            Other Technical Projects
+          </h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="bg-gray-900 rounded-lg shadow-xl p-6">
+              <h3 className="text-xl font-semibold mb-2">
+                <a href="https://floaredor.vercel.app/left-brain" className="text-xl font-semibold hover:text-blue-400 flex items-center gap-2">
+                  Project RECON
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+              </h3>
+              <p className="text-gray-400 mb-4">8-pi compute cluster serving 400+ students</p>
+              <ul className="list-disc pl-6 text-gray-300">
+                <li className="mb-2">Implemented VLANs and distributed storage</li>
+                <li className="mb-2">$2000 funded university infrastructure project</li>
+                <li>GlusterFS and OpenMPI implementation</li>
+              </ul>
+            </div>
+            <div className="bg-gray-900 rounded-lg shadow-xl p-6">
+              <h3 className="text-xl font-semibold mb-2">
+                <a href="https://floaredor.vercel.app/left-brain" className="text-xl font-semibold hover:text-blue-400 flex items-center gap-2">
+                  Co-Write
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+              </h3>
+              <p className="text-gray-400 mb-4">AI-powered learning platform with academic integrity focus</p>
+              <ul className="list-disc pl-6 text-gray-300">
+                <li className="mb-2">Custom RAG model implementation</li>
+                <li className="mb-2">Next.js, FastAPI, and LangChain stack</li>
+                <li>Professor-defined AI assistance boundaries</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* Achievements */}
+        <section className="mb-16">
+          <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+            <Award className="w-6 h-6" />
+            Notable Achievements
+          </h2>
+          <div className="bg-gray-900 rounded-lg shadow-xl p-6">
+            <div className="space-y-6">
+              <div className="achievement-item">
+                <h3 className="text-xl font-semibold text-blue-400">
+                  <a href="https://floaredor.vercel.app/left-brain" className="flex items-center gap-2 hover:text-blue-300">
+                    WaffleHacks 2024 - First Place <span className="text-gray-400">(2024)</span>
+                    <ExternalLink className="w-4 h-4" />
+                  </a>
+                </h3>
+                <p className="text-gray-400 mb-2">320+ participants</p>
+                <ul className="list-disc pl-6 text-gray-300">
+                  <li className="mb-2">Built Chrome extension with RAG system for personalized learning in 24 hours</li>
+                </ul>
+              </div>
+
+              <div className="achievement-item">
+                <h3 className="text-xl font-semibold text-blue-400">
+                  <a href="https://floaredor.vercel.app/left-brain" className="flex items-center gap-2 hover:text-blue-300">
+                    Aether Game Jam 2024 - First Place <span className="text-gray-400">(2024)</span>
+                    <ExternalLink className="w-4 h-4" />
+                  </a>
+                </h3>
+                <ul className="list-disc pl-6 text-gray-300">
+                  <li className="mb-2">Developed top-down horror game using Godot engine in 48 hrs</li>
+                  <li className="mb-2">Implemented A* pathfinding algorithm and procedural map generation</li>
+                  <li>Created custom sound design and atmospheric effects</li>
+                </ul>
+              </div>
+
+              <div className="achievement-item">
+                <h3 className="text-xl font-semibold text-blue-400">
+                  <a href="https://floaredor.vercel.app/left-brain" className="flex items-center gap-2 hover:text-blue-300">
+                    Noderunner Hackathon - First Place
+                    <ExternalLink className="w-4 h-4" />
+                  </a>
+                </h3>
+                <p className="text-gray-400 mb-2">50+ participants</p>
+                <ul className="list-disc pl-6 text-gray-300">
+                  <li className="mb-2">Solo implementation of distributed Raft consensus protocol in 18 hrs</li>
+                </ul>
+              </div>
+
+              <div className="achievement-item">
+                <h3 className="text-xl font-semibold text-blue-400">
+                  <a href="https://floaredor.vercel.app/left-brain" className="flex items-center gap-2 hover:text-blue-300">
+                    Talentmapp Hack4Hire 2023 - First Place <span className="text-gray-400">(2023)</span>
+                    <ExternalLink className="w-4 h-4" />
+                  </a>
+                </h3>
+                <p className="text-gray-400 mb-2">300+ participants</p>
+                <ul className="list-disc pl-6 text-gray-300">
+                  <li className="mb-2">Built full-stack task-tracking application with LLM integration</li>
+                  <li className="mb-2">Tech stack: MongoDB, Flask, React.js, ChatGPT</li>
+                  <li className="mb-2">Implemented secure backend and intelligent task suggestions</li>
+                  <li>Deployed the solution in 8 hours</li>
+                </ul>
+              </div>
+
+              <div className="achievement-item">
+                <h3 className="text-xl font-semibold text-blue-400">Finalist, NVIDIA SAP</h3>
+                <ul className="list-disc pl-6 text-gray-300">
+                  <li>Finalist in the NVIDIA Student Ambassador Program</li>
+                </ul>
+              </div>
             </div>
           </div>
         </section>
@@ -117,85 +366,6 @@ export default function PortfolioPage() {
           </div>
         </section>
 
-        {/* Technical Research */}
-        <section className="mb-16">
-          <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
-            <Brain className="w-6 h-6" />
-            Technical Research
-          </h2>
-          <div className="bg-gray-900 rounded-lg shadow-xl p-6">
-            <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-2">Michigan State University Research</h3>
-              <p className="text-gray-400 mb-4">Working on emotional music transitions and therapeutic music generation</p>
-              <ul className="list-disc pl-6 text-gray-300">
-                <li className="mb-2">Multi-objective optimization for raga-based music generation</li>
-                <li className="mb-2">Implementation of iso principle for mood transitions</li>
-                <li>Collaboration with Prof. Kalyanmoy Dev and Prof. Arya Kumar</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        {/* Software Projects */}
-        <section className="mb-16">
-          <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
-            <Code className="w-6 h-6" />
-            Software Engineering Projects
-          </h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-gray-900 rounded-lg shadow-xl p-6">
-              <h3 className="text-xl font-semibold mb-2">Project RECON</h3>
-              <p className="text-gray-400 mb-4">8-pi compute cluster serving 400+ students</p>
-              <ul className="list-disc pl-6 text-gray-300">
-                <li className="mb-2">Implemented VLANs and distributed storage</li>
-                <li className="mb-2">$2000 funded university infrastructure project</li>
-                <li>GlusterFS and OpenMPI implementation</li>
-              </ul>
-            </div>
-            <div className="bg-gray-900 rounded-lg shadow-xl p-6">
-              <h3 className="text-xl font-semibold mb-2">Co-Write</h3>
-              <p className="text-gray-400 mb-4">AI-powered learning platform with academic integrity focus</p>
-              <ul className="list-disc pl-6 text-gray-300">
-                <li className="mb-2">Custom RAG model implementation</li>
-                <li className="mb-2">Next.js, FastAPI, and LangChain stack</li>
-                <li>Professor-defined AI assistance boundaries</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        {/* Achievements */}
-        <section className="mb-16">
-          <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
-            <Award className="w-6 h-6" />
-            Notable Achievements
-          </h2>
-          <div className="bg-gray-900 rounded-lg shadow-xl p-6">
-            <ul className="space-y-4">
-              <li className="flex items-start gap-2">
-                <ChevronRight className="w-5 h-5 mt-1 text-blue-400 flex-shrink-0" />
-                <div>
-                  <span className="font-semibold">First Place, WaffleHacks 2024</span>
-                  <p className="text-gray-400">Chrome extension with RAG system for personalized learning</p>
-                </div>
-              </li>
-              <li className="flex items-start gap-2">
-                <ChevronRight className="w-5 h-5 mt-1 text-blue-400 flex-shrink-0" />
-                <div>
-                  <span className="font-semibold">First Place, Noderunner Hackathon</span>
-                  <p className="text-gray-400">Implemented Raft consensus protocol in 18 hours</p>
-                </div>
-              </li>
-              <li className="flex items-start gap-2">
-                <ChevronRight className="w-5 h-5 mt-1 text-blue-400 flex-shrink-0" />
-                <div>
-                  <span className="font-semibold">Finalist, NVIDIA Student Ambassador Program</span>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </section>
-
         {/* Contact */}
         <section>
           <h2 className="text-2xl font-bold mb-6">Connect</h2>
@@ -210,7 +380,7 @@ export default function PortfolioPage() {
               <ExternalLink className="w-4 h-4" />
               SoundCloud
             </a>
-            <a href="https://github.com/yourgithub" 
+            <a href="https://github.com/floaredor" 
                className="flex items-center gap-2 text-blue-400 hover:text-blue-300">
               <ExternalLink className="w-4 h-4" />
               GitHub
@@ -224,6 +394,7 @@ export default function PortfolioPage() {
           <p>© 2024 Sai Ravi Teja Gangavarapu</p>
         </div>
       </footer>
-    </div>
+      </div>
+      </div>
   );
 }

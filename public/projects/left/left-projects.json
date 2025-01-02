@@ -310,7 +310,7 @@
 						"id": 22,
 						"title": "Text-Guided Sound Synthesis",
 						"description": "An implementation exploring text-to-audio synthesis using modular synthesis and parameter optimization, enabling automatic synthesizer programming based on target sounds or text descriptions.",
-						"image": "/images/left/synth.png",
+						"image": "/images/left/text-to-synth.png",
 						"technologies": [
 						  "Python",
 						  "PyTorch",
