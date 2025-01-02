@@ -31,7 +31,7 @@ export default function PortfolioPage() {
           <div className="bg-gray-900 rounded-lg shadow-xl p-6">
             <div className="mb-6">
               <h3 className="text-xl font-semibold mb-2">University of Florida <span className="text-gray-400">(Jan 2024 – May 2024)</span></h3>
-              <p className="text-gray-300">Senior Certificate + Master's coursework in Computer Science, CISE Department</p>
+              <p className="text-gray-300">Senior Certificate + Master&apos;s coursework in Computer Science, CISE Department</p>
               <p className="text-gray-400 mb-2">GPA: 4.0/4.0</p>
               <p className="text-gray-400">Courses: Analysis of Algorithms, Advanced Data Structures, Computer Graphics, UX Design</p>
             </div>
@@ -355,7 +355,7 @@ export default function PortfolioPage() {
               <div className="mt-6">
                 <p className="text-gray-400">
                   My music draws inspiration from artists like Flume, Kasbo, Petit Biscuit, and Tourist, 
-                  blending ethereal soundscapes with intricate electronic production. I'm particularly 
+                  blending ethereal soundscapes with intricate electronic production. I&apos;m particularly 
                   passionate about experimental sound design, with granular synthesis being one of my 
                   favorite techniques for creating atmospheric pads and textures. My work explores the 
                   space between melodic electronic music and experimental sound design, always pushing 
