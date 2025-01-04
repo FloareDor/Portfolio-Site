@@ -45,6 +45,31 @@ export default function PortfolioPage() {
               <p className="text-gray-300">A-levels - Mathematics, Physics and Chemistry</p>
               <p className="text-gray-400">AAB Grades</p>
             </div>
+
+            {/* MathAcademy */}
+            <div className="mt-6 border-t border-gray-800 pt-6">
+              <h3 className="text-xl font-semibold mb-2">
+                <a href="https://www.mathacademy.com/courses/mathematics-for-machine-learning" 
+                   className="hover:text-blue-400 flex items-center gap-2"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                  MathAcademy
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+              </h3>
+              <div className="flex items-start gap-6">
+                <div className="flex-1">
+                  <p className="text-gray-300 mb-2">Daily rigorous practice to maintain proficiency in machine learning mathematics</p>
+                  <p className="text-gray-400 mb-2">Covering linear algebra, multivariable calculus, probability theory, and statistical inference</p>
+                  <p className="text-gray-400 text-sm">(1 XP ≈ 1 minute of focused problem solving)</p>
+                </div>
+                <img 
+                  src="/images/left/mathacademy2.png" 
+                  alt="MathAcademy Progress" 
+                  className="w-[450px] h-auto rounded-lg shadow-lg transition-transform duration-300 hover:scale-150 hover:z-50"
+                />
+              </div>
+            </div>
           </div>
         </section>
 
@@ -94,7 +119,10 @@ export default function PortfolioPage() {
           <div className="space-y-6">
             <div className="bg-gray-900 rounded-lg shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-2">
-                <a href="https://www.instagram.com/tapsta.app/" className="text-xl font-semibold hover:text-blue-400 flex items-center gap-2">
+                <a href="https://www.instagram.com/tapsta.app/" 
+                   className="text-xl font-semibold hover:text-blue-400 flex items-center gap-2"
+                   target="_blank"
+                   rel="noopener noreferrer">
                   Tapsta
                   <ExternalLink className="w-4 h-4" />
                 </a>
@@ -110,7 +138,10 @@ export default function PortfolioPage() {
 
             <div className="bg-gray-900 rounded-lg shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-2">
-                <a href="https://oneaiclick.com" className="text-xl font-semibold hover:text-blue-400 flex items-center gap-2">
+                <a href="https://oneaiclick.com" 
+                   className="text-xl font-semibold hover:text-blue-400 flex items-center gap-2"
+                   target="_blank"
+                   rel="noopener noreferrer">
                   OneAIclick.com
                   <ExternalLink className="w-4 h-4" />
                 </a>
@@ -125,7 +156,10 @@ export default function PortfolioPage() {
 
             <div className="bg-gray-900 rounded-lg shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-2">
-                <a href="https://garden.finance" className="text-xl font-semibold hover:text-blue-400 flex items-center gap-2">
+                <a href="https://garden.finance" 
+                   className="text-xl font-semibold hover:text-blue-400 flex items-center gap-2"
+                   target="_blank"
+                   rel="noopener noreferrer">
                   Catalog.fi
                   <ExternalLink className="w-4 h-4" />
                 </a>
@@ -158,7 +192,10 @@ export default function PortfolioPage() {
             
             <div className="bg-gray-900 rounded-lg shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-2">
-                <a href="https://floaredor.vercel.app/left-brain" className="text-xl font-semibold hover:text-blue-400 flex items-center gap-2">
+                <a href="https://floaredor.vercel.app/left-brain" 
+                   className="text-xl font-semibold hover:text-blue-400 flex items-center gap-2"
+                   target="_blank"
+                   rel="noopener noreferrer">
                   Samplebox
                   <ExternalLink className="w-4 h-4" />
                 </a>
@@ -173,7 +210,10 @@ export default function PortfolioPage() {
 
             <div className="bg-gray-900 rounded-lg shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-2">
-                <a href="https://floaredor.vercel.app/left-brain" className="text-xl font-semibold hover:text-blue-400 flex items-center gap-2">
+                <a href="https://floaredor.vercel.app/left-brain" 
+                   className="text-xl font-semibold hover:text-blue-400 flex items-center gap-2"
+                   target="_blank"
+                   rel="noopener noreferrer">
                   Text-to-Synthesizer System
                   <ExternalLink className="w-4 h-4" />
                 </a>
@@ -188,7 +228,10 @@ export default function PortfolioPage() {
 
             <div className="bg-gray-900 rounded-lg shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-2">
-                <a href="https://floaredor.vercel.app/left-brain/21" className="text-xl font-semibold hover:text-blue-400 flex items-center gap-2">
+                <a href="https://floaredor.vercel.app/left-brain/21" 
+                   className="text-xl font-semibold hover:text-blue-400 flex items-center gap-2"
+                   target="_blank"
+                   rel="noopener noreferrer">
                   Audio-Visual Integration Projects
                   <ExternalLink className="w-4 h-4" />
                 </a>
@@ -211,7 +254,10 @@ export default function PortfolioPage() {
           <div className="grid md:grid-cols-2 gap-6">
             <div className="bg-gray-900 rounded-lg shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-2">
-                <a href="https://floaredor.vercel.app/left-brain" className="text-xl font-semibold hover:text-blue-400 flex items-center gap-2">
+                <a href="https://floaredor.vercel.app/left-brain" 
+                   className="text-xl font-semibold hover:text-blue-400 flex items-center gap-2"
+                   target="_blank"
+                   rel="noopener noreferrer">
                   Project RECON
                   <ExternalLink className="w-4 h-4" />
                 </a>
@@ -225,7 +271,10 @@ export default function PortfolioPage() {
             </div>
             <div className="bg-gray-900 rounded-lg shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-2">
-                <a href="https://floaredor.vercel.app/left-brain" className="text-xl font-semibold hover:text-blue-400 flex items-center gap-2">
+                <a href="https://floaredor.vercel.app/left-brain" 
+                   className="text-xl font-semibold hover:text-blue-400 flex items-center gap-2"
+                   target="_blank"
+                   rel="noopener noreferrer">
                   Co-Write
                   <ExternalLink className="w-4 h-4" />
                 </a>
@@ -250,7 +299,10 @@ export default function PortfolioPage() {
             <div className="space-y-6">
               <div className="achievement-item">
                 <h3 className="text-xl font-semibold text-blue-400">
-                  <a href="https://floaredor.vercel.app/left-brain" className="flex items-center gap-2 hover:text-blue-300">
+                  <a href="https://floaredor.vercel.app/left-brain" 
+                     className="flex items-center gap-2 hover:text-blue-300"
+                     target="_blank"
+                     rel="noopener noreferrer">
                     WaffleHacks 2024 - First Place <span className="text-gray-400">(2024)</span>
                     <ExternalLink className="w-4 h-4" />
                   </a>
@@ -263,7 +315,10 @@ export default function PortfolioPage() {
 
               <div className="achievement-item">
                 <h3 className="text-xl font-semibold text-blue-400">
-                  <a href="https://floaredor.vercel.app/left-brain" className="flex items-center gap-2 hover:text-blue-300">
+                  <a href="https://floaredor.vercel.app/left-brain" 
+                     className="flex items-center gap-2 hover:text-blue-300"
+                     target="_blank"
+                     rel="noopener noreferrer">
                     Aether Game Jam 2024 - First Place <span className="text-gray-400">(2024)</span>
                     <ExternalLink className="w-4 h-4" />
                   </a>
@@ -277,7 +332,10 @@ export default function PortfolioPage() {
 
               <div className="achievement-item">
                 <h3 className="text-xl font-semibold text-blue-400">
-                  <a href="https://floaredor.vercel.app/left-brain" className="flex items-center gap-2 hover:text-blue-300">
+                  <a href="https://floaredor.vercel.app/left-brain" 
+                     className="flex items-center gap-2 hover:text-blue-300"
+                     target="_blank"
+                     rel="noopener noreferrer">
                     Noderunner Hackathon - First Place
                     <ExternalLink className="w-4 h-4" />
                   </a>
@@ -290,7 +348,10 @@ export default function PortfolioPage() {
 
               <div className="achievement-item">
                 <h3 className="text-xl font-semibold text-blue-400">
-                  <a href="https://floaredor.vercel.app/left-brain" className="flex items-center gap-2 hover:text-blue-300">
+                  <a href="https://floaredor.vercel.app/left-brain" 
+                     className="flex items-center gap-2 hover:text-blue-300"
+                     target="_blank"
+                     rel="noopener noreferrer">
                     Talentmapp Hack4Hire 2023 - First Place <span className="text-gray-400">(2023)</span>
                     <ExternalLink className="w-4 h-4" />
                   </a>
@@ -371,17 +432,23 @@ export default function PortfolioPage() {
           <h2 className="text-2xl font-bold mb-6">Connect</h2>
           <div className="flex flex-wrap gap-4">
             <a href="https://linkedin.com/in/sai-ravi-teja-gangavarapu" 
-               className="flex items-center gap-2 text-blue-400 hover:text-blue-300">
+               className="flex items-center gap-2 text-blue-400 hover:text-blue-300"
+               target="_blank"
+               rel="noopener noreferrer">
               <ExternalLink className="w-4 h-4" />
               LinkedIn
             </a>
             <a href="https://soundcloud.com/raven-714331711/popular-tracks" 
-               className="flex items-center gap-2 text-blue-400 hover:text-blue-300">
+               className="flex items-center gap-2 text-blue-400 hover:text-blue-300"
+               target="_blank"
+               rel="noopener noreferrer">
               <ExternalLink className="w-4 h-4" />
               SoundCloud
             </a>
             <a href="https://github.com/floaredor" 
-               className="flex items-center gap-2 text-blue-400 hover:text-blue-300">
+               className="flex items-center gap-2 text-blue-400 hover:text-blue-300"
+               target="_blank"
+               rel="noopener noreferrer">
               <ExternalLink className="w-4 h-4" />
               GitHub
             </a>
