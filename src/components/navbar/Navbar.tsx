@@ -33,7 +33,7 @@ const Navbar = ({className, titleStyle} : navbarProps) => {
 
         <div className="hidden lg:flex md:flex flex-row gap-5 md:gap-3 lg:gap-5 sm:gap-3 items-center">
             <Link href={"/"}><span className="text-gray-300 text-sm lg:text-base md:text-base font-semibold hover:text-white">Home</span></Link>
-            {/* <Link href={"/portfolio"}><span className="text-gray-300 text-sm lg:text-base md:text-base font-semibold hover:text-white  ">Portfolio</span></Link> */}
+            <Link href={"/portfolio"}><span className="text-gray-300 text-sm lg:text-base md:text-base font-semibold hover:text-white  ">Portfolio</span></Link>
             <Link href={"/left-brain"}><span className="text-gray-300 text-sm lg:text-base md:text-base font-semibold hover:text-white  ">Left Brain</span></Link>
             <Link href={"/right-brain"}><span className="text-gray-300 text-sm lg:text-base md:text-base font-semibold hover:text-white">Right Brain</span></Link>
             <Link href={"/socials"}><span className="text-gray-300 text-sm lg:text-base md:text-base font-semibold hover:text-white">Socials</span></Link>
@@ -49,7 +49,7 @@ const Navbar = ({className, titleStyle} : navbarProps) => {
       {isOpen && (
         <div className="h-screen animate-in slide-in-from-right-full duration-300 gap-1 lg:hidden md:hidden px-5 py-4 flex flex-col items-end">
           <Link href={"/"}><span onClick={toggleScrollLock} className="block text-white text-base font-semibold mb-2 hover:text-gray-300">Home</span></Link>
-          {/* <Link href={"/portfolio"}><span onClick={toggleScrollLock} className="block text-white text-base font-semibold mb-2 focus:text-gray-300">Portfolio</span></Link> */}
+          <Link href={"/portfolio"}><span onClick={toggleScrollLock} className="block text-white text-base font-semibold mb-2 focus:text-gray-300">Portfolio</span></Link>
           <Link href={"/left-brain"}><span onClick={toggleScrollLock} className="block text-white text-base font-semibold mb-2 focus:text-gray-300">Left Brain</span></Link>
           <Link href={"/right-brain"}><span onClick={toggleScrollLock} className="block text-white text-base font-semibold mb-2 hover:text-gray-300">Right Brain</span></Link>
           <Link href={"/socials"}><span onClick={toggleScrollLock} className="block text-white text-base font-semibold mb-2 hover:text-gray-300">Socials</span></Link>

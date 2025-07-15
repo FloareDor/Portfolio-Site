@@ -23,9 +23,9 @@ const socials = () => {
                     <Link href={"https://soundcloud.com/raven-714331711"} target="_blank">
                         <span className="text-white font-sans hover:text-gray-300">SoundCloud</span>
                     </Link>
-                    {/* <Link href={"https://www.instagram.com/floare_dor/"} target="_blank">
+                    <Link href={"https://www.instagram.com/floare_dor/"} target="_blank">
                         <span className="text-white font-sans hover:text-gray-300">Instagram</span>
-                    </Link> */}
+                    </Link>
                     <Link href={"https://leetcode.com/Sai_Ravi_Teja/"} target="_blank">
                         <span className="text-white font-sans hover:text-gray-300">Leetcode? Seriously?</span>
                     </Link>
