@@ -7,7 +7,7 @@ const socials = () => {
             <div className="flex flex-col bg-black">
                 <Navbar />
                 <div className="flex flex-col items-center gap-2 pt-28 lg:pt-60 md:pt-60 sm:pt-60">
-                    <span className="text-white font-sans">gangavarapus@ufl.edu</span>
+                    <span className="text-white font-sans">sairavig@cs.cmu.edu</span>
                     <Link href={"https://github.com/FloareDor"} target="_blank">
                         <span className="text-white font-sans hover:text-gray-300">GitHub</span>
                     </Link>
