@@ -4,7 +4,7 @@ import { ExternalLink, ChevronRight, Music, Code, Brain, Award, Microscope, Book
 import InstagramEmbed from './InstagramEmbed';
 import Navbar from '@/components/navbar/Navbar';
 
-export default function PortfolioPage() {
+export default function MidPortfolioPage() {
   return (
     <div className=''>
     <div className="z-10">
@@ -23,21 +23,6 @@ export default function PortfolioPage() {
       </header>
 
       <main className="max-w-6xl mx-auto px-4 py-12">
-        {/* About Me */}
-        <section className="mb-16">
-          <div className="bg-gray-900 rounded-lg shadow-xl p-8">
-            <p className="text-lg text-gray-300 leading-relaxed mb-6">
-              I&apos;m a curious builder who loves where art, technology, and people meet. My story started as a passionate music producer - I&apos;d stay up all night making music just because it was fun. The best moments were when my tracks really connected, not just with listeners, but with me too. It felt like I was putting my emotions right into the sound. That love for how music can stir feelings led me into computer science, machine learning, and creative coding. I think the coolest problems happen when different fields bump into each other - tech and art.
-            </p>
-            <p className="text-lg text-gray-300 leading-relaxed mb-6">
-              When I&apos;m not debugging neural networks or composing ambient soundscapes, you&apos;ll find me exploring local music scene, hacking on creative tech projects, or getting lost in research papers about computational creativity. I get excited about projects that blend technical rigor with artistic expression - whether that&apos;s training models to generate therapeutic music, building tools that make creation more accessible, or just experimenting with new ways to make computers sound goofy/cool.
-            </p>
-            <p className="text-lg text-gray-300 leading-relaxed">
-              Life feels most meaningful when I&apos;m creating things that surprise and delight people. I&apos;m drawn to the unknown, the experimental, and the beautifully complex.
-            </p>
-          </div>
-        </section>
-
         {/* Education */}
         <section className="mb-16">
           <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
@@ -93,130 +78,6 @@ export default function PortfolioPage() {
           </div>
         </section>
 
-        {/* Music Technology Projects */}
-        <section className="mb-16">
-          <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
-            <Music className="w-6 h-6" />
-            Music Technology Projects <span className="text-gray-400">(2021 – Present)</span>
-          </h2>
-          <div className="space-y-6">
-            <div className="bg-gray-900 rounded-lg shadow-xl p-6">
-              <h3 className="text-xl font-semibold mb-2">Music Theory & Audio Programming Studies</h3>
-              <ul className="list-disc pl-6 text-gray-300">
-                <li className="mb-2">Currently studying Fundamentals of Music Theory (University of Edinburgh) on Coursera and doing a bit of simply piano :)</li>
-                <li className="mb-2">and Audio Signal Processing for Music Applications by Professor Xavier Serra - Stanford</li>
-                <li className="mb-2">Developing audio plugins using C++ & JUCE framework</li>
-                <li>Implementing real-time audio processing and synthesis techniques</li>
-              </ul>
-            </div>
-
-            <div className="bg-gray-900 rounded-lg shadow-xl p-6">
-              <h3 className="text-xl font-semibold mb-2">
-                <a href="https://floaredor.vercel.app/left-brain"
-                   className="text-xl font-semibold hover:text-blue-400 flex items-center gap-2"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                  Samplebox
-                  <ExternalLink className="w-4 h-4" />
-                </a>
-              </h3>
-              <p className="text-gray-400 mb-4">Desktop application for music production workflow (30+ active users)</p>
-              <ul className="list-disc pl-6 text-gray-300">
-                <li className="mb-2">Implemented stem separation and drum kit extraction</li>
-                <li className="mb-2">Created algorithmic variations of harmonic samples using music theory principles</li>
-                <li>Built with Electron.js, FastAPI, and Librosa</li>
-              </ul>
-            </div>
-
-            <div className="bg-gray-900 rounded-lg shadow-xl p-6">
-              <h3 className="text-xl font-semibold mb-2">
-                <a href="https://floaredor.vercel.app/left-brain"
-                   className="text-xl font-semibold hover:text-blue-400 flex items-center gap-2"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                  Text-to-Synthesizer System
-                  <ExternalLink className="w-4 h-4" />
-                </a>
-              </h3>
-              <p className="text-gray-400 mb-4">Natural language control of synthesizer parameters</p>
-              <ul className="list-disc pl-6 text-gray-300">
-                <li className="mb-2">Parameter mapping using LAION-CLAP embeddings</li>
-                <li className="mb-2">PyTorch implementation with differential evolution</li>
-                <li>STFT-based timbre matching capabilities</li>
-              </ul>
-            </div>
-
-            <div className="bg-gray-900 rounded-lg shadow-xl p-6">
-              <h3 className="text-xl font-semibold mb-2">
-                <a href="https://floaredor.vercel.app/left-brain/21"
-                   className="text-xl font-semibold hover:text-blue-400 flex items-center gap-2"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                  Audio-Visual Integration Projects
-                  <ExternalLink className="w-4 h-4" />
-                </a>
-              </h3>
-              <ul className="list-disc pl-6 text-gray-300">
-                <li className="mb-2">CUDA-accelerated ray tracer with FFT-based audio reactivity</li>
-                <li className="mb-2">Audio-reactive GAN art installations</li>
-                <li>Boids simulation with audio parameter mapping</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        {/* Music Compositions & Media */}
-        <section className="mb-16">
-          <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
-            <Music className="w-6 h-6" />
-            Music Compositions & Media
-          </h2>
-          <div className="grid gap-6">
-            <div className="bg-gray-900 rounded-lg shadow-xl p-6">
-              <div className="mb-6">
-                <p className="text-gray-400">
-                  My music draws inspiration from artists like Flume, Kasbo, Petit Biscuit, and Tourist,
-                  blending ethereal soundscapes with intricate electronic production. I&apos;m particularly
-                  passionate about experimental sound design, with granular synthesis being one of my
-                  favorite techniques for creating atmospheric pads and textures. My work explores the
-                  space between melodic electronic music and experimental sound design, always pushing
-                  to find new and interesting ways to craft surprising yet pleasing sonic experiences.
-                </p>
-              </div>
-              <h3 className="text-xl font-semibold mb-4">Featured Works</h3>
-              <div className="space-y-6">
-                <iframe
-                  width="100%"
-                  height="300"
-                  scrolling="no"
-                  frameBorder="no"
-                  allow="autoplay"
-                  src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1197833611&color=%23040406&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
-                ></iframe>
-                <iframe
-                  width="100%"
-                  height="166"
-                  scrolling="no"
-                  frameBorder="no"
-                  allow="autoplay"
-                  src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1212479563&color=%23040406&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
-                ></iframe>
-                <div className="mt-4 space-y-6">
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <InstagramEmbed url="https://www.instagram.com/p/CXgLeW5hTUT/" />
-                    <InstagramEmbed url="https://www.instagram.com/reel/CmFQdRwsQAf/" />
-                  </div>
-                  <h4 className="text-lg font-semibold mt-8 mb-4">GAN Art Showcase + DJ set (5th and 6th page)</h4>
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <InstagramEmbed url="https://www.instagram.com/p/Cpk381-BgGM/" />
-                    <InstagramEmbed url="https://www.instagram.com/tv/CluZbX5ANTj" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Research Experience */}
         <section className="mb-16">
           <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
@@ -249,6 +110,27 @@ export default function PortfolioPage() {
                 <li className="mb-2">Applied genomic models for rare disease prediction using transformer architectures, processing 15,000+ DNA sequences</li>
                 <li>Developed multi-layer perceptron models using protein embeddings (ESM3) analyzing RNA-binding proteins</li>
               </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* Leadership */}
+        <section className="mb-16">
+          <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+            <Award className="w-6 h-6" />
+            Leadership
+          </h2>
+          <div className="bg-gray-900 rounded-lg shadow-xl p-6">
+            <div className="space-y-6">
+              <div className="achievement-item">
+                <h3 className="text-xl font-semibold text-blue-400">
+                  President, Enigma, the Computer Science Club <span className="text-gray-400">(2021-2023)</span>
+                </h3>
+                <ul className="list-disc pl-6 text-gray-300">
+                  <li className="mb-2">Conducted technical workshops on Gamedev, ML, Linux, heading outreach initiatives increasing the club membership by 40%, reaching over 2000 students</li>
+                  <li>Collabs Ubisoft, NVIDIA</li>
+                </ul>
+              </div>
             </div>
           </div>
         </section>
@@ -309,7 +191,7 @@ export default function PortfolioPage() {
 
             <div className="bg-gray-900 rounded-lg shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-2">
-                <a href="https://garden.finance"
+                <a href="https://garden.finance" 
                    className="text-xl font-semibold hover:text-blue-400 flex items-center gap-2"
                    target="_blank"
                    rel="noopener noreferrer">
@@ -327,6 +209,76 @@ export default function PortfolioPage() {
           </div>
         </section>
 
+        {/* Music Technology Projects */}
+        <section className="mb-16">
+          <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+            <Music className="w-6 h-6" />
+            Music Technology Projects <span className="text-gray-400">(2021 – Present)</span>
+          </h2>
+          <div className="space-y-6">
+            <div className="bg-gray-900 rounded-lg shadow-xl p-6">
+              <h3 className="text-xl font-semibold mb-2">Music Theory & Audio Programming Studies</h3>
+              <ul className="list-disc pl-6 text-gray-300">
+                <li className="mb-2">Currently studying Fundamentals of Music Theory (University of Edinburgh) on Coursera</li>
+                <li className="mb-2">Developing audio plugins using C++ & JUCE framework</li>
+                <li>Implementing real-time audio processing and synthesis techniques</li>
+              </ul>
+            </div>
+            
+            <div className="bg-gray-900 rounded-lg shadow-xl p-6">
+              <h3 className="text-xl font-semibold mb-2">
+                <a href="https://floaredor.vercel.app/left-brain" 
+                   className="text-xl font-semibold hover:text-blue-400 flex items-center gap-2"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                  Samplebox
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+              </h3>
+              <p className="text-gray-400 mb-4">Desktop application for music production workflow (30+ active users)</p>
+              <ul className="list-disc pl-6 text-gray-300">
+                <li className="mb-2">Implemented stem separation and drum kit extraction</li>
+                <li className="mb-2">Created algorithmic variations of harmonic samples using music theory principles</li>
+                <li>Built with Electron.js, FastAPI, and Librosa</li>
+              </ul>
+            </div>
+
+            <div className="bg-gray-900 rounded-lg shadow-xl p-6">
+              <h3 className="text-xl font-semibold mb-2">
+                <a href="https://floaredor.vercel.app/left-brain" 
+                   className="text-xl font-semibold hover:text-blue-400 flex items-center gap-2"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                  Text-to-Synthesizer System
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+              </h3>
+              <p className="text-gray-400 mb-4">Natural language control of synthesizer parameters</p>
+              <ul className="list-disc pl-6 text-gray-300">
+                <li className="mb-2">Parameter mapping using LAION-CLAP embeddings</li>
+                <li className="mb-2">PyTorch implementation with differential evolution</li>
+                <li>STFT-based timbre matching capabilities</li>
+              </ul>
+            </div>
+
+            <div className="bg-gray-900 rounded-lg shadow-xl p-6">
+              <h3 className="text-xl font-semibold mb-2">
+                <a href="https://floaredor.vercel.app/left-brain/21" 
+                   className="text-xl font-semibold hover:text-blue-400 flex items-center gap-2"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                  Audio-Visual Integration Projects
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+              </h3>
+              <ul className="list-disc pl-6 text-gray-300">
+                <li className="mb-2">CUDA-accelerated ray tracer with FFT-based audio reactivity</li>
+                <li className="mb-2">Audio-reactive GAN art installations</li>
+                <li>Boids simulation with audio parameter mapping</li>
+              </ul>
+            </div>
+          </div>
+        </section>
 
         {/* Other Technical Projects */}
         <section className="mb-16">
@@ -368,27 +320,6 @@ export default function PortfolioPage() {
                 <li className="mb-2">Next.js, FastAPI, and LangChain stack</li>
                 <li>Professor-defined AI assistance boundaries</li>
               </ul>
-            </div>
-          </div>
-        </section>
-
-        {/* Leadership */}
-        <section className="mb-16">
-          <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
-            <Award className="w-6 h-6" />
-            Leadership
-          </h2>
-          <div className="bg-gray-900 rounded-lg shadow-xl p-6">
-            <div className="space-y-6">
-              <div className="achievement-item">
-                <h3 className="text-xl font-semibold text-blue-400">
-                  President, Enigma, the Computer Science Club <span className="text-gray-400">(2021-2023)</span>
-                </h3>
-                <ul className="list-disc pl-6 text-gray-300">
-                  <li className="mb-2">Conducted technical workshops on Gamedev, ML, Linux, heading outreach initiatives increasing the club membership by 40%, reaching over 2000 students</li>
-                  <li>Collabs Ubisoft, NVIDIA</li>
-                </ul>
-              </div>
             </div>
           </div>
         </section>
@@ -479,6 +410,57 @@ export default function PortfolioPage() {
           </div>
         </section>
 
+        {/* Music Compositions & Media */}
+        <section className="mb-16">
+          <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+            <Music className="w-6 h-6" />
+            Music Compositions & Media
+          </h2>
+          <div className="grid gap-6">
+            <div className="bg-gray-900 rounded-lg shadow-xl p-6">
+              <h3 className="text-xl font-semibold mb-4">Featured Works</h3>
+              <div className="space-y-6">
+                <iframe
+                  width="100%"
+                  height="300"
+                  scrolling="no"
+                  frameBorder="no"
+                  allow="autoplay"
+                  src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1197833611&color=%23040406&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+                ></iframe>
+                <iframe
+                  width="100%"
+                  height="166"
+                  scrolling="no"
+                  frameBorder="no"
+                  allow="autoplay"
+                  src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1212479563&color=%23040406&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+                ></iframe>
+                <div className="mt-4 space-y-6">
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <InstagramEmbed url="https://www.instagram.com/p/CXgLeW5hTUT/" />
+                    <InstagramEmbed url="https://www.instagram.com/reel/CmFQdRwsQAf/" />
+                  </div>
+                  <h4 className="text-lg font-semibold mt-8 mb-4">GAN Art Showcase + DJ set (5th and 6th page)</h4>
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <InstagramEmbed url="https://www.instagram.com/p/Cpk381-BgGM/" />
+                    <InstagramEmbed url="https://www.instagram.com/tv/CluZbX5ANTj" />
+                  </div>
+                </div>
+              </div>
+              <div className="mt-6">
+                <p className="text-gray-400">
+                  My music draws inspiration from artists like Flume, Kasbo, Petit Biscuit, and Tourist, 
+                  blending ethereal soundscapes with intricate electronic production. I&apos;m particularly 
+                  passionate about experimental sound design, with granular synthesis being one of my 
+                  favorite techniques for creating atmospheric pads and textures. My work explores the 
+                  space between melodic electronic music and experimental sound design, always pushing 
+                  to find new and interesting ways to craft surprising yet pleasing sonic experiences.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* Contact */}
         <section>
