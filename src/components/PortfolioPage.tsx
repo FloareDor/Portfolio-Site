@@ -336,6 +336,9 @@ export default function PortfolioPage() {
             </div>
             <div className="win95-content">
               <div className="win95-inset">
+                <p className="text-sm leading-relaxed mb-4" style={{color: '#000000'}}>
+                  I am fortunate to have worked with Professor Prafulla Kalapatapu and Dr. Arya Kumar Bhattacharya at Mahindra École Centrale, and Dr. Xiao Fan at the University of Florida.
+                </p>
                 <div className="mb-4">
                   <h3 className="text-sm font-bold mb-1" style={{color: '#000080'}}>Michigan State University Research <span style={{color: '#000000', fontWeight: 'normal'}}>(Sept 2024 – Present)</span></h3>
                   <p className="text-xs mb-2" style={{color: '#000000'}}>Working on emotional music transitions and therapeutic music generation</p>
