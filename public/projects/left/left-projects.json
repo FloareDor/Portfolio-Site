@@ -274,7 +274,7 @@
 				"20":{
 					"id": 20,
 					"title": "SampleBox: desktop app for sample flipping",
-					"description": "A desktop app that generates a box of inspiration from any song, inspired by Daft Punk's sampling techniques. Features stem separation, drum extraction, and creative sample flips using music theory.",
+					"description": "Buildspace S5 project: Desktop app with 30+ users that generates AI sample packs from songs with stem separation, drum extraction, and creative sample flips using music theory, inspired by Daft Punk's sampling techniques.",
 					"image": "/images/left/samplebox.png",
 					"technologies": [
 					"Electron.js",
@@ -322,6 +322,16 @@
 						"liveLink": "https://github.com/FloareDor/text-to-synth-de",
 						"videoLink": "",
 						"blog": "Implemented an approach to text-guided sound synthesis that combines traditional modular synthesis with a neural audio-language model. The system uses a virtual modular synthesizer (TorchSynth) with 78 parameters including oscillators, LFOs, ADSR envelopes, and a modulation matrix.\n\nThe core contains two main components:\n\n1. Parameter Optimization:\n- Implemented differential evolution to optimize synthesizer parameters based on text descriptions\n- Utilized LAION-CLAP embeddings for semantic matching between synthesized audio and text prompts\n- Developed a parallel processing pipeline for efficient parameter search\n- I didn't do a comprehensive testing but it worked for a few short text phrases I tested\n\n2. Synthesis Engine:\n- Implemented inverse synthesis optimization to recreate target sounds by finding optimal synthesizer parameters\n- Integrated STFT-based audio comparison metrics for parameter optimization\n- Supports basic parameter interpolation for smooth transitions between different sounds\n\nThe project serves as a proof-of-concept for combining traditional synthesis techniques with contrastive pre-trained models and basic optimization techniques for sound matching and generation. While still in early stages, it demonstrates the potential for using optimization techniques to automatically program synthesizer parameters based on target sounds or descriptions."
+					  },
+					  "23": {
+						"id": 23,
+						"title": "OneAIclick.com",
+						"description": "An LLM fine-tuning abstraction tool for Hugging Face models that cuts development cycles by 60% and reduces boilerplate code by 75%, enabling rapid idea validation and full data privacy.",
+						"image": "/images/left/oneaiclick.png",
+						"technologies": ["Python", "React.js", "Hugging Face", "PEFT", "LORA"],
+						"githubLink": "https://github.com/FloareDor/oneaiclick",
+						"liveLink": "https://oneaiclick.com",
+						"blog": "Developed an LLM fine-tuning abstraction tool for Hugging Face models that cut development cycles by 60% and reduced boilerplate code by 75%, enabling rapid idea validation and full data privacy."
 					  }
-		
+
 }

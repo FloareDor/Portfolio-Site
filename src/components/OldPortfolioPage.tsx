@@ -1,6 +1,6 @@
 'use client'
 import React from 'react';
-import { ExternalLink, ChevronRight, Music, Code, Brain, Award, Microscope, BookOpen } from 'lucide-react';
+import { ExternalLink, ChevronRight, Music, Code, Brain, Award, Microscope } from 'lucide-react';
 import InstagramEmbed from './InstagramEmbed';
 import Navbar from '@/components/navbar/Navbar';
 
@@ -17,7 +17,6 @@ export default function PortfolioPage() {
         <div className="max-w-6xl mx-auto px-4">
           <h1 className="text-4xl font-bold mb-4">Sai Ravi Teja Gangavarapu</h1>
           <p className="text-xl mb-6">Music Technology Researcher & Software Engineer</p>
-          <p className="text-lg opacity-90 mb-4">(412) 251-7161 | sairavig@cs.cmu.edu | Pittsburgh, PA | floaredor.vercel.app</p>
           <p className="text-lg opacity-90">Exploring the intersection of AI, Music, and Human-Computer Interaction</p>
         </div>
       </header>
@@ -30,11 +29,6 @@ export default function PortfolioPage() {
             Education
           </h2>
           <div className="bg-gray-900 rounded-lg shadow-xl p-6">
-            <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-2">Carnegie Mellon University <span className="text-gray-400">(Aug 2025 – Dec 2026)</span></h3>
-              <p className="text-gray-300">Master of Software Engineering - Scalable Systems</p>
-              <p className="text-gray-400"></p>
-            </div>
             <div className="mb-6">
               <h3 className="text-xl font-semibold mb-2">University of Florida <span className="text-gray-400">(Jan 2024 – May 2024)</span></h3>
               <p className="text-gray-300">Senior Certificate + Master&apos;s coursework in Computer Science, CISE Department</p>
@@ -55,22 +49,23 @@ export default function PortfolioPage() {
             {/* MathAcademy */}
             <div className="mt-6 border-t border-gray-800 pt-6">
               <h3 className="text-xl font-semibold mb-2">
-                <a href="https://www.mathacademy.com/courses/mathematics-for-machine-learning"
+                <a href="https://www.mathacademy.com/courses/mathematics-for-machine-learning" 
                    className="hover:text-blue-400 flex items-center gap-2"
                    target="_blank"
                    rel="noopener noreferrer">
-                  MathAcademy <span className="text-gray-400">(Sep 2024 – Present)</span>
+                  MathAcademy
                   <ExternalLink className="w-4 h-4" />
                 </a>
               </h3>
               <div className="flex items-start gap-6">
                 <div className="flex-1">
-                  <p className="text-gray-300 mb-2">Mathematics for Machine Learning - Daily practice in ML, Probability, Statistics and Calculus</p>
-                  {/* <p className="text-gray-400 text-sm">(1 XP ≈ 1 minute of focused problem solving)</p> */}
+                  <p className="text-gray-300 mb-2">Daily rigorous practice to maintain proficiency in machine learning mathematics</p>
+                  <p className="text-gray-400 mb-2">Covering linear algebra, multivariable calculus, probability theory, and statistical inference</p>
+                  <p className="text-gray-400 text-sm">(1 XP ≈ 1 minute of focused problem solving)</p>
                 </div>
-                <img
-                  src="/images/left/mathacademy2.png"
-                  alt="MathAcademy Progress"
+                <img 
+                  src="/images/left/mathacademy2.png" 
+                  alt="MathAcademy Progress" 
                   className="w-[450px] h-auto rounded-lg shadow-lg transition-transform duration-300 hover:scale-150 hover:z-50"
                 />
               </div>
@@ -95,67 +90,22 @@ export default function PortfolioPage() {
               </ul>
             </div>
             <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-2">Mahindra École Centrale Research <span className="text-gray-400">(Dec 2022 – Jan 2025)</span></h3>
+              <h3 className="text-xl font-semibold mb-2">Mahindra École Centrale Research <span className="text-gray-400">(Oct 2022 – Sept 2024)</span></h3>
               <p className="text-gray-400 mb-4">IEEE WCCI 2024 (CEC) Publication</p>
               <ul className="list-disc pl-6 text-gray-300">
-                <li className="mb-2">Published research on emotion-targeted music generation using FFT, differential evolution, F C-means, self-organizing maps achieving 85% accuracy in classification</li>
-                <li className="mb-2">Implemented ALI-GAN model with t-SNE and PCA for clustering analysis on 1000+ samples</li>
-                <li className="mb-2">Built MIR pipelines extracting 100+ features</li>
+                <li className="mb-2">Developed novel differential evolution system for emotion-aligned sound synthesis</li>
+                <li className="mb-2">Combined music information retrieval with evolutionary computation</li>
+                <li className="mb-2">Achieved 90% classification accuracy using self-organizing maps and fuzzy clustering</li>
+                <li>Designed pipelines for extracting 100+ time and frequency-based features</li>
               </ul>
             </div>
             <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-2">Fan Lab Research - Genomic ML <span className="text-gray-400">(Feb 2024 – Jun 2024)</span></h3>
+              <h3 className="text-xl font-semibold mb-2">Fan Lab Research - Genomic ML <span className="text-gray-400">(Feb 2024 – Present)</span></h3>
               <p className="text-gray-400 mb-4">Research on genomic foundational models and RNA-protein interactions</p>
               <ul className="list-disc pl-6 text-gray-300">
-                <li className="mb-2">Applied genomic models for rare disease prediction using transformer architectures, processing 15,000+ DNA sequences</li>
-                <li>Developed multi-layer perceptron models using protein embeddings (ESM3) analyzing RNA-binding proteins</li>
+                <li className="mb-2">Conducted research under Dr. Xiao Fan on genomic foundational models using nucleotide variance techniques</li>
+                <li>Developing neural network system for RNA-Protein interaction prediction to aid in cancer diagnosis</li>
               </ul>
-            </div>
-          </div>
-        </section>
-
-        {/* Leadership */}
-        <section className="mb-16">
-          <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
-            <Award className="w-6 h-6" />
-            Leadership
-          </h2>
-          <div className="bg-gray-900 rounded-lg shadow-xl p-6">
-            <div className="space-y-6">
-              <div className="achievement-item">
-                <h3 className="text-xl font-semibold text-blue-400">
-                  President, Enigma, the Computer Science Club <span className="text-gray-400">(2021-2023)</span>
-                </h3>
-                <ul className="list-disc pl-6 text-gray-300">
-                  <li className="mb-2">Conducted technical workshops on Gamedev, ML, Linux, heading outreach initiatives increasing the club membership by 40%, reaching over 2000 students</li>
-                  <li>Collabs Ubisoft, NVIDIA</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Publications */}
-        <section className="mb-16">
-          <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
-            <BookOpen className="w-6 h-6" />
-            Publications
-          </h2>
-          <div className="bg-gray-900 rounded-lg shadow-xl p-6">
-            <div className="space-y-4">
-              <div className="publication-item">
-                <h3 className="text-lg font-semibold text-blue-400">
-                  "From clicks to insights: analysing online customer reviews for handicraft products"
-                </h3>
-                <p className="text-gray-400">Technology Analysis & Strategic Management (2025)</p>
-              </div>
-
-              <div className="publication-item">
-                <h3 className="text-lg font-semibold text-blue-400">
-                  "Emotion Aligned Music Composition from Sound Fundamentals Using Differential Evolution"
-                </h3>
-                <p className="text-gray-400">IEEE Congress on Evolutionary Computation (CEC 2024)</p>
-              </div>
             </div>
           </div>
         </section>
@@ -169,23 +119,38 @@ export default function PortfolioPage() {
           <div className="space-y-6">
             <div className="bg-gray-900 rounded-lg shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-2">
-                <a href="https://www.instagram.com/tapsta.app/"
+                <a href="https://www.instagram.com/tapsta.app/" 
                    className="text-xl font-semibold hover:text-blue-400 flex items-center gap-2"
                    target="_blank"
                    rel="noopener noreferrer">
-                  Tapsta <span className="text-gray-400">(Jul 2024 – Jun 2025)</span>
+                  Tapsta
                   <ExternalLink className="w-4 h-4" />
                 </a>
               </h3>
-              <p className="text-gray-400 mb-4">Founding Software Engineer</p>
+              <p className="text-gray-400 mb-4">Lead Software/Founding Engineer</p>
               <ul className="list-disc pl-6 text-gray-300">
-                <li className="mb-2">Architected end-to-end full-stack social rewards mobile application using React, React Native, FastAPI, and PostgreSQL</li>
-                <li className="mb-2">Designed database architecture with 25+ schemas and optimized client-side operations with caching and debouncing, achieving 30% faster response times</li>
-                <li className="mb-2">Worked with product team to redesign onboarding flow, driving 40% user retention</li>
-                <li className="mb-2">Orchestrated Plaid API integration alongside REST API creation, establishing secure bank connectivity and enabling automated cashback processing, plus ACH transfers for over 1,500 application users</li>
-                <li className="mb-2">Made containerized CI/CD pipeline with Docker, AWS, and ArgoCD that reduced deployment time by 70%</li>
-                <li className="mb-2">Led development team of 3 SDE interns, establishing code review processes that contributed to 30% faster feature delivery</li>
-                <li>Built a semantic people search engine for alumni networks using embedding-based similarity using LangGraph</li>
+                <li className="mb-2">Leading development team of 4 building social media app connecting students with local merchants (1000+ users)</li>
+                <li className="mb-2">Designed scalable architecture with 20+ schemas, shipped 50,000+ lines of code across front/backend</li>
+                <li className="mb-2">Implemented CI/CD pipelines and optimized database queries</li>
+                <li>Mentored 3 SDE interns, accelerating project velocity and code quality</li>
+              </ul>
+            </div>
+
+            <div className="bg-gray-900 rounded-lg shadow-xl p-6">
+              <h3 className="text-xl font-semibold mb-2">
+                <a href="https://oneaiclick.com" 
+                   className="text-xl font-semibold hover:text-blue-400 flex items-center gap-2"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                  OneAIclick.com
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+              </h3>
+              <p className="text-gray-400 mb-4">Co-Founder/Founding Engineer</p>
+              <ul className="list-disc pl-6 text-gray-300">
+                <li className="mb-2">Building private LLM pipeline abstraction tooling for easy fine-tuning and deployment</li>
+                <li className="mb-2">Developed no-code GUI for fine-tuning open-source HuggingFace LLMs</li>
+                <li>Speeding up validation of fine-tuning on custom datasets by 2X over traditional methods</li>
               </ul>
             </div>
 
@@ -201,9 +166,9 @@ export default function PortfolioPage() {
               </h3>
               <p className="text-gray-400 mb-4">Software Development Engineer Intern</p>
               <ul className="list-disc pl-6 text-gray-300">
-                <li className="mb-2">Taught LLMs to use APIs (incl. function calling), fine-tuning LLaMA/BERT in PyTorch to build a natural-language interface for payroll, achieving 90% natural language to API accuracy and reducing API integration time by 25%</li>
-                <li className="mb-2">Implemented full-stack crypto analytics platform using React, FastAPI, Postgres, Pandas, and Golang with real-time monitoring dashboard and a microservice for a leaderboard system for garden.finance, boosting user engagement by 30%</li>
-                <li className="mb-2">Improved backend performance using Go and PostgreSQL optimizations, supporting $150M+ trading volume over 30 days with 20% faster queries on garden.finance</li>
+                <li className="mb-2">Fine-tuned language models and developed custom API mapping system to teach language models to use APIs.</li>
+                <li className="mb-2">Implemented real-time data analytics system for crypto token volume monitoring</li>
+                <li>Contributed to facilitating $150M+ in trading volume over 30 days</li>
               </ul>
             </div>
           </div>
