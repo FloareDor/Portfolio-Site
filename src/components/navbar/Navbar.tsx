@@ -21,7 +21,7 @@ const Navbar = ({className, titleStyle, hideTitle = false} : navbarProps) => {
   };
 
   return (
-    <div className={twMerge("bg-opacity-95 bg-black fixed top-0 left-0 right-0 z-20", className)}>
+    <div className={twMerge("bg-opacity-80 bg-black backdrop-blur-lg fixed top-0 left-0 right-0 z-20", className)}>
       <div className="flex flex-row items-center justify-between px-5 py-4 md:px-6 md:pt-10 lg:px-12 lg:pt-10">
         {!hideTitle && (
           <span className="text-white text-2xl lg:text-3xl md:text-3xl sm:text-3xl font-bold">
