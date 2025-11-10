@@ -7,22 +7,36 @@ interface InstagramEmbedProps {
 
 export default function InstagramEmbed({ url }: InstagramEmbedProps) {
   useEffect(() => {
-    // Load Instagram embed script
-    const script = document.createElement('script')
-    script.src = '//www.instagram.com/embed.js'
-    script.async = true
-    document.body.appendChild(script)
-
-    return () => {
-      document.body.removeChild(script)
+    // Load Instagram embed script if not already loaded
+    if (!document.querySelector('script[src="//www.instagram.com/embed.js"]')) {
+      const script = document.createElement('script')
+      script.src = '//www.instagram.com/embed.js'
+      script.async = true
+      document.body.appendChild(script)
+    } else {
+      // If script already exists, process embeds
+      if ((window as any).instgrm) {
+        (window as any).instgrm.Embeds.process()
+      }
     }
-  }, [])
+  }, [url])
 
   return (
     <blockquote
       className="instagram-media"
       data-instgrm-permalink={url}
       data-instgrm-version="14"
+      style={{
+        background: '#FFF',
+        border: '1px solid #000',
+        borderRadius: '3px',
+        boxShadow: '0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15)',
+        margin: '1px',
+        maxWidth: '540px',
+        minWidth: '326px',
+        padding: '0',
+        width: 'calc(100% - 2px)'
+      }}
     >
       <div style={{ padding: '16px' }}>
         <a
@@ -34,11 +48,13 @@ export default function InstagramEmbed({ url }: InstagramEmbedProps) {
             textAlign: 'center',
             textDecoration: 'none',
             width: '100%',
+            display: 'block',
+            color: '#000080'
           }}
           target="_blank"
           rel="noopener noreferrer"
         >
-          View on Instagram
+          View this post on Instagram
         </a>
       </div>
     </blockquote>
