@@ -128,13 +128,13 @@ export default function PortfolioPage() {
             <div className="win95-content">
               <div className="win95-inset">
                 <p className="text-sm leading-relaxed mb-3" style={{color: '#000000'}}>
-                  I&apos;m a curious builder who loves where art, technology, and people meet. My story started as a passionate music producer - I&apos;d stay up all night making music just because it was fun. The best moments were when my tracks really connected, not just with listeners, but with me too. It felt like I was putting my emotions right into the sound. That love for how music can stir feelings led me into computer science, machine learning, and creative coding. I think the coolest problems happen when different fields bump into each other - tech and art.
+                  I started out making music. I&apos;d spend entire nights producing tracks just because I loved it (and cuz I only had FL Studio trial version). The best part was when a song actually meant something - to me, and to whoever listened. That feeling of translating emotion into sound got me hooked on the idea that technology could be creative. So I ended up studying computer science and machine learning, trying to figure out how to mix code with art.
                 </p>
                 <p className="text-sm leading-relaxed mb-3" style={{color: '#000000'}}>
-                  When I&apos;m not debugging neural networks or composing ambient soundscapes, you&apos;ll find me exploring the local music scene, Phenomenology, books, hacking on creative tech projects, hackathons,  or getting lost in research papers about computational creativity. I get excited about projects that blend technical rigor with artistic expression - whether that&apos;s training models to generate therapeutic music, building tools that make creation more accessible, or just experimenting with new ways to make computers sound goofy/cool.
+                  These days I&apos;m into music production, philosophy books, building weird tech projects, and going to hackathons. I like working on stuff that&apos;s both technical and creative - like training neural nets to make music, building tools for artists, or just seeing what strange sounds I can get a computer to make.
                 </p>
                 <p className="text-sm leading-relaxed" style={{color: '#000000'}}>
-                  Life feels most meaningful when I&apos;m creating things that surprise and delight people. I&apos;m drawn to the unknown, the experimental, and the beautifully complex.
+                  I like making things that are useful or interesting. That&apos;s pretty much it.
                 </p>
               </div>
             </div>
