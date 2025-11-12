@@ -281,12 +281,9 @@ export default function PortfolioPage() {
               <div className="win95-inset">
                 <div className="mb-4">
                   <p className="text-sm" style={{color: '#000000'}}>
-                    My music draws inspiration from artists like Flume, Kasbo, Petit Biscuit, and Tourist,
-                    blending ethereal soundscapes with intricate electronic production. I&apos;m particularly
-                    passionate about experimental sound design, with granular synthesis being one of my
-                    favorite techniques for creating atmospheric pads and textures. My work explores the
-                    space between melodic electronic music and experimental sound design. I try
-                    to find new and interesting ways to craft surprising yet pleasing sounds.
+                    I make electronic music inspired by artists like Flume, Kasbo, Petit Biscuit, and Tourist.
+                    I spend a lot of time on sound design - granular synthesis is my go-to for making atmospheric
+                    textures and pads. I&apos;m always trying to make sounds that are interesting and pleasing at the same time.
                   </p>
                 </div>
                 <h3 className="text-sm font-bold mb-3" style={{color: '#000080'}}>Featured Works</h3>
