@@ -8,12 +8,14 @@ export default function PortfolioPage() {
   return (
     <div className=''>
     <div className="z-10">
-    <Navbar className='bg-transparent' titleStyle='text-white'/>
+    <Navbar className='bg-transparent' titleStyle='text-theme-text-primary'/>
   </div>
-    <div className="min-h-screen bg-black text-gray-100">
+    <div className="min-h-screen bg-theme-bg-primary text-theme-text-primary">
 
       {/* Hero Section */}
-      <header className="bg-gradient-to-r from-blue-900 to-purple-900 py-40">
+      <header className="py-40" style={{
+        background: 'linear-gradient(to right, var(--accent-primary), var(--accent-secondary))'
+      }}>
         <div className="max-w-6xl mx-auto px-4">
           <h1 className="text-4xl font-bold mb-4">Sai Ravi Teja Gangavarapu</h1>
           <p className="text-xl mb-6">Music Technology Researcher & Software Engineer</p>
@@ -28,7 +30,7 @@ export default function PortfolioPage() {
             <Brain className="w-6 h-6" />
             Education
           </h2>
-          <div className="bg-gray-900 rounded-lg shadow-xl p-6">
+          <div className="bg-theme-bg-secondary rounded-lg shadow-xl p-6">
             <div className="mb-6">
               <h3 className="text-xl font-semibold mb-2">University of Florida <span className="text-gray-400">(Jan 2024 – May 2024)</span></h3>
               <p className="text-gray-300">Senior Certificate + Master&apos;s coursework in Computer Science, CISE Department</p>
@@ -79,7 +81,7 @@ export default function PortfolioPage() {
             <Microscope className="w-6 h-6" />
             Research Experience
           </h2>
-          <div className="bg-gray-900 rounded-lg shadow-xl p-6">
+          <div className="bg-theme-bg-secondary rounded-lg shadow-xl p-6">
             <div className="mb-6">
               <h3 className="text-xl font-semibold mb-2">Michigan State University Research <span className="text-gray-400">(Sept 2024 – Present)</span></h3>
               <p className="text-gray-400 mb-4">Working on emotional music transitions and therapeutic music generation</p>
@@ -117,7 +119,7 @@ export default function PortfolioPage() {
             Work Experience
           </h2>
           <div className="space-y-6">
-            <div className="bg-gray-900 rounded-lg shadow-xl p-6">
+            <div className="bg-theme-bg-secondary rounded-lg shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-2">
                 <a href="https://www.instagram.com/tapsta.app/" 
                    className="text-xl font-semibold hover:text-blue-400 flex items-center gap-2"
@@ -136,7 +138,7 @@ export default function PortfolioPage() {
               </ul>
             </div>
 
-            <div className="bg-gray-900 rounded-lg shadow-xl p-6">
+            <div className="bg-theme-bg-secondary rounded-lg shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-2">
                 <a href="https://oneaiclick.com" 
                    className="text-xl font-semibold hover:text-blue-400 flex items-center gap-2"
@@ -154,7 +156,7 @@ export default function PortfolioPage() {
               </ul>
             </div>
 
-            <div className="bg-gray-900 rounded-lg shadow-xl p-6">
+            <div className="bg-theme-bg-secondary rounded-lg shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-2">
                 <a href="https://garden.finance" 
                    className="text-xl font-semibold hover:text-blue-400 flex items-center gap-2"
@@ -181,7 +183,7 @@ export default function PortfolioPage() {
             Music Technology Projects <span className="text-gray-400">(2021 – Present)</span>
           </h2>
           <div className="space-y-6">
-            <div className="bg-gray-900 rounded-lg shadow-xl p-6">
+            <div className="bg-theme-bg-secondary rounded-lg shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-2">Music Theory & Audio Programming Studies</h3>
               <ul className="list-disc pl-6 text-gray-300">
                 <li className="mb-2">Currently studying Fundamentals of Music Theory (University of Edinburgh) on Coursera</li>
@@ -190,7 +192,7 @@ export default function PortfolioPage() {
               </ul>
             </div>
             
-            <div className="bg-gray-900 rounded-lg shadow-xl p-6">
+            <div className="bg-theme-bg-secondary rounded-lg shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-2">
                 <a href="https://floaredor.vercel.app/left-brain" 
                    className="text-xl font-semibold hover:text-blue-400 flex items-center gap-2"
@@ -208,7 +210,7 @@ export default function PortfolioPage() {
               </ul>
             </div>
 
-            <div className="bg-gray-900 rounded-lg shadow-xl p-6">
+            <div className="bg-theme-bg-secondary rounded-lg shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-2">
                 <a href="https://floaredor.vercel.app/left-brain" 
                    className="text-xl font-semibold hover:text-blue-400 flex items-center gap-2"
@@ -226,7 +228,7 @@ export default function PortfolioPage() {
               </ul>
             </div>
 
-            <div className="bg-gray-900 rounded-lg shadow-xl p-6">
+            <div className="bg-theme-bg-secondary rounded-lg shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-2">
                 <a href="https://floaredor.vercel.app/left-brain/21" 
                    className="text-xl font-semibold hover:text-blue-400 flex items-center gap-2"
@@ -252,7 +254,7 @@ export default function PortfolioPage() {
             Other Technical Projects
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-gray-900 rounded-lg shadow-xl p-6">
+            <div className="bg-theme-bg-secondary rounded-lg shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-2">
                 <a href="https://floaredor.vercel.app/left-brain" 
                    className="text-xl font-semibold hover:text-blue-400 flex items-center gap-2"
@@ -269,7 +271,7 @@ export default function PortfolioPage() {
                 <li>GlusterFS and OpenMPI implementation</li>
               </ul>
             </div>
-            <div className="bg-gray-900 rounded-lg shadow-xl p-6">
+            <div className="bg-theme-bg-secondary rounded-lg shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-2">
                 <a href="https://floaredor.vercel.app/left-brain" 
                    className="text-xl font-semibold hover:text-blue-400 flex items-center gap-2"
@@ -295,7 +297,7 @@ export default function PortfolioPage() {
             <Award className="w-6 h-6" />
             Notable Achievements
           </h2>
-          <div className="bg-gray-900 rounded-lg shadow-xl p-6">
+          <div className="bg-theme-bg-secondary rounded-lg shadow-xl p-6">
             <div className="space-y-6">
               <div className="achievement-item">
                 <h3 className="text-xl font-semibold text-blue-400">
@@ -382,7 +384,7 @@ export default function PortfolioPage() {
             Music Compositions & Media
           </h2>
           <div className="grid gap-6">
-            <div className="bg-gray-900 rounded-lg shadow-xl p-6">
+            <div className="bg-theme-bg-secondary rounded-lg shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-4">Featured Works</h3>
               <div className="space-y-6">
                 <iframe
@@ -456,7 +458,7 @@ export default function PortfolioPage() {
         </section>
       </main>
 
-      <footer className="bg-gray-900 text-gray-400 py-8 mt-20">
+      <footer className="bg-theme-bg-secondary text-theme-text-secondary py-8 mt-20">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <p>© 2024 Sai Ravi Teja Gangavarapu</p>
         </div>

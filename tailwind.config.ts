@@ -18,6 +18,16 @@ const config: Config = {
       },
       colors: {
         "nice-gray":"#6b6b6b",
+        // Theme-aware colors using CSS variables
+        "theme-bg-primary": "var(--bg-primary)",
+        "theme-bg-secondary": "var(--bg-secondary)",
+        "theme-text-primary": "var(--text-primary)",
+        "theme-text-secondary": "var(--text-secondary)",
+        "theme-accent-primary": "var(--accent-primary)",
+        "theme-accent-secondary": "var(--accent-secondary)",
+        "theme-accent-navy": "var(--accent-navy)",
+        "theme-accent-highlight": "var(--accent-highlight)",
+        "theme-accent-violet": "var(--accent-violet)",
       },
     },
   },

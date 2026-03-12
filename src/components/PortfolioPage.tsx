@@ -95,7 +95,7 @@ export default function PortfolioPage() {
       }
     `}</style>
     <div className="z-10">
-    <Navbar className='bg-transparent' titleStyle='text-white' hideTitle={true}/>
+    <Navbar className='bg-transparent' titleStyle='text-theme-text-primary' hideTitle={true}/>
   </div>
     <div className="win95-desktop" style={{paddingBottom: '50px'}}>
 

@@ -8,12 +8,14 @@ export default function MidPortfolioPage() {
   return (
     <div className=''>
     <div className="z-10">
-    <Navbar className='bg-transparent' titleStyle='text-white'/>
+    <Navbar className='bg-transparent' titleStyle='text-theme-text-primary'/>
   </div>
-    <div className="min-h-screen bg-black text-gray-100">
+    <div className="min-h-screen bg-theme-bg-primary text-theme-text-primary">
 
       {/* Hero Section */}
-      <header className="bg-gradient-to-r from-blue-900 to-purple-900 py-40">
+      <header className="py-40" style={{
+        background: 'linear-gradient(to right, var(--accent-primary), var(--accent-secondary))'
+      }}>
         <div className="max-w-6xl mx-auto px-4">
           <h1 className="text-4xl font-bold mb-4">Sai Ravi Teja Gangavarapu</h1>
           <p className="text-xl mb-6">Music Technology Researcher & Software Engineer</p>
@@ -491,7 +493,7 @@ export default function MidPortfolioPage() {
         </section>
       </main>
 
-      <footer className="bg-gray-900 text-gray-400 py-8 mt-20">
+      <footer className="bg-theme-bg-secondary text-theme-text-secondary py-8 mt-20">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <p>© 2024 Sai Ravi Teja Gangavarapu</p>
         </div>

@@ -9,18 +9,20 @@ const Scene = dynamic(() => import('@/components/3d/Scene'), {
 
 const Home: React.FC = () => {
   return (
-    <main className="h-screen w-screen flex flex-col relative bg-black">
+    <main className="h-screen w-screen flex flex-col relative bg-theme-bg-primary">
       <div className="absolute top-0 left-0 w-full h-full z-0 hidden lg:block md:block">
         <Scene/>
       </div>
       <div className="z-10">
-        <Navbar className='bg-transparent' titleStyle='text-white'/>
+        <Navbar className='bg-transparent' titleStyle='text-theme-text-primary'/>
       </div>
       <div className='flex flex-col gap-[1vh]'>
-        <span className='text-4xl text-center font-neue-montreal pt-[42vh] text-transparent bg-clip-text bg-gradient-to-l from-white via-gray-500 to-purple-900'>
+        <span className='text-4xl text-center font-neue-montreal pt-[42vh] text-transparent bg-clip-text' style={{
+          backgroundImage: 'linear-gradient(to left, var(--text-gradient-from), var(--text-gradient-via), var(--text-gradient-to))'
+        }}>
           Hi I&apos;m Ravi
         </span>
-        <span className='text-md text-center font-neue-montreal text-transparent bg-clip-text bg-gradient-to-r from-gray-200 via-gray-400 to-gray-500'>
+        <span className='text-md text-center font-neue-montreal text-theme-text-secondary'>
           Audio X AI  |  Full Stack  |  Music Production
         </span>
       </div>
