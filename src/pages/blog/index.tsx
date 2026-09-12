@@ -20,34 +20,16 @@ export default function Blog() {
 
         <div className="mx-auto max-w-5xl px-5 pb-24 pt-36 md:px-8 md:pt-44">
           <header className="mb-16 max-w-2xl md:mb-24">
-            <p className="mb-5 font-mono text-[11px] uppercase tracking-[0.28em] text-theme-text-secondary">
-              Notes / experiments / things I&apos;m learning
-            </p>
             <h1 className="font-neue-montreal text-5xl leading-none tracking-[-0.04em] md:text-7xl">
               Blog<span className="text-theme-text-secondary">.</span>
             </h1>
           </header>
 
-          <section aria-labelledby="latest-writing">
-            <div className="mb-6 flex items-center justify-between border-b border-white/15 pb-3">
-              <h2
-                id="latest-writing"
-                className="font-mono text-xs uppercase tracking-[0.2em] text-theme-text-secondary"
-              >
-                Latest writing
-              </h2>
-              <span className="font-mono text-xs text-theme-text-secondary">01</span>
-            </div>
-
+          <section>
             <Link
               href={ARTICLE_PATH}
-              className="group grid gap-7 border-b border-white/15 py-8 transition-colors duration-300 hover:border-white/50 md:grid-cols-[9rem_1fr_auto] md:items-start md:py-11"
+              className="group grid gap-7 border-b border-white/15 py-8 transition-colors duration-300 hover:border-white/50 md:grid-cols-[1fr_auto] md:items-start md:py-11"
             >
-              <div className="font-mono text-[11px] uppercase leading-relaxed tracking-[0.16em] text-theme-text-secondary">
-                <p>Research note</p>
-                <p>Motion planning</p>
-              </div>
-
               <div className="max-w-2xl">
                 <h3 className="font-neue-montreal text-3xl leading-[1.02] tracking-[-0.025em] transition-transform duration-300 group-hover:translate-x-1 md:text-5xl">
                   How Much Belief Does It Take to Hit the Brakes?
