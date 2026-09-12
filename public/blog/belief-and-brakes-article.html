@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A controlled experiment on which motion-prediction errors actually change a planner's decision.">
+<title>How Much Belief Does It Take to Hit the Brakes?</title>
+<style>
+@font-face {
+  font-family: "Neue Montreal";
+  src: url("/fonts/PPNeueMontreal-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-display: swap;
+}
+:root {
+  --ink: #151515;
+  --muted: #6f6b63;
+  --paper: #f5f2ea;
+  --surface: #fffdf8;
+  --line: #d8d2c6;
+  --accent: #8a2e18;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--paper);
+  font: 18px/1.72 Georgia, "Times New Roman", serif;
+  text-rendering: optimizeLegibility;
+}
+::selection { color: var(--surface); background: var(--accent); }
+.site-strip {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--line);
+  font-family: "Neue Montreal", "Arial Narrow", sans-serif;
+}
+.site-strip a {
+  color: var(--ink);
+  text-decoration: none;
+}
+.site-strip .home { font-size: 15px; letter-spacing: -.01em; }
+.site-strip .back {
+  color: var(--muted);
+  font: 11px/1.2 Consolas, "Courier New", monospace;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  transition: color .2s ease, transform .2s ease;
+}
+.site-strip .back:hover { color: var(--ink); transform: translateX(-3px); }
+article {
+  width: min(100%, 820px);
+  margin: 0 auto;
+  padding: 88px 28px 112px;
+}
+.kicker {
+  margin: 0 0 22px;
+  color: var(--accent);
+  font: 11px/1.4 Consolas, "Courier New", monospace;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+h1, h2, h3 {
+  color: var(--ink);
+  font-family: "Neue Montreal", "Arial Narrow", sans-serif;
+  letter-spacing: -.035em;
+}
+h1 {
+  max-width: 760px;
+  margin: 0 0 26px;
+  font-size: clamp(3rem, 7vw, 5.6rem);
+  line-height: .94;
+}
+h1 + h2 {
+  max-width: 650px;
+  margin: 0 0 52px;
+  color: var(--muted);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.25rem, 2.5vw, 1.6rem);
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -.015em;
+  line-height: 1.35;
+}
+h2 {
+  margin: 4.4rem 0 1.1rem;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  line-height: 1.08;
+}
+h3 {
+  margin: 2.5rem 0 .8rem;
+  font-size: 1.3rem;
+  line-height: 1.25;
+}
+p { margin: 0 0 1.35rem; }
+strong { font-weight: 700; }
+a { color: var(--accent); text-underline-offset: 3px; }
+a:hover { text-decoration-thickness: 2px; }
+ul, ol { margin: .3rem 0 1.6rem; padding-left: 1.45rem; }
+li { margin: .38rem 0; padding-left: .25rem; }
+figure {
+  margin: 3rem 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.figure-missing {
+  display: grid;
+  min-height: 250px;
+  place-content: center;
+  padding: 32px;
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(135deg, transparent 49.75%, var(--line) 50%, transparent 50.25%),
+    linear-gradient(45deg, transparent 49.75%, var(--line) 50%, transparent 50.25%),
+    var(--surface);
+  background-size: 44px 44px;
+  text-align: center;
+}
+.figure-missing span {
+  display: inline-block;
+  padding: 8px 12px;
+  color: var(--ink);
+  background: var(--surface);
+  font: 11px/1.2 Consolas, "Courier New", monospace;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+.figure-missing small {
+  display: block;
+  max-width: 340px;
+  margin-top: 8px;
+  padding: 4px 8px;
+  color: var(--muted);
+  background: var(--surface);
+  font: 13px/1.45 Georgia, "Times New Roman", serif;
+  letter-spacing: 0;
+  text-transform: none;
+}
+figcaption {
+  margin-top: .75rem;
+  color: var(--muted);
+  font-size: .78rem;
+  font-style: italic;
+  line-height: 1.5;
+}
+table {
+  width: 100%;
+  margin: 2rem 0;
+  border-collapse: collapse;
+  font-size: .9rem;
+}
+th, td {
+  padding: .75rem .4rem;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+th {
+  font-family: "Neue Montreal", "Arial Narrow", sans-serif;
+  font-size: .76rem;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+th:last-child, td:last-child { text-align: right; }
+pre {
+  overflow-x: auto;
+  margin: 2rem 0;
+  padding: 1.4rem;
+  border-left: 3px solid var(--accent);
+  background: #e9e4da;
+  font-size: .86rem;
+  line-height: 1.55;
+  white-space: pre-wrap;
+}
+code {
+  padding: .08em .28em;
+  border-radius: 2px;
+  background: #e9e4da;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: .86em;
+}
+pre code { padding: 0; background: transparent; }
+.article-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font: 11px/1.5 Consolas, "Courier New", monospace;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.article-footer a { color: var(--ink); text-decoration: none; }
+.article-footer a:hover { color: var(--accent); }
+@media (max-width: 620px) {
+  body { font-size: 16px; }
+  .site-strip { width: calc(100% - 32px); padding: 19px 0; }
+  article { padding: 64px 18px 80px; }
+  h1 + h2 { margin-bottom: 40px; }
+  h2 { margin-top: 3.5rem; }
+  .figure-missing { min-height: 190px; }
+  table { display: block; overflow-x: auto; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}
+@media print {
+  .site-strip, .article-footer { display: none; }
+  body, article { background: white; }
+  article { padding-top: 32px; }
+}
+</style>
+<script>MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['$$','$$'],['\\[','\\]']]}};</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head><body><nav class="site-strip" aria-label="Blog navigation"><a class="home" href="/">Ravi Gangavarapu</a><a class="back" href="/blog">← All writing</a></nav><article><p class="kicker">Research note / Motion planning</p><h1>How Much Belief Does It Take to Hit the Brakes?</h1>
+<h2>What prediction errors actually matter to a planner?</h2>
+<p><strong>TL;DR:</strong> We usually score a motion prediction by asking how close it came to what actually happened. I wanted to ask something else: <em>did the error make the car do anything differently?</em></p>
+<p>So I built a tiny planner, kept every predicted path fixed, and changed only the probabilities attached to those paths. In 20 controlled cut-in scenes, two equally large probability errors could have completely different outcomes. One did nothing. The other made the planner change its mind.</p>
+<p>This started as a small planning-course experiment. I kept getting stuck on a basic question: once a prediction reaches the planner, which errors actually matter?</p>
+<p>The easiest way to find out was to strip the problem down until I could see the whole thing.</p>
+<p>Three quick definitions before we start:</p>
+<ul>
+<li>the <strong>predictor</strong> guesses how nearby cars might move;</li>
+<li>the <strong>planner</strong> decides what our car should do about it;</li>
+<li><strong>ego</strong> just means our car.</li>
+</ul>
+<p>One important caveat: this experiment shows that the effect exists. It does not tell us how often it happens in real traffic. More on that later.</p>
+<h2>The question</h2>
+<p>Say the predictor gives us three possible futures for a nearby car:</p>
+<ul>
+<li>it stays in its lane;</li>
+<li>it makes a mild cut-in;</li>
+<li>it makes an aggressive cut-in.</li>
+</ul>
+<p>Our planner has to choose now: maintain speed, slow down, or brake.</p>
+<p>That is the whole setup. Three futures. Three responses.</p>
+<p>Normally, the paths and their probabilities all change together. If the planner then picks a different action, we do not really know what caused it. Was it the shape of a path? A missing possibility? A confidence score?</p>
+<p>So I froze every path and changed only the probabilities.</p>
+<p>Would the planner still react? And if two probability estimates were equally wrong, could one matter much more than the other?</p>
+<p>Before getting to the experiment, it helps to walk through how motion prediction is usually evaluated. Each step adds something useful. Each also leaves one annoying hole.</p>
+<figure><div class="figure-missing" role="img" aria-label="Evaluation ladder from geometric accuracy to planner consequence"><span>Figure archive</span><small>Image asset was not included with the source draft.</small></div><figcaption>Figure 1. The usual evaluation ladder, followed by the controlled experiment: keep the possible paths fixed and change only the belief over them.</figcaption></figure>
+<h2>1. How accurate was the prediction?</h2>
+<p>The obvious place to start is distance.</p>
+<p>Average displacement error (ADE) measures how far the prediction is from the real path over time. Final displacement error (FDE) only looks at the last point:</p>
+<p>$$
+FDE = \lVert \hat y_T-y_T \rVert.
+$$</p>
+<p>Simple enough. Did the predicted path land near the real one?</p>
+<figure><div class="figure-missing" role="img" aria-label="Illustration of average and final displacement error"><span>Figure archive</span><small>Image asset was not included with the source draft.</small></div><figcaption>Figure 2. ADE averages the gaps between the predicted and realized paths across time. FDE measures the gap at the end of the prediction horizon. Values are illustrative.</figcaption></figure>
+<h3>One average can hide difficult maneuvers</h3>
+<p>One average mixes together a lot of very different driving.</p>
+<p>Most cars spend most of their time doing boring, predictable things. They stay in their lane and keep moving. A model can get those scenes right, post a nice average score, and still be bad at merges, turns, lane changes, and cut-ins.</p>
+<p>So we can split ADE and FDE by maneuver. This is already much more useful: now we can see <em>where</em> the predictor struggles.</p>
+<p>But we are still only measuring geometry. We still do not know whether the model covered the possible futures, whether the miss was dangerous, or whether the planner cared.</p>
+<h2>2. Did it cover and rank the possible futures?</h2>
+<p>Driving does not have one obvious future.</p>
+<p>A car near a merge might keep going, merge, yield, or brake. A useful predictor should be able to represent several of these possibilities at once. This is <strong>multimodal prediction</strong>.</p>
+<p>Now we need to ask two things:</p>
+<ol>
+<li>Did the model include the future that actually happened?</li>
+<li>Did it put sensible confidence on each possibility?</li>
+</ol>
+<p>minADE and minFDE check whether at least one predicted path came close. Miss rate checks whether all of them missed. Metrics like the <a href="https://proceedings.mlr.press/v235/shahroudi24a.html">Energy Score</a> look at the whole distribution, not just the model's luckiest guess. The <a href="https://openaccess.thecvf.com/content/ICCV2021/html/Ettinger_Large_Scale_Interactive_Motion_Forecasting_for_Autonomous_Driving_The_Waymo_ICCV_2021_paper.html">Waymo Open Motion Dataset benchmark</a> and models like <a href="https://papers.nips.cc/paper_files/paper/2022/hash/2ab47c960bfee4f86dfc362f26ad066a-Abstract-Conference.html">Motion Transformer</a> use this multimodal view.</p>
+<p>Much better. But we still do not know whether a miss was actually dangerous.</p>
+<figure><div class="figure-missing" role="img" aria-label="Illustration of multimodal coverage and ranking"><span>Figure archive</span><small>Image asset was not included with the source draft.</small></div><figcaption>Figure 3. The realized future is present in the predicted set, but the predictor assigns more confidence to a different mode. Values are illustrative.</figcaption></figure>
+<h2>3. Was the error dangerous?</h2>
+<p>This is the part that distance metrics completely flatten.</p>
+<p>Imagine two predictions that are both wrong by two meters.</p>
+<p>In the first scene, the other car is 50 meters away on the other side of an empty road. In the second, it is right next to us and drifting into our lane.</p>
+<p>Same FDE. Very different problem.</p>
+<p>Things like time to collision (TTC), path overlap, proximity, relative speed, and minimum clearance add the context we were missing. They ask: <em>where did the error happen, and was anyone about to have a really bad day?</em></p>
+<figure><div class="figure-missing" role="img" aria-label="Illustration of equal geometric error at different interaction severity"><span>Figure archive</span><small>Image asset was not included with the source draft.</small></div><figcaption>Figure 4. Both predictions have the same geometric error. The error on the right happens much closer to the ego path, making the interaction more urgent. Values are illustrative.</figcaption></figure>
+<h2>4. Did the error matter to the planner?</h2>
+<p>But even danger is not quite the same as relevance to the planner.</p>
+<p>Two scenes can have similar FDE and TTC. In one, both predictions make the car maintain speed. In the other, the prediction changes the action from maintain to brake.</p>
+<p>FDE tells us how wrong the path was. TTC tells us how urgent the interaction looked. Neither tells us whether that specific error changed the car's decision.</p>
+<figure><div class="figure-missing" role="img" aria-label="Illustration of severity versus planner relevance"><span>Figure archive</span><small>Image asset was not included with the source draft.</small></div><figcaption>Figure 5. Similar FDE and TTC do not imply the same planner response. Only the second example changes the selected action. Values are illustrative.</figcaption></figure>
+<p>If the planner brakes either way, the error shows up in our metrics but not in the car's behavior. If one prediction says brake and the other says maintain, the error has made it all the way through the stack.</p>
+<p>I am definitely not the first person to ask whether prediction metrics match driving quality. <a href="https://proceedings.mlr.press/v205/farid23a.html">Farid et al.</a> connect prediction failures to planning cost. <a href="https://papers.nips.cc/paper_files/paper/2023/hash/e197fe307eb3467035f892dc100d570a-Abstract-Conference.html">Tran et al.</a> show that better trajectory scores do not always mean better driving. <a href="https://arxiv.org/abs/2212.06437">DiffStack</a> trains prediction with the downstream task in mind. <a href="https://doi.org/10.1609/aaai.v38i19.30085">CCTR</a> asks whether better confidence calibration helps planning. And <a href="https://proceedings.mlr.press/v270/nakamura25a.html">Nakamura et al.</a> use regret to find prediction failures that actually hurt the robot downstream.</p>
+<p>My question is much narrower.</p>
+<p>Keep every possible path exactly where it is. Change only the probabilities. How much belief has to move before the planner changes its mind?</p>
+<p>You can also phrase this as a threshold question: how confident does the predictor need to be in a cut-in before the planner hits the brakes?</p>
+<p>There is probably no single magic number. A 20% chance of a cut-in might matter a lot when another car is close and moving toward us. The same 20% might mean nothing when there is loads of space. It depends on the scene and on how the planner balances safety, progress, and comfort.</p>
+<p>So the experiment has three parts:</p>
+<ol>
+<li>keep the paths fixed and move only their probabilities;</li>
+<li>measure how far the probabilities can move before the action flips;</li>
+<li>check whether that flip actually made the outcome worse.</li>
+</ol>
+<h2>5. Was it the trajectories or their probabilities?</h2>
+<p>A multimodal prediction is basically a short list. Each row has one possible path and one probability. Each row is usually called a <strong>mode</strong>.</p>
+<ul>
+<li>The <strong>support</strong> is the set of physical paths the model says are possible.</li>
+<li>The <strong>belief</strong> is the set of probabilities attached to those paths.</li>
+</ul>
+<p>Usually both parts change together. Paths move. Modes appear or disappear. Probabilities shift. Good luck figuring out which change the planner reacted to.</p>
+<p>I froze the support instead. No path gets moved, added, removed, or regenerated. I only change the belief.</p>
+<p>This means ADE, FDE, coverage, and trajectory diversity literally cannot change. The physical predictions are identical.</p>
+<p>In each scene, the other car has three fixed futures: stay in its lane, make a mild cut-in, or make an aggressive cut-in. Ego can maintain speed, slow down, or brake. The planner scores those choices using overlap, clearance, progress, acceleration, and jerk, then picks the cheapest one.</p>
+<p>Figure 6 is the whole trick. Same three paths. Different probabilities. That alone changes the ego plan from brake to maintain.</p>
+<figure><div class="figure-missing" role="img" aria-label="Fixed trajectory support and selected ego speed profiles"><span>Figure archive</span><small>Image asset was not included with the source draft.</small></div><figcaption>Figure 6. Left: one fixed set of possible trajectories under two beliefs. Right: the resulting selected ego speed profiles. The intervention changes probabilities, not paths.</figcaption></figure>
+<h2>6. How close was the planner to changing its mind?</h2>
+<p>Now we can ask the question in the title: how much belief has to move before the planner hits the brakes—or stops braking?</p>
+<p>A belief here is just three numbers that add up to one: the probabilities of stay, mild cut-in, and aggressive cut-in. Every possible mix of those numbers fits inside a triangle.</p>
+<p>Pick any point in that triangle. The planner uses those probabilities to work out the expected cost of maintaining, slowing down, and braking. Then it picks the cheapest action:</p>
+<p>$$
+\pi(p)=\arg\min_a J_a(p), \qquad J_a(p)=r_a^\top p.
+$$</p>
+<p>Because this planner is simple and linear, the triangle splits into clean decision regions. One region says maintain. Another says brake. Cross the line and the plan flips.</p>
+<p>A real planner would probably produce a much messier boundary. That is fine. The same question still works: how close is the current prediction to making the planner change its mind?</p>
+<p>To measure how much probability moved, I used <strong>total variation distance</strong>:</p>
+<p>$$
+d_{TV}(p,\tilde p)=\frac{1}{2}\lVert p-\tilde p\rVert_1.
+$$</p>
+<p>Awful name. Simple idea. If I take 0.05 probability from "stay" and give it to "aggressive cut-in," the distance is 0.05. We are measuring probability moved, not meters moved.</p>
+<p>I call the smallest change that reaches another decision region $\varepsilon_{flip}$. You can think of it as the planner's margin. Small margin, twitchy decision. Large margin, you have to move a lot of belief before anything changes.</p>
+<p>I solved for this distance and also checked it against a dense grid over the triangle.</p>
+<figure><div class="figure-missing" role="img" aria-label="Three-mode planner policy simplex"><span>Figure archive</span><small>Image asset was not included with the source draft.</small></div><figcaption>Figure 7. Both arrows move the same amount of probability from the reference belief. Blue stays in the brake region; orange crosses into maintain.</figcaption></figure>
+<p>I tested 20 cut-in settings chosen near transitions between planner actions:</p>
+<table>
+<thead>
+<tr>
+<th>Quantity</th>
+<th style="text-align: right;">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cut-in settings analyzed</td>
+<td style="text-align: right;">20 / 20</td>
+</tr>
+<tr>
+<td>Median distance to nearest competing policy region</td>
+<td style="text-align: right;">0.1029 TV</td>
+</tr>
+<tr>
+<td>Scenarios within 0.05 TV of a boundary</td>
+<td style="text-align: right;">5 / 20</td>
+</tr>
+<tr>
+<td>Operational decisions</td>
+<td style="text-align: right;">18 brake, 2 maintain</td>
+</tr>
+</tbody>
+</table>
+<p>For the median scene, moving 0.1029 of the probability mass was enough to change the plan. Five of the 20 scenes needed no more than 0.05.</p>
+<p>That is interesting, but please do not read it as “25% of traffic is near a decision boundary.” I deliberately chose scenes around transitions because I wanted to study the mechanism. This is a microscope, not a traffic survey.</p>
+<h2>7. Did changing the planner's decision matter?</h2>
+<p>A plan changing is interesting. It is not automatically bad.</p>
+<p>Maybe the new action is safer. Maybe it is less comfortable. Maybe the two choices are basically equivalent. I still needed to check what the change actually cost.</p>
+<p>There is also an obvious fairness problem. Comparing one huge error with one tiny error proves very little. So I built pairs with exactly the same amount of probability error. One stays on the same side of the boundary. The other crosses it.</p>
+<p>For each scene, I start with one fixed set of reference probabilities, written as $q$. The code calls this the <strong>oracle belief</strong>. The name is a little grand. It is really just a fixed ruler that lets me compare both errors fairly—not perfect knowledge of a real scene.</p>
+<p>I then create two equally large probability errors:</p>
+<ul>
+<li>$p_{in}$ moves the probabilities but stays in the same planner region;</li>
+<li>$p_{cross}$ moves them by the same amount but crosses a boundary.</li>
+</ul>
+<p>Their total variation distance from the reference is identical:</p>
+<p>$$
+d_{TV}(q,p_{in})=d_{TV}(q,p_{cross}).
+$$</p>
+<p>Each altered prediction makes the planner choose an action. I score both actions using the original reference $q$. The prediction changes; the ruler does not.</p>
+<p>Any extra cost over the best reference action is <strong>oracle regret</strong>:</p>
+<p>$$
+R(p;q)=\mathbb E_q[L(\pi(p),\tau)]-\min_a\mathbb E_q[L(a,\tau)].
+$$</p>
+<p>In plain English: choose an action using the changed probabilities, then judge that action using the fixed reference probabilities. Zero regret means the changed prediction still led to the best action. Positive regret means it did not.</p>
+<p>I also use different weights for choosing the action and judging it. Otherwise the “evaluation” would just repeat the planner's own opinion back to us.</p>
+<p>I found a matched pair in all 20 scenes. Every in-region error kept the reference action and had zero regret. Every boundary-crossing error changed the action and had positive regret. The mean gap was <code>424.52</code> evaluation-cost units.</p>
+<figure><div class="figure-missing" role="img" aria-label="Equal oracle error with unequal regret"><span>Figure archive</span><small>Image asset was not included with the source draft.</small></div><figcaption>Figure 8. Top: each pair has equal total-variation error. Bottom: crossing regret ranges from <code>320.99</code> to <code>499.27</code> evaluation-cost units, while explicit blue markers show zero in-region regret.</figcaption></figure>
+<p>This does <strong>not</strong> mean “probability errors are bad.” It means error size missed something important in these scenes. Two equally large errors had different consequences because only one crossed the planner's boundary.</p>
+<h2>Checking nearby planner weights and learned trajectories</h2>
+<p>The main experiment uses hand-drawn cut-ins and one planner setup. Fair complaint: maybe the result is just a quirk of those choices.</p>
+<p>I ran two quick checks. First, I changed how much the planner cares about safety. Then I replaced my hand-drawn paths with outputs from a learned prediction model.</p>
+<p>These checks still do not tell us how common the effect is in the real world. They only answer a smaller question: does it immediately disappear when I move away from the base setup?</p>
+<figure><div class="figure-missing" role="img" aria-label="Planner-weight robustness and learned-support scan"><span>Figure archive</span><small>Image asset was not included with the source draft.</small></div><figcaption>Figure 9. Two scope checks: nearby safety-risk weights and learned A7 trajectory supports at one synthetic ego-relative placement.</figcaption></figure>
+<h3>Nearby planner weights</h3>
+<p>I tried safety-risk weights of <code>0.75x</code>, <code>1.00x</code>, and <code>1.25x</code> while keeping the evaluation rule fixed. The equal-error comparison worked in 8/20, 7/20, and 6/20 scenes.</p>
+<p>Six scenes worked under all three settings. In those six, the median boundary distance went from <code>0.0853</code> to <code>0.2719</code> to <code>0.3834</code> TV as the safety weight increased. The mean regret gap stayed at <code>494.13</code> evaluation-cost units because the paired cases still switched between the same actions.</p>
+<p>I added this common-six comparison after the main experiment, so I see it as a useful sanity check, not a headline result.</p>
+<h3>Learned trajectory supports</h3>
+<p>For the second check, I used outputs from a learned motion-prediction model called A7. Each prediction has six paths and six probabilities.</p>
+<p>There was one catch: the saved data did not include ego's future. So I placed every prediction at the same synthetic position relative to ego. This makes the scan consistent, but it is a stress test—not a replay of the original driving scenes.</p>
+<p>I scanned 500 deterministically selected predictions. For 366 of them, some change in probability could reach a different planner decision. Eight were within <code>0.01</code> TV of a boundary, 43 within <code>0.05</code>, and 95 within <code>0.10</code>. The planner chose maintain 133 times, slow 143 times, and brake 224 times.</p>
+<p>The good news: the boundary idea is not limited to my three hand-drawn paths.</p>
+<p>The big caveat: this does not tell me that 8.6% of real Argoverse 2 scenes sit near an important boundary. Without the original ego-agent geometry, I cannot make that claim.</p>
+<h2>What I take from this</h2>
+<p>Here is the whole experiment in five lines:</p>
+<pre><code class="language-text">same predicted trajectories
+        +
+different probabilities
+        →
+planner boundary crossing
+        →
+different ego decision
+        →
+different oracle regret
+</code></pre>
+<p>Geometry tells us <em>where the forecast went</em>. Probability metrics tell us <em>how confidence was split across the possible futures</em>. The planner adds one more question: <em>did the error land somewhere that changed the decision?</em></p>
+<p>I think distance to a planner boundary could be a useful diagnostic beside ADE, FDE, coverage, and calibration. A small error can cross a nearby boundary. A much larger error can stay inside the same region and change nothing.</p>
+<p>This is still a deliberately tiny experiment: synthetic cut-ins, one nearby car, and a planner that mostly chooses between maintain and brake. (<code>slow</code> never wins in the base suite.) Models like <a href="https://waymo.com/research/scene-transformer-a-unified-architecture-for-predicting-multiple-agent-trajectories/">Scene Transformer</a> and <a href="https://openaccess.thecvf.com/content/CVPR2023/html/Rowe_FJMP_Factorized_Joint_Multi-Agent_Motion_Prediction_Over_Learned_Directed_Acyclic_CVPR_2023_paper.html">FJMP</a> model joint futures for several agents. The boundary idea might carry over, but interactions between agents could make it behave very differently.</p>
+<p>Also, the cost numbers here are not collision probabilities or units of real-world harm. They only let us compare the paired cases inside this experiment.</p>
+<p>The mechanism is real. How often it matters in traffic is still an open question.</p>
+<h2>What I would do next</h2>
+<p>The obvious next step is to put the learned predictions back into their real scenes.</p>
+<p>I would restore the original ego and agent geometry for the saved A7 records, keep every predicted path in its native scene, and run the same analysis again. Then we could finally ask how often real forecasts sit near a boundary that actually matters.</p>
+<h2>Reproducing it</h2>
+<p>Everything is deterministic. The code uses NumPy and a small expected-cost planner. A constrained linear program finds the nearest competing decision region, and a dense grid checks the answer.</p>
+<p>The repository has frozen configs for the <code>configs/belief_planning_blog.yaml</code>, the <code>configs/belief_planning_balanced_sweep.yaml</code>, and the <code>configs/belief_planning_a7_scan.yaml</code>. The <code>idea3-assets/manifest.json</code> records the checksums and where every figure came from.</p>
+<p>If you work on prediction or planning, I would genuinely love to know where this framing breaks. Would you monitor distance to a planner boundary? Or does the whole idea get too unstable once the planner becomes realistic?</p>
+<h2>References</h2>
+<ul>
+<li>Ettinger et al. <a href="https://openaccess.thecvf.com/content/ICCV2021/html/Ettinger_Large_Scale_Interactive_Motion_Forecasting_for_Autonomous_Driving_The_Waymo_ICCV_2021_paper.html">Large Scale Interactive Motion Forecasting for Autonomous Driving: The Waymo Open Motion Dataset</a>. ICCV, 2021.</li>
+<li>Shi et al. <a href="https://papers.nips.cc/paper_files/paper/2022/hash/2ab47c960bfee4f86dfc362f26ad066a-Abstract-Conference.html">Motion Transformer with Global Intention Localization and Local Movement Refinement</a>. NeurIPS, 2022.</li>
+<li>Farid et al. <a href="https://proceedings.mlr.press/v205/farid23a.html">Task-Relevant Failure Detection for Trajectory Predictors in Autonomous Vehicles</a>. CoRL 2022, published 2023.</li>
+<li>Karkus et al. <a href="https://arxiv.org/abs/2212.06437">DiffStack: A Differentiable and Modular Control Stack for Autonomous Vehicles</a>. CoRL, 2022.</li>
+<li>Tran et al. <a href="https://papers.nips.cc/paper_files/paper/2023/hash/e197fe307eb3467035f892dc100d570a-Abstract-Conference.html">What Truly Matters in Trajectory Prediction for Autonomous Driving?</a>. NeurIPS, 2023.</li>
+<li>Cao et al. <a href="https://doi.org/10.1609/aaai.v38i19.30085">CCTR: Calibrating Trajectory Prediction for Uncertainty-Aware Motion Planning in Autonomous Driving</a>. AAAI, 2024.</li>
+<li>Shahroudi et al. <a href="https://proceedings.mlr.press/v235/shahroudi24a.html">Evaluation of Trajectory Distribution Predictions with Energy Score</a>. ICML, 2024.</li>
+<li>Nakamura et al. <a href="https://proceedings.mlr.press/v270/nakamura25a.html">Not All Errors Are Made Equal: A Regret Metric for Detecting System-level Trajectory Prediction Failures</a>. CoRL, 2024; published 2025.</li>
+<li>Da et al. <a href="https://arxiv.org/abs/2512.12211">Measuring What Matters: Scenario-Driven Evaluation for Trajectory Predictors in Autonomous Driving</a>. arXiv preprint, 2025.</li>
+<li>Chakraborty et al. <a href="https://arxiv.org/abs/2507.22389">Safety Evaluation of Motion Plans Using Trajectory Predictors as Forward Reachable Set Estimators</a>. arXiv preprint, 2025.</li>
+<li>Ngiam et al. <a href="https://waymo.com/research/scene-transformer-a-unified-architecture-for-predicting-multiple-agent-trajectories/">Scene Transformer: A Unified Architecture for Predicting Multiple Agent Trajectories</a>. ICLR, 2022.</li>
+<li>Rowe et al. <a href="https://openaccess.thecvf.com/content/CVPR2023/html/Rowe_FJMP_Factorized_Joint_Multi-Agent_Motion_Prediction_Over_Learned_Directed_Acyclic_CVPR_2023_paper.html">FJMP: Factorized Joint Multi-Agent Motion Prediction Over Learned Directed Acyclic Interaction Graphs</a>. CVPR, 2023.</li>
+</ul><footer class="article-footer"><span>End of note</span><a href="/blog">More writing →</a></footer></article></body></html>
