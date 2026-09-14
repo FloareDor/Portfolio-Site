@@ -43,7 +43,6 @@ const Navbar = ({className, titleStyle, hideTitle = false} : navbarProps) => {
             {/* <Link href={"/portfolio"}><span className="text-theme-text-secondary text-sm lg:text-base md:text-base font-semibold hover:text-theme-text-primary  ">Portfolio</span></Link> */}
             <Link href={"/left-brain"}><span className="text-theme-text-secondary text-sm lg:text-base md:text-base font-semibold hover:text-theme-text-primary  ">Left Brain</span></Link>
             <Link href={"/right-brain"}><span className="text-theme-text-secondary text-sm lg:text-base md:text-base font-semibold hover:text-theme-text-primary">Right Brain</span></Link>
-            <Link href={"/blog"}><span className="text-theme-text-secondary text-sm lg:text-base md:text-base font-semibold hover:text-theme-text-primary">Blog</span></Link>
             <Link href={"/socials"}><span className="text-theme-text-secondary text-sm lg:text-base md:text-base font-semibold hover:text-theme-text-primary">Socials</span></Link>
             <Link href={"/resume.pdf"}><span className="text-theme-text-secondary text-sm lg:text-base md:text-base font-semibold hover:text-theme-text-primary">Resume</span></Link>
         </div>
@@ -60,7 +59,6 @@ const Navbar = ({className, titleStyle, hideTitle = false} : navbarProps) => {
           {/* <Link href={"/portfolio"}><span onClick={toggleScrollLock} className="block text-theme-text-primary text-base font-semibold mb-2 focus:text-theme-text-secondary">Portfolio</span></Link> */}
           <Link href={"/left-brain"}><span onClick={toggleScrollLock} className="block text-theme-text-primary text-base font-semibold mb-2 focus:text-theme-text-secondary">Left Brain</span></Link>
           <Link href={"/right-brain"}><span onClick={toggleScrollLock} className="block text-theme-text-primary text-base font-semibold mb-2 hover:text-theme-text-secondary">Right Brain</span></Link>
-          <Link href={"/blog"}><span onClick={toggleScrollLock} className="block text-theme-text-primary text-base font-semibold mb-2 hover:text-theme-text-secondary">Blog</span></Link>
           <Link href={"/socials"}><span onClick={toggleScrollLock} className="block text-theme-text-primary text-base font-semibold mb-2 hover:text-theme-text-secondary">Socials</span></Link>
           <Link href={"/resume.pdf"}><span onClick={toggleScrollLock} className="block text-theme-text-primary text-base font-semibold hover:text-theme-text-secondary">Resume</span></Link>
         </div>
