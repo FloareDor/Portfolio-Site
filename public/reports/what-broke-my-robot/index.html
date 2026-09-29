@@ -165,7 +165,7 @@
   </header>
 
   <figure>
-    <img src="renders/hero_standing.png" alt="Rendered MuJoCo simulation of the Unitree Go1 quadruped robot standing on a checkered floor.">
+    <img src="/reports/what-broke-my-robot/renders/hero_standing.png" alt="Rendered MuJoCo simulation of the Unitree Go1 quadruped robot standing on a checkered floor.">
   </figure>
 
   <section>
@@ -205,7 +205,7 @@
     </div>
 
     <figure class="on-white">
-      <img src="renders/healthy_vs_faulty.png" alt="Side by side MuJoCo renders comparing a healthy robot trotting to a robot with a weakened rear-right hip motor at three points in time; the faulty one visibly tips over by the last frame.">
+      <img src="/reports/what-broke-my-robot/renders/healthy_vs_faulty.png" alt="Side by side MuJoCo renders comparing a healthy robot trotting to a robot with a weakened rear-right hip motor at three points in time; the faulty one visibly tips over by the last frame.">
       <figcaption>Same walking command and starting position, three moments in time. Top row is healthy. Bottom row has one rear hip motor cut to 35% strength, exaggerated here for visibility. By 2.5 seconds it has tipped over.</figcaption>
     </figure>
 
@@ -275,11 +275,11 @@ def policy(t, obs):
 
     <div class="chart-row">
       <figure class="on-white">
-        <img src="plots/held_out_error_vs_budget.png" alt="Line chart: held-out body position error vs experiment budget, comparing doing nothing against random probing.">
+        <img src="/reports/what-broke-my-robot/plots/held_out_error_vs_budget.png" alt="Line chart: held-out body position error vs experiment budget, comparing doing nothing against random probing.">
         <figcaption>Fig. 1: error after seeing new movements, by how many tests were allowed. Lower is better.</figcaption>
       </figure>
       <figure class="on-white">
-        <img src="plots/error_by_fault_type.png" alt="Bar chart: held-out body position error by fault type, comparing doing nothing against random probing.">
+        <img src="/reports/what-broke-my-robot/plots/error_by_fault_type.png" alt="Bar chart: held-out body position error by fault type, comparing doing nothing against random probing.">
         <figcaption>Fig. 2: same comparison, split by what actually broke.</figcaption>
       </figure>
     </div>
@@ -301,7 +301,7 @@ def policy(t, obs):
     </p>
 
     <figure class="on-white" style="max-width: 420px;">
-      <img src="plots/param_error_vs_budget.png" alt="Line chart: parameter estimation error vs experiment budget.">
+      <img src="/reports/what-broke-my-robot/plots/param_error_vs_budget.png" alt="Line chart: parameter estimation error vs experiment budget.">
       <figcaption>Fig. 3: how close the guessed cause is to the true cause, by test budget.</figcaption>
     </figure>
 
