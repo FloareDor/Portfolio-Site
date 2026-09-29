@@ -370,10 +370,10 @@ def policy(t, obs):
   <section>
     <h2>Next Steps</h2>
     <ol>
-      <li>Run the full-scale version of this test with the coding agent included: many more severities and fault types, not just 5 runs. I need this for a statistically meaningful answer to whether the agent beats random probing. I haven't done it yet because of the API cost and time it would take.</li>
-      <li>Tell the agent, directly, that a wrong guess costs more than an honest blank. This is the cheapest fix for the failure above, and I can test it against the two known losing runs.</li>
-      <li>Lock down how the agent's test code actually runs. Right now it is unrestricted, which is fine for one trusted user locally, but it's worth hardening before anyone else's code runs through it.</li>
-      <li>Add automated tests for the simulation and fitting code. None exist yet; I've only checked the pipeline by running it and reading the numbers.</li>
+      <li>Run the full-scale test with the coding agent: more fault types, more severities, way more than 5 runs. Haven't done it yet, costs API money and time.</li>
+      <li>Tell the agent a wrong guess costs more than an honest blank.</li>
+      <li>Sandbox the agent's code execution. Right now it runs unrestricted.</li>
+      <li>Write automated tests for the simulation and fitting code. None exist yet.</li>
     </ol>
   </section>
 
