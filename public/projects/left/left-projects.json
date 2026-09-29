@@ -343,6 +343,17 @@
 "liveLink": "https://www.instagram.com/reel/DQbY-6tDmAb/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
 			"blog": "Made a little Chrome extension for strudel.cc that lets you edit live coding music patterns with AI. Type what you want (like 'add drums') and it generates the code. Has apply/reject buttons like Cursor. Used Context7 to research Strudel docs for accurate suggestions. Works with voice input too.\n\nI did this in public to get used to putting myself out there in the open. Kimi was initially unusable but the key was Context7, documentation files, strictly-defined rules in a markdown file, agentic workflow instead of one-shotting. Gemini was alright but Kimi was blazingly fast thanks to LPUs @groq. \n\n It was super fun doing the demo video lol.",
 "videoLink": "https://www.instagram.com/reel/DQbY-6tDmAb/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+},
+"25": {
+	"id": 25,
+	"title": "What Broke My Robot?",
+	"description": "Testing whether an AI agent can diagnose a physical fault on a simulated quadruped robot by designing and running its own experiments, and beating both a do-nothing baseline and random probing.",
+	"image": "/images/left/what-broke-my-robot.png",
+	"technologies": ["Python", "MuJoCo", "Gemini API", "SciPy"],
+	"githubLink": "https://github.com/FloareDor/what-broke-my-robot",
+	"liveLink": "/reports/what-broke-my-robot/",
+	"blog": "Real machines drift over time: a motor weakens, a surface gets slicker, weight shifts. Nobody tells the robot what changed, it has to notice on its own. The usual fix is a person running diagnostic tests by hand. I wanted to test whether an AI agent can do this itself: design its own tests, read the results, and figure out the cause.\n\nI took a Go1 quadruped in MuJoCo (from DeepMind's Menagerie), secretly messed with one physical property per episode (grip, torso mass, or one actuator's strength), and gave the agent a fixed budget of 8 experiments to figure out which. It only ever sees four functions: inspect_model, run_experiment, inspect_trajectory, and submit_model, never an image or video. I used a standard off-the-shelf simulator, walking controller, and scipy curve-fitting baseline instead of building any of that myself. The only new part is the diagnosis step: can an agent figure out the fault better than doing nothing and better than random probing?\n\nFull writeup with methodology, plots, and results is in the live link.",
+	"videoLink": ""
 }
 
 }
