@@ -254,7 +254,7 @@ def policy(t, obs):
     <p>I run each one through the same steps 2 through 4:</p>
     <ul>
       <li><b>A, do nothing:</b> I assume the robot is still healthy. This is the baseline I compare the other two methods against.</li>
-      <li><b>B, random probing:</b> I apply random leg movements 8 times, then fit the most likely explanation with scipy's standard least-squares optimizer, the simplest option available, rather than writing anything custom.</li>
+      <li><b>B, random probing:</b> I apply random leg movements 8 times, then fit the most likely explanation with scipy's standard least-squares optimizer.</li>
       <li><b>C, the coding agent:</b> Gemini 3.5 Flash. It designs its own tests on purpose, reads the results, and decides what to try next.</li>
     </ul>
   </section>
@@ -292,8 +292,7 @@ def policy(t, obs):
       handful of tries without raising an error.
     </p>
     <p>
-      I fixed the default the simple way: moving the starting guess slightly off the edge, which is almost
-      free and resolves most of it. Before the fix, 8 tests scored worse than doing nothing. After, 8 tests
+      I fixed the default the simple way: moving the starting guess slightly off the edge. Before the fix, 8 tests scored worse than doing nothing. After, 8 tests
       beat doing nothing. I also tried a more thorough fix, restarting the fit from several different points
       instead of one, which gets much closer (one config went from parameter error 0.24 to 0.0015) but costs
       30 to 90 minutes per fit since it means re-running the simulation many more times. I kept that as a
