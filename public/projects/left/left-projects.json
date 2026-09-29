@@ -351,7 +351,7 @@
 	"image": "/images/left/what-broke-my-robot.png",
 	"technologies": ["Python", "MuJoCo", "Gemini API", "SciPy"],
 	"githubLink": "https://github.com/FloareDor/what-broke-my-robot",
-	"liveLink": "/reports/what-broke-my-robot/",
+	"liveLink": "/reports/what-broke-my-robot/index.html",
 	"blog": "Real machines drift over time: a motor weakens, a surface gets slicker, weight shifts. Nobody tells the robot what changed, it has to notice on its own. The usual fix is a person running diagnostic tests by hand. I wanted to test whether an AI agent can do this itself: design its own tests, read the results, and figure out the cause.\n\nI took a Go1 quadruped in MuJoCo (from DeepMind's Menagerie), secretly messed with one physical property per episode (grip, torso mass, or one actuator's strength), and gave the agent a fixed budget of 8 experiments to figure out which. It only ever sees four functions: inspect_model, run_experiment, inspect_trajectory, and submit_model, never an image or video.\n\nFull writeup with methodology, plots, and results is in the live link.",
 	"videoLink": ""
 }
