@@ -5,36 +5,18 @@
 
 <style>
   :root {
-    --bg: #eef1ec;
-    --ink: #1a2420;
-    --muted: #5c655c;
-    --line: #d2d8cb;
-    --accent: #b34e08;
-    --code-bg: #1e2420;
-    --code-ink: #e6e9e3;
-    --code-comment: #7fa88a;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-      --bg: #14181a;
-      --ink: #e9ede6;
-      --muted: #9aa398;
-      --line: #313830;
-      --accent: #ff8f4d;
-    }
-  }
-
-  :root[data-theme="dark"] {
     --bg: #14181a;
     --ink: #e9ede6;
     --muted: #9aa398;
     --line: #313830;
     --accent: #ff8f4d;
+    --code-bg: #1e2420;
+    --code-ink: #e6e9e3;
+    --code-comment: #7fa88a;
   }
 
   * { box-sizing: border-box; }
-  html { color-scheme: light dark; }
+  html { color-scheme: dark; }
 
   body {
     margin: 0;
