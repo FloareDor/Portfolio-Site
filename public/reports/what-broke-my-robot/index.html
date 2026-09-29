@@ -109,6 +109,17 @@
       <li><b>Grade it.</b> I test the estimate against new movements it never saw during testing.</li>
     </ol>
 
+    <p>
+      Grading works like this: I build a robot model from whatever the method guessed, then run it through two
+      gaits it never saw during testing and compare where its torso ends up against where the real, hidden
+      robot's torso actually ends up. That distance in meters, averaged over both gaits, is the
+      <b>held-out error</b> in Figures 1 and 2. Lower is better, zero means the guess predicts the real robot
+      perfectly. Separately, since I know the true fault in every episode, I can also score the guess directly:
+      how far off the guessed value is from the true one, for whichever single thing actually broke. That's the
+      <b>parameter error</b> in Figure 3. A method that never guesses a parameter is scored as if it had said
+      the robot was still healthy.
+    </p>
+
     <div class="fig-row">
       <figure>
         <img src="/reports/what-broke-my-robot/renders/healthy.gif" alt="Animated MuJoCo render of the healthy Go1 robot trotting normally.">
@@ -225,7 +236,7 @@ def policy(t, obs):
     <div class="table-wrap">
       <table>
         <thead>
-          <tr><th>Fault (true strength)</th><th>Agent's guess</th><th>Also guessed</th><th>Result</th><th>Outcome</th></tr>
+          <tr><th>Fault (true strength)</th><th>Agent's guess</th><th>Also guessed</th><th>Held-out error: agent vs. doing nothing / random probing</th><th>Outcome</th></tr>
         </thead>
         <tbody>
           <tr>
