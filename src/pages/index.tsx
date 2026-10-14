@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
 import Navbar from "@/components/navbar/Navbar";
 import { ArrowUpRight } from "lucide-react";
 
@@ -93,6 +94,27 @@ export default function Home() {
               actual hardware. I also make music sometimes.
             </p>
           </div>
+        </section>
+
+        <section className="mb-16">
+          <Link href="/work/lunabotics" className="group block">
+            <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden border border-white/10">
+              <Image
+                src="/media/lunabotics_selfie.jpeg"
+                alt="With the CMU Lunabotics rover"
+                fill
+                priority
+                className="object-cover transition-opacity duration-300 group-hover:opacity-90"
+                sizes="(max-width: 768px) 100vw, 42rem"
+              />
+            </div>
+            <p className="text-xs text-theme-text-secondary mt-2">
+              With the CMU Lunabotics rover.{" "}
+              <span className="underline underline-offset-4 group-hover:text-theme-text-primary">
+                Read about the autonomy stack
+              </span>
+            </p>
+          </Link>
         </section>
 
         <section className="mb-16">
