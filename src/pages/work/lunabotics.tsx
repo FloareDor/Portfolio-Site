@@ -14,11 +14,6 @@ const stack = [
   "Unity (synthetic data)",
 ];
 
-const facts = [
-  { label: "Role", value: "Autonomy subsystem lead" },
-  { label: "Advisor", value: "Prof. Wenshan Wang, CMU Robotics Institute" },
-  { label: "Recognition", value: "Autonomy award at NASA’s Lunabotics competition" },
-];
 
 const gallery = [
   {
@@ -62,11 +57,12 @@ export default function LunaboticsPage() {
         <section className="mb-10">
           <h1 className="text-2xl font-semibold mb-3">CMU Lunabotics</h1>
           <p className="text-theme-text-secondary leading-relaxed">
-            A lunar excavation rover that drives itself across simulated regolith, digs, evades
-            rocks and craters, and dumps its load, with no human in the loop. As a first-year team
-            we managed to score core autonomy points, and were lucky enough to come away with an{" "}
-            <span className="text-theme-text-primary">autonomy award</span> at NASA&apos;s
-            competition.
+            NASA&apos;s Lunabotics competition asks university teams to build a rover that can
+            mine lunar regolith on its own. Ours drives itself across a simulated lunar surface,
+            digs, hauls its load back, and dumps it, steering around rocks and craters the whole
+            way, with no human in the loop. As a first-year team we managed to score core autonomy
+            points, and were lucky enough to come away with an{" "}
+            <span className="text-theme-text-primary">autonomy award</span>.
           </p>
         </section>
 
@@ -87,64 +83,17 @@ export default function LunaboticsPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="text-xs uppercase tracking-widest text-theme-text-secondary mb-4">
-            At a glance
+          <h2 className="text-xs uppercase tracking-widest text-theme-text-secondary mb-3">
+            The autonomy stack
           </h2>
-          <dl className="flex flex-col">
-            {facts.map((fact) => (
-              <div
-                key={fact.label}
-                className="flex items-baseline justify-between gap-4 py-3 border-b border-white/10"
-              >
-                <dt className="text-xs uppercase tracking-widest text-theme-text-secondary shrink-0">
-                  {fact.label}
-                </dt>
-                <dd className="text-sm text-right">{fact.value}</dd>
-              </div>
-            ))}
-          </dl>
+          <p className="text-sm text-theme-text-secondary leading-relaxed">
+            The rover plans a route with Hybrid A* and follows it with a GPU MPPI controller quick
+            enough to replan as the terrain changes. LiDAR and a camera feed obstacle detection and
+            the costmap, with segmentation running onboard a Jetson Orin. Digging and dumping runs
+            as a state machine driven by what those sensors see. We put 100+ hours of field testing
+            into it, mostly in a sandbox standing in for the lunar surface.
+          </p>
           <p className="text-xs text-theme-text-secondary mt-4 font-mono">{stack.join(" · ")}</p>
-        </section>
-
-        <section className="mb-12 flex flex-col gap-8">
-          <div>
-            <h2 className="text-xs uppercase tracking-widest text-theme-text-secondary mb-3">
-              Navigation
-            </h2>
-            <p className="text-sm text-theme-text-secondary leading-relaxed">
-              I built the rover&apos;s ROS2 navigation stack: Hybrid A* for global planning, and a
-              GPU-optimized MPPI controller that evaluates thousands of candidate trajectories in
-              about 0.5&nbsp;ms versus roughly 50&nbsp;ms on CPU, around 100× faster, which is
-              what made real-time replanning on the rover possible at all.
-            </p>
-          </div>
-
-          <div>
-            <h2 className="text-xs uppercase tracking-widest text-theme-text-secondary mb-3">
-              Perception
-            </h2>
-            <p className="text-sm text-theme-text-secondary leading-relaxed">
-              Obstacle detection runs an instance segmentation model (PyTorch / YOLOv8) trained on
-              synthetic data from a Unity reconstruction of the competition arena. Getting it onto
-              the rover&apos;s Jetson Orin meant quantizing FP32 → INT8 with TensorRT: 65.6% smaller
-              for about a 3% drop in mIoU. A LiDAR + camera fusion pipeline feeds the costmap in
-              real time, using RANSAC ground-plane removal for obstacles and point-to-pixel
-              projection to localize dig targets.
-            </p>
-          </div>
-
-          <div>
-            <h2 className="text-xs uppercase tracking-widest text-theme-text-secondary mb-3">
-              Excavation &amp; field testing
-            </h2>
-            <p className="text-sm text-theme-text-secondary leading-relaxed">
-              The dig-and-dump sequence is a sensor-driven state machine, using LiDAR, camera, and
-              motor-encoder feedback to trigger transitions. I validated it over 100+ hours of
-              integrated field testing with the controls and avionics teams, mostly in a sandbox
-              standing in for the lunar surface, and set up network teleoperation so we could debug
-              remotely when things went sideways.
-            </p>
-          </div>
         </section>
 
         <section>
