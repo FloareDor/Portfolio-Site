@@ -23,7 +23,7 @@ const workRows: WorkRow[] = [
   {
     title: "Self-Supervised Offroad Autonomous Driving",
     description:
-      "AirLab, CMU Robotics Institute, working with Eungchang Mason Lee on self-supervised approaches to offroad autonomous driving, learning from unlabeled driving data instead of hand-annotated supervision.",
+      "AirLab, CMU Robotics Institute. Self-supervised approaches to offroad autonomous driving, learning from unlabeled driving data instead of hand-annotated supervision.",
     tags: ["Self-Supervised Learning", "Offroad Autonomy", "Perception"],
   },
   {
@@ -71,8 +71,8 @@ export default function Home() {
             </p>
             <p>
               Currently, I&apos;m at CMU&apos;s <span className="text-theme-text-primary">AirLab</span>,
-              working with Eungchang Mason Lee on self-supervised offroad autonomous driving. I
-              also work on autonomy for{" "}
+              working on self-supervised offroad autonomous driving. I also work on autonomy
+              for{" "}
               <Link
                 href="/work/lunabotics"
                 className="text-theme-text-primary underline underline-offset-4 decoration-white/30 hover:decoration-white"
