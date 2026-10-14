@@ -354,6 +354,18 @@
 	"liveLink": "/reports/what-broke-my-robot/index.html",
 	"blog": "Real machines drift over time: a motor weakens, a surface gets slicker, weight shifts. Nobody tells the robot what changed, it has to notice on its own. The usual fix is a person running diagnostic tests by hand. I wanted to test whether an AI agent can do this itself: design its own tests, read the results, and figure out the cause.\n\nI took a Go1 quadruped in MuJoCo (from DeepMind's Menagerie), secretly messed with one physical property per episode (grip, torso mass, or one actuator's strength), and gave the agent a fixed budget of 8 experiments to figure out which. It only ever sees four functions: inspect_model, run_experiment, inspect_trajectory, and submit_model, never an image or video.\n\nFull writeup with methodology, plots, and results is in the live link.",
 	"videoLink": ""
+},
+
+	"26": {
+		"id": 26,
+		"title": "Teaching a Robot to Copy",
+		"description": "A simulated robot learns to run by watching an expert, falls over constantly, then gets much better once it starts asking the expert what to do in the messes it gets itself into.",
+		"image": "/images/left/teaching-a-robot-to-copy.png",
+		"technologies": ["PyTorch", "MuJoCo", "Behavior Cloning", "DAgger"],
+		"githubLink": "",
+		"liveLink": "/projects/robot-learning",
+		"blog": "There is a robot in a simulator, and an expert that already knows how to make it run. The expert is a program someone else wrote, and it never falls over. My job was to build a new robot brain that learns to run only by watching it.\n\nThe obvious thing to try first is to record the expert playing, then train a neural net to copy it. Show it what the robot sees, ask it what the expert would do, correct it when it is wrong. This is called behavior cloning. It half works. The ant crawls along at about 70% of the expert's score. The hopper is a disaster, scoring about a quarter of the expert before it tips over.\n\nThe recordings never contain a fall, because the expert never falls. So the student only ever sees what a perfect run looks like. The moment it wobbles, it is somewhere it has never been, and it guesses. The guess makes the wobble worse. A second later it is on the floor.\n\nThe fix is called DAgger, and the idea is simpler than the name. Let the student drive. When it wobbles into some strange pose, stop and ask the expert what it would have done right there. Add that answer to the training pile and train again. Repeat. Now the student is learning from the exact situations it gets itself into, including the ugly ones it used to have no answer for. The hopper went from falling over to matching the expert in about three rounds of this.\n\nThe humanoid refused to cooperate. It face planted every round, no matter how many I ran. That turned out to have nothing to do with the learning. A humanoid reports hundreds of numbers about itself, and some are far bigger than others, so the network mostly paid attention to the loud ones and ignored the rest. Scaling every number into a similar range fixed it, and the same training kept up with the expert.\n\nThe video shows the hopper five times over from the same starting point. Left to right: the expert, plain copying, then rounds 1, 3 and 9 of asking the expert for help. Red text means it hit the floor. All four robots are on the project page.",
+		"videoLink": "/media/robotlearning/Hopper-v2.mp4"
 }
 
 }
