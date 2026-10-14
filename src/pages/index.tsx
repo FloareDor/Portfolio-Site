@@ -29,7 +29,7 @@ const workRows: WorkRow[] = [
   {
     title: "Evaluating a Level-4 Self-Driving Stack",
     description:
-      "Autonomy ML Systems team, Motional. Kinematics-aware, multimodal evaluation metrics for trajectory prediction and a production regression dashboard over ~1 PB of driving logs.",
+      "Autonomy ML Systems team, Motional. A data-driven metric that analyzes trajectory prediction in autonomous driving and flags the predictions that look undesirable, run across the fleet's driving logs.",
     tags: ["SQL", "AWS Athena", "Polars"],
   },
   {
