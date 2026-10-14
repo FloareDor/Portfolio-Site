@@ -255,9 +255,9 @@ export default function RobotLearningPage() {
             Teaching a Robot to Copy
           </h1>
           <p className="text-theme-text-secondary leading-relaxed">
-            Homework. Train a neural net to make a MuJoCo robot run, using nothing but recordings
-            of an expert policy that already knows how. It went badly at first, which turned out
-            to be the interesting part.
+            I trained a neural net to make a MuJoCo robot run, using nothing but recordings of an
+            expert policy that already knows how. It went badly at first, which turned out to be
+            the interesting part.
           </p>
         </header>
 
