@@ -17,8 +17,7 @@ const stack = [
 const facts = [
   { label: "Role", value: "Autonomy subsystem lead" },
   { label: "Advisor", value: "Prof. Wenshan Wang, CMU Robotics Institute" },
-  { label: "Award", value: "NASA \u201cFirst Steps\u201d Autonomy Award" },
-  { label: "When", value: "Jan 2026 \u2013 present" },
+  { label: "Recognition", value: "Autonomy award at NASA’s Lunabotics competition" },
 ];
 
 const gallery = [
@@ -43,7 +42,7 @@ export default function LunaboticsPage() {
   return (
     <>
       <Head>
-        <title>CMU Lunabotics — Sai Ravi Teja Gangavarapu</title>
+        <title>CMU Lunabotics | Sai Ravi Teja Gangavarapu</title>
         <meta
           name="description"
           content="Autonomy for a lunar excavation rover: ROS2 nav stack, GPU MPPI control, YOLOv8 obstacle detection on Jetson Orin, and LiDAR-camera fusion."
@@ -64,9 +63,10 @@ export default function LunaboticsPage() {
           <h1 className="text-2xl font-semibold mb-3">CMU Lunabotics</h1>
           <p className="text-theme-text-secondary leading-relaxed">
             A lunar excavation rover that drives itself across simulated regolith, digs, evades
-            rocks and craters, and dumps its load — without a human in the loop. We were the first
-            first-year team to score core autonomy points, which won us NASA&apos;s{" "}
-            <span className="text-theme-text-primary">&ldquo;First Steps&rdquo; Autonomy Award</span>.
+            rocks and craters, and dumps its load, with no human in the loop. As a first-year team
+            we managed to score core autonomy points, and were lucky enough to come away with an{" "}
+            <span className="text-theme-text-primary">autonomy award</span> at NASA&apos;s
+            competition.
           </p>
         </section>
 
@@ -114,8 +114,8 @@ export default function LunaboticsPage() {
             <p className="text-sm text-theme-text-secondary leading-relaxed">
               I built the rover&apos;s ROS2 navigation stack: Hybrid A* for global planning, and a
               GPU-optimized MPPI controller that evaluates thousands of candidate trajectories in
-              about 0.5&nbsp;ms versus roughly 50&nbsp;ms on CPU — around 100× faster, which is what
-              made real-time replanning on the rover possible at all.
+              about 0.5&nbsp;ms versus roughly 50&nbsp;ms on CPU, around 100× faster, which is
+              what made real-time replanning on the rover possible at all.
             </p>
           </div>
 
@@ -128,8 +128,8 @@ export default function LunaboticsPage() {
               synthetic data from a Unity reconstruction of the competition arena. Getting it onto
               the rover&apos;s Jetson Orin meant quantizing FP32 → INT8 with TensorRT: 65.6% smaller
               for about a 3% drop in mIoU. A LiDAR + camera fusion pipeline feeds the costmap in
-              real time — RANSAC ground-plane removal for obstacles, point-to-pixel projection to
-              localize dig targets.
+              real time, using RANSAC ground-plane removal for obstacles and point-to-pixel
+              projection to localize dig targets.
             </p>
           </div>
 
@@ -140,8 +140,8 @@ export default function LunaboticsPage() {
             <p className="text-sm text-theme-text-secondary leading-relaxed">
               The dig-and-dump sequence is a sensor-driven state machine, using LiDAR, camera, and
               motor-encoder feedback to trigger transitions. I validated it over 100+ hours of
-              integrated field testing with the controls and avionics teams — mostly in a sandbox
-              standing in for the lunar surface — and set up network teleoperation so we could debug
+              integrated field testing with the controls and avionics teams, mostly in a sandbox
+              standing in for the lunar surface, and set up network teleoperation so we could debug
               remotely when things went sideways.
             </p>
           </div>

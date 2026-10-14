@@ -5,7 +5,6 @@ import Navbar from "@/components/navbar/Navbar";
 import { ArrowUpRight } from "lucide-react";
 
 interface WorkRow {
-  date: string;
   title: string;
   description: string;
   tags: string[];
@@ -15,39 +14,34 @@ interface WorkRow {
 
 const workRows: WorkRow[] = [
   {
-    date: "2026",
-    title: "CMU Lunabotics — Autonomy Lead",
+    title: "CMU Lunabotics",
     description:
-      "Autonomy on a lunar excavation rover that digs and dumps regolith while evading obstacles, advised by Prof. Wenshan Wang — NASA Autonomy Award, first-year team. ROS2 nav stack, GPU MPPI control (~100x faster than CPU), YOLOv8 obstacle detection quantized for Jetson Orin, LiDAR-camera fusion.",
+      "A lunar excavation rover that drives itself across simulated regolith, digs, hauls, and dumps its load while steering around rocks and craters, with no human in the loop. We were lucky enough to pick up an autonomy award at NASA's competition.",
     tags: ["ROS2", "MPPI", "YOLOv8", "TensorRT", "LiDAR"],
     href: "/work/lunabotics",
   },
   {
-    date: "2025–",
-    title: "Adversarial Robustness of Drone Perception",
+    title: "Self-Supervised Offroad Autonomous Driving",
     description:
-      "AirLab, CMU Robotics Institute, working with Eungchang Mason Lee. Agentic test bench in NVIDIA Isaac Sim that generates scenarios and surfaces failure modes in learning-based UAV perception and obstacle avoidance.",
-    tags: ["Isaac Sim", "UAV Perception", "SLAM"],
+      "AirLab, CMU Robotics Institute, working with Eungchang Mason Lee on self-supervised approaches to offroad autonomous driving, learning from unlabeled driving data instead of hand-annotated supervision.",
+    tags: ["Self-Supervised Learning", "Offroad Autonomy", "Perception"],
   },
   {
-    date: "2025",
     title: "Evaluating a Level-4 Self-Driving Stack",
     description:
-      "Autonomy ML Systems Intern, Motional. Kinematics-aware, multimodal evaluation metrics for trajectory prediction and a production regression dashboard over ~1 PB of driving logs.",
+      "Autonomy ML Systems team, Motional. Kinematics-aware, multimodal evaluation metrics for trajectory prediction and a production regression dashboard over ~1 PB of driving logs.",
     tags: ["SQL", "AWS Athena", "Polars"],
   },
   {
-    date: "2024–2025",
     title: "CMR Driverless & F1TENTH",
     description:
       "LiDAR-camera cone detection for Carnegie Mellon Racing's driverless Formula SAE car, plus reactive obstacle avoidance and path tracking on a 1/10-scale autonomous racer.",
     tags: ["ROS2", "LiDAR", "Motion Planning"],
   },
   {
-    date: "2024",
     title: "gitask.org",
     description:
-      "Offline, in-browser RAG tool — chat with any GitHub repo by swapping the URL. Local LLM inference via WebGPU, AST chunking, binary-quantized embeddings. Zero data leaves the browser. 200+ users.",
+      "Offline, in-browser RAG tool: chat with any GitHub repo by swapping the URL. Local LLM inference via WebGPU, AST chunking, binary-quantized embeddings. Zero data leaves the browser. 200+ users.",
     tags: ["WebGPU", "TypeScript", "RAG"],
     href: "https://gitask.org",
     external: true,
@@ -61,7 +55,7 @@ export default function Home() {
         <title>Sai Ravi Teja Gangavarapu</title>
         <meta
           name="description"
-          content="MSE (Scalable Systems) student at Carnegie Mellon. Robotics, ML, and vision — AirLab, CMU Lunabotics, previously Motional."
+          content="Master's student at the School of Computer Science, Carnegie Mellon University. Robotics and ML: AirLab, CMU Lunabotics, previously Motional."
         />
       </Head>
 
@@ -72,13 +66,13 @@ export default function Home() {
           <h1 className="text-2xl font-semibold mb-4">Sai Ravi Teja Gangavarapu</h1>
           <div className="flex flex-col gap-4 text-theme-text-secondary leading-relaxed">
             <p>
-              I&apos;m pursuing a Master of Software Engineering (Scalable Systems) at{" "}
+              I&apos;m pursuing a Master&apos;s at the School of Computer Science at{" "}
               <span className="text-theme-text-primary">Carnegie Mellon University</span>.
             </p>
             <p>
               Currently, I&apos;m at CMU&apos;s <span className="text-theme-text-primary">AirLab</span>,
-              working with Eungchang Mason Lee to break drone perception systems before they break
-              themselves. I also work on autonomy for{" "}
+              working with Eungchang Mason Lee on self-supervised offroad autonomous driving. I
+              also work on autonomy for{" "}
               <Link
                 href="/work/lunabotics"
                 className="text-theme-text-primary underline underline-offset-4 decoration-white/30 hover:decoration-white"
@@ -90,8 +84,8 @@ export default function Home() {
             <p>
               Previously, I interned on the autonomy team at{" "}
               <span className="text-theme-text-primary">Motional</span>. I&apos;m interested in the
-              intersection of robotics, ML, and vision — and in making machine learning run on
-              actual hardware. I also make music sometimes.
+              intersection of robotics and ML, and in making machine learning run on actual
+              hardware. I also make music sometimes.
             </p>
           </div>
         </section>
@@ -125,14 +119,9 @@ export default function Home() {
             {workRows.map((row) => {
               const inner = (
                 <>
-                  <div className="flex items-baseline justify-between gap-4">
-                    <h3 className="font-medium group-hover:underline underline-offset-4">
-                      {row.title}
-                    </h3>
-                    <span className="text-xs text-theme-text-secondary shrink-0 font-mono">
-                      {row.date}
-                    </span>
-                  </div>
+                  <h3 className="font-medium group-hover:underline underline-offset-4">
+                    {row.title}
+                  </h3>
                   <p className="text-sm text-theme-text-secondary leading-relaxed mt-1">
                     {row.description}
                   </p>
@@ -176,7 +165,7 @@ export default function Home() {
             })}
           </div>
           <p className="text-sm text-theme-text-secondary mt-6">
-            30+ more projects — hackathons, research, music & art — in the{" "}
+            30+ more projects (hackathons, research, music &amp; art) in the{" "}
             <Link href="/left-brain" className="underline underline-offset-4 hover:text-theme-text-primary">
               engineering archive
             </Link>{" "}
