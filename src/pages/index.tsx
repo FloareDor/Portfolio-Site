@@ -7,7 +7,7 @@ import { ArrowUpRight } from "lucide-react";
 interface WorkRow {
   title: string;
   description: string;
-  tags: string[];
+  tags?: string[];
   href?: string;
   external?: boolean;
 }
@@ -29,8 +29,7 @@ const workRows: WorkRow[] = [
   {
     title: "Autonomy ML Evals for Self-Driving Taxi 🚕",
     description:
-      "Motional. Evaluating how well the autonomy stack predicts what other agents on the road are about to do.",
-    tags: ["SQL", "AWS Athena", "Polars"],
+      "Motional. Evaluating how well transformer-based trajectory prediction models anticipate what other agents on the road are about to do.",
   },
   {
     title: "CMR Driverless & F1TENTH",
@@ -125,9 +124,11 @@ export default function Home() {
                   <p className="text-sm text-theme-text-secondary leading-relaxed mt-1">
                     {row.description}
                   </p>
-                  <p className="text-xs text-theme-text-secondary mt-2 font-mono">
-                    {row.tags.join(" · ")}
-                  </p>
+                  {row.tags && row.tags.length > 0 && (
+                    <p className="text-xs text-theme-text-secondary mt-2 font-mono">
+                      {row.tags.join(" · ")}
+                    </p>
+                  )}
                 </>
               );
 
