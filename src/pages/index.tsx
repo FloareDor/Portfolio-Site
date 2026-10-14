@@ -27,9 +27,9 @@ const workRows: WorkRow[] = [
     tags: ["Self-Supervised Learning", "Offroad Autonomy", "Perception"],
   },
   {
-    title: "Evaluating a Level-4 Self-Driving Stack",
+    title: "Autonomy ML Evals for Self-Driving Taxi 🚕",
     description:
-      "Autonomy ML Systems team, Motional. A data-driven metric that flags undesirable trajectory predictions across millions of agents.",
+      "Motional. Evaluating how well the autonomy stack predicts what other agents on the road are about to do.",
     tags: ["SQL", "AWS Athena", "Polars"],
   },
   {
