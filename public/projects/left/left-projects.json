@@ -365,7 +365,8 @@
 		"githubLink": "",
 		"liveLink": "/projects/robot-learning",
 		"blog": "I trained a neural net to make a MuJoCo robot run, using nothing but recordings of an expert policy that already knows how.\n\nBehavior cloning, plain supervised learning on the expert's (observation, action) pairs, gets Ant to about 70% of expert return. Hopper reaches about 25%, then falls over. The cause is distribution shift: the training set only covers states the expert visits, and the expert never falls, so one small error puts the policy somewhere it was never trained and the error compounds.\n\nDAgger fixes the data rather than the model. Roll out the current policy, have the expert label the states it actually visited, aggregate, retrain. Hopper went from 948 to 3,768 in three rounds, against an expert at 3,773.\n\nThe side-by-side runs are in the live link.",
-		"videoLink": "/media/robotlearning/Humanoid-v2.mp4"
+		"videoLink": "/media/robotlearning/Humanoid-v2.mp4",
+		"page": "/projects/robot-learning"
 },
 	"27": {
 		"id": 27,
@@ -378,5 +379,17 @@
 		"blog": "",
 		"videoLink": "",
 		"page": "/projects/f1tenth"
+	},
+	"28": {
+		"id": 28,
+		"title": "CMU Lunabotics",
+		"description": "A lunar excavation rover that drives itself across simulated regolith, digs, hauls and dumps its load, with no human in the loop.",
+		"image": "/media/lunabotics-poster.jpg",
+		"technologies": ["ROS2", "MPPI", "YOLOv8", "LiDAR"],
+		"githubLink": "",
+		"liveLink": "",
+		"blog": "",
+		"videoLink": "",
+		"page": "/work/lunabotics"
 	}
 }

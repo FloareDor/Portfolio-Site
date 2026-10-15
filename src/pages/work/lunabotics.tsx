@@ -4,32 +4,18 @@ import Image from "next/image";
 import Navbar from "@/components/navbar/Navbar";
 import { ArrowLeft } from "lucide-react";
 
-const stack = [
-  "ROS2 / Nav2",
-  "Hybrid A* + MPPI",
-  "YOLOv8 (PyTorch)",
-  "TensorRT / INT8",
-  "LiDAR + camera fusion",
-  "Jetson Orin",
-  "Unity (synthetic data)",
-];
 
 
 const gallery = [
   {
-    src: "/media/lunamining.jpeg",
-    alt: "The rover excavating regolith simulant during a field test",
-    caption: "Field testing the excavation tooling in the sandbox arena.",
-  },
-  {
     src: "/media/lunahot.jpeg",
-    alt: "Costmap and dig-target mapping during a Lunabotics field test",
-    caption: "Costmap and dig-target mapping during a run.",
+    alt: "Laptop showing the rover costmap with numbered dig zones",
+    caption: "The costmap mid-run with the dig zones marked, over a remote session into the rover's Jetson.",
   },
   {
     src: "/media/lunabotics_selfie.jpeg",
-    alt: "The CMU Lunabotics team with the rover",
-    caption: "The team, somewhere around hour 90 of integration testing.",
+    alt: "Inside the test tent, with the rover out on the regolith simulant bed",
+    caption: "The test arena: regolith simulant, work lights, and the rover partway through a run.",
   },
 ];
 
@@ -40,7 +26,7 @@ export default function LunaboticsPage() {
         <title>CMU Lunabotics | Sai Ravi Teja Gangavarapu</title>
         <meta
           name="description"
-          content="Autonomy for a lunar excavation rover: ROS2 nav stack, GPU MPPI control, YOLOv8 obstacle detection on Jetson Orin, and LiDAR-camera fusion."
+          content="A lunar excavation rover that drives itself across simulated regolith, digs, hauls and dumps, with no human in the loop."
         />
       </Head>
 
@@ -75,25 +61,11 @@ export default function LunaboticsPage() {
             muted
             loop
             preload="metadata"
-            poster="/media/lunamining.jpeg"
+            poster="/media/lunabotics-poster.jpg"
           />
           <p className="text-xs text-theme-text-secondary mt-2">
-            An autonomous dig-and-dump cycle, start to finish.
+            A run in the test arena, from the costmap view through to the rover working the pit.
           </p>
-        </section>
-
-        <section className="mb-12">
-          <h2 className="text-xs uppercase tracking-widest text-theme-text-secondary mb-3">
-            The autonomy stack
-          </h2>
-          <p className="text-sm text-theme-text-secondary leading-relaxed">
-            The rover plans a route with Hybrid A* and follows it with a GPU MPPI controller quick
-            enough to replan as the terrain changes. LiDAR and a camera feed obstacle detection and
-            the costmap, with segmentation running onboard a Jetson Orin. Digging and dumping runs
-            as a state machine driven by what those sensors see. We put 100+ hours of field testing
-            into it, mostly in a sandbox standing in for the lunar surface.
-          </p>
-          <p className="text-xs text-theme-text-secondary mt-4 font-mono">{stack.join(" · ")}</p>
         </section>
 
         <section>

@@ -10,10 +10,10 @@ const LeftBrain: React.FC = () => {
       try {
         const response = await fetch('/projects/left/left-projects.json');
         const data: Record<string, Project> = await response.json();
-        const projectsData = Object.values(data).map((project) => ({
-          ...project,
-          isLeft: true,
-        }));
+        // Newest first, so recent work is not buried behind years of older projects.
+        const projectsData = Object.values(data)
+          .map((project) => ({ ...project, isLeft: true }))
+          .sort((a, b) => b.id - a.id);
         setProjects(projectsData);
       } catch (error) {
         console.error('Error fetching projects:', error);
