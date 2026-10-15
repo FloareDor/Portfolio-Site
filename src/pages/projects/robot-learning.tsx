@@ -6,33 +6,13 @@ import { ArrowLeft } from "lucide-react";
 const clips = [
   {
     src: "/media/robotlearning/Hopper-v2.mp4",
-    note: "Hopper. Cloning tips over. Matches the expert by round 3.",
+    note: "Hopper. Cloning tips over almost immediately. Matches the expert by round 3.",
   },
   {
     src: "/media/robotlearning/Ant-v2.mp4",
     note: "Ant. Cloning already walks, slower and less steady than the expert.",
   },
 ];
-
-function Clip({ src, note }: { src: string; note: string }) {
-  return (
-    <figure>
-      <video
-        className="w-full rounded border border-white/10 bg-black block"
-        src={src}
-        autoPlay
-        loop
-        muted
-        controls
-        playsInline
-        preload="metadata"
-      />
-      <figcaption className="text-xs text-theme-text-secondary mt-1.5 lg:px-28">
-        {note}
-      </figcaption>
-    </figure>
-  );
-}
 
 export default function RobotLearningPage() {
   return (
@@ -63,7 +43,7 @@ export default function RobotLearningPage() {
         <figure className="mb-10 lg:-mx-28">
           <video
             className="w-full rounded border border-white/10 bg-black block"
-            src="/media/robotlearning/humanoid-raw-vs-standardized.mp4"
+            src="/media/robotlearning/Humanoid-v2.mp4"
             autoPlay
             loop
             muted
@@ -72,8 +52,8 @@ export default function RobotLearningPage() {
             preload="auto"
           />
           <figcaption className="text-xs text-theme-text-secondary mt-2 lg:px-28">
-            Humanoid, the same training run twice. On raw observations every DAgger round falls.
-            On standardized observations it tracks the expert by round 3.
+            Humanoid. Cloning the expert falls over, and so does the first round of DAgger. By
+            round 3 it runs.
           </figcaption>
         </figure>
 
@@ -87,19 +67,34 @@ export default function RobotLearningPage() {
           </p>
           <p className="text-sm text-theme-text-secondary leading-relaxed">
             DAgger fixes the data, not the model. Roll out the policy, have the expert label the
-            states it actually visited, aggregate, retrain. Hopper goes 948 to 3,768 in three
-            rounds, against an expert at 3,773.
+            states it actually visited, aggregate, retrain. Each round pulls the training
+            distribution toward the states the policy actually reaches. Hopper goes 948 to 3,768
+            in three rounds, against an expert at 3,773.
           </p>
           <p className="text-sm text-theme-text-secondary leading-relaxed">
-            Humanoid needed observation normalization before any of that worked. Its 376
-            dimensions have magnitudes from near zero to over 200, so raw, the large ones dominate
-            the first-layer gradients and every round fell. Standardizing per dimension fixed it.
+            Humanoid only got there after I standardized its observations. Its 376 dimensions have
+            magnitudes from near zero to over 200, so raw, the large ones dominate the first-layer
+            gradients and every round fell.
           </p>
         </div>
 
         <div className="flex flex-col gap-5 lg:-mx-28">
           {clips.map((clip) => (
-            <Clip key={clip.src} src={clip.src} note={clip.note} />
+            <figure key={clip.src}>
+              <video
+                className="w-full rounded border border-white/10 bg-black block"
+                src={clip.src}
+                autoPlay
+                loop
+                muted
+                controls
+                playsInline
+                preload="metadata"
+              />
+              <figcaption className="text-xs text-theme-text-secondary mt-1.5 lg:px-28">
+                {clip.note}
+              </figcaption>
+            </figure>
           ))}
         </div>
 
