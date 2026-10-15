@@ -5,22 +5,34 @@ import { ArrowLeft } from "lucide-react";
 
 const clips = [
   {
-    src: "/media/robotlearning/Ant-v2.mp4",
-    note: "Ant. Cloning walks, slower and less steady than the expert.",
-  },
-  {
     src: "/media/robotlearning/Hopper-v2.mp4",
     note: "Hopper. Cloning tips over. Matches the expert by round 3.",
   },
   {
-    src: "/media/robotlearning/Humanoid-v2.mp4",
-    note: "Humanoid, raw observations. Every round falls.",
-  },
-  {
-    src: "/media/robotlearning/Humanoid-v2_normalized.mp4",
-    note: "Humanoid, standardized observations. Same training, keeps up.",
+    src: "/media/robotlearning/Ant-v2.mp4",
+    note: "Ant. Cloning already walks, slower and less steady than the expert.",
   },
 ];
+
+function Clip({ src, note }: { src: string; note: string }) {
+  return (
+    <figure>
+      <video
+        className="w-full rounded border border-white/10 bg-black block"
+        src={src}
+        autoPlay
+        loop
+        muted
+        controls
+        playsInline
+        preload="metadata"
+      />
+      <figcaption className="text-xs text-theme-text-secondary mt-1.5 lg:px-28">
+        {note}
+      </figcaption>
+    </figure>
+  );
+}
 
 export default function RobotLearningPage() {
   return (
@@ -48,6 +60,23 @@ export default function RobotLearningPage() {
         </p>
         <h1 className="text-2xl font-semibold mb-6">Teaching a Robot to Copy</h1>
 
+        <figure className="mb-10 lg:-mx-28">
+          <video
+            className="w-full rounded border border-white/10 bg-black block"
+            src="/media/robotlearning/humanoid-raw-vs-standardized.mp4"
+            autoPlay
+            loop
+            muted
+            controls
+            playsInline
+            preload="auto"
+          />
+          <figcaption className="text-xs text-theme-text-secondary mt-2 lg:px-28">
+            Humanoid, the same training run twice. On raw observations every DAgger round falls.
+            On standardized observations it tracks the expert by round 3.
+          </figcaption>
+        </figure>
+
         <div className="flex flex-col gap-4 mb-10">
           <p className="text-sm text-theme-text-secondary leading-relaxed">
             Behavior cloning is supervised learning on the expert&apos;s (observation, action)
@@ -62,29 +91,15 @@ export default function RobotLearningPage() {
             rounds, against an expert at 3,773.
           </p>
           <p className="text-sm text-theme-text-secondary leading-relaxed">
-            Humanoid needed observation normalization first. Its 376 dimensions have magnitudes
-            from near zero to over 200, so raw, the large ones dominate the first-layer gradients
-            and every round fell. Standardizing per dimension fixed it.
+            Humanoid needed observation normalization before any of that worked. Its 376
+            dimensions have magnitudes from near zero to over 200, so raw, the large ones dominate
+            the first-layer gradients and every round fell. Standardizing per dimension fixed it.
           </p>
         </div>
 
         <div className="flex flex-col gap-5 lg:-mx-28">
           {clips.map((clip) => (
-            <figure key={clip.src}>
-              <video
-                className="w-full rounded border border-white/10 bg-black block"
-                src={clip.src}
-                autoPlay
-                loop
-                muted
-                controls
-                playsInline
-                preload="metadata"
-              />
-              <figcaption className="text-xs text-theme-text-secondary mt-1.5 lg:px-28">
-                {clip.note}
-              </figcaption>
-            </figure>
+            <Clip key={clip.src} src={clip.src} note={clip.note} />
           ))}
         </div>
 
