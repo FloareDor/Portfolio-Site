@@ -8,6 +8,7 @@ export interface Project {
   	description: string;
 	image: string;
 	isLeft: boolean;
+	page?: string;
 }
 
 interface ProjectGridProps {

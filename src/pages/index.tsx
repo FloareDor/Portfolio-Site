@@ -36,6 +36,7 @@ const workRows: WorkRow[] = [
     description:
       "LiDAR-camera cone detection for Carnegie Mellon Racing's driverless Formula SAE car, plus reactive obstacle avoidance and path tracking on a 1/10-scale autonomous racer.",
     tags: ["ROS2", "LiDAR", "Motion Planning"],
+    href: "/projects/f1tenth",
   },
   {
     title: "gitask.org",

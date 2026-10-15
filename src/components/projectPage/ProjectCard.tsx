@@ -9,10 +9,12 @@ interface ProjectCardProps {
   technologies: string[];
     image: string;
     isLeft: boolean;
+    page?: string;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ id, title, technologies, description, image, isLeft }) => {
-  const href = isLeft ? `/left-brain/${id}` : `/right-brain/${id}`;
+const ProjectCard: React.FC<ProjectCardProps> = ({ id, title, technologies, description, image, isLeft, page }) => {
+  // Projects with their own page link straight to it instead of the generic detail view.
+  const href = page ?? (isLeft ? `/left-brain/${id}` : `/right-brain/${id}`);
   const isGif = image.endsWith('.gif');
 
   return (
